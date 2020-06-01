@@ -140,15 +140,15 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Interface_Expansion_MCP23017_SS
+# Interface_Expansion_MCP23017_SO
 #
-DEF Interface_Expansion_MCP23017_SS U 0 40 Y Y 1 F N
+DEF Interface_Expansion_MCP23017_SO U 0 40 Y Y 1 F N
 F0 "U" -450 950 50 H V C CNN
-F1 "Interface_Expansion_MCP23017_SS" 0 0 50 H V C CNN
-F2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" 200 -1000 50 H I L CNN
+F1 "Interface_Expansion_MCP23017_SO" 0 0 50 H V C CNN
+F2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" 200 -1000 50 H I L CNN
 F3 "" 200 -1100 50 H I L CNN
 $FPLIST
- SSOP*5.3x10.2mm*P0.65mm*
+ SOIC*7.5x17.9mm*P1.27mm*
 $ENDFPLIST
 DRAW
 S -500 900 500 -900 0 1 10 f

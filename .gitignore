@@ -1,2 +1,5 @@
 _autosave*
 *-bak
+*.gbr
+ferris.csv
+ferris-all-pos.csv
