@@ -3,6 +3,7 @@ _autosave*
 *.gbr
 ferris.csv
 ferris-all-pos.csv
+ferris.xml
 .~lock.*
 *.tmp
 bom.ini
