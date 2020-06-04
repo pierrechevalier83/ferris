@@ -1,4 +1,4 @@
-### Module positions - created on Thu Jun  4 18:12:27 2020 ###
+### Module positions - created on Thu Jun  4 20:09:37 2020 ###
 ### Printed by Pcbnew version kicad 5.1.6
 ## Unit = mm, Angle = deg.
 ## Side : All
@@ -42,10 +42,10 @@ D2_6      D            D_SOD-123                                     217.0000   
 D2_7      D            D_SOD-123                                     236.0000   -66.2500  180.0000  top
 D2_8      D            D_SOD-123                                     255.0000   -72.2500  180.0000  top
 D2_9      D            D_SOD-123                                     274.0000   -84.2500  180.0000  top
-D3_2      D            D_SOD-123                                      90.2000   -93.4000  165.0000  top
-D3_3      D            D_SOD-123                                     112.3000  -100.9000  150.0000  top
-D3_6      D            D_SOD-123                                     184.6000  -100.9000  210.0000  top
-D3_7      D            D_SOD-123                                     206.7500   -93.4500  195.0000  top
+D3_3      D            D_SOD-123                                      90.2000   -93.4000  165.0000  top
+D3_4      D            D_SOD-123                                     112.3000  -100.9000  150.0000  top
+D3_5      D            D_SOD-123                                     184.6000  -100.9000  210.0000  top
+D3_6      D            D_SOD-123                                     206.7500   -93.4500  195.0000  top
 G***      LOGO         pad                                           233.6000   -94.0000   10.0000  top
 G***      LOGO         mask                                          233.6000   -94.0000   10.0000  top
 J1        USB_C        USB_C_Receptacle_HRO_TYPE-C-31-M-12           116.6950   -71.0150  180.0000  top
