@@ -49,7 +49,7 @@ To match its minimalistic design philosophy, the Ferris adopts a minimalistic an
 The lines are few and clean. The traces are carefully routed with the intent to highlight the switch matrix (rows on the front, columns on the back). It's a design that doesn't hide "how the sausage is made", but that remains unobtrusive thanks to a limited number of features supported.
 All the components are top-mounted for eye candy and a ferris the crab logo decorates the right hand board.
 The SOD-123 diodes are tiny and live under switches in the spot that is usually reserved for the per-key backlights. This means that they are not visible once assembled.
-The back is really bare, without any components or text. Only a few traces and the solder joints for the switches, TRRS jacks and the USB C connector shound show. The intention is to only add a few fabric pads on the bottom pad to be used as feet and protect the desk's surface from solder joints.
+The back is really bare, without any components or text. Only a few traces and the solder joints for the switches, TRRS jacks and the USB C connector should show. The intention is to only add a few fabric pads on the bottom side to be used as feet and protect the desk's surface from solder joints.
 
 Portability:
 ------------
@@ -59,7 +59,7 @@ Ease of assembly:
 -----------------
 Most components are smd mounted, which means that they can be SMT assembled when getting the PCBs printed. All that remains is to solder in the switches, the jack and USB-C connectors.
 Since the only holes present are exactly the ones needed, there is only one way where the hand-soldered components fit, so it shouldn't be possible to mount them the wrong way by mistake.
-If hand-soldering the smd components, once must refer to the schematics for identifying where the resistors and capacitors go as the board is unlabelled for aesthetical reasons.
+If hand-soldering the smd components, one must refer to the schematics for identifying where the resistors and capacitors go as the board is unlabelled for aesthetical reasons.
 
 Low-Cost:
 ---------
@@ -100,7 +100,7 @@ It's 2020, people! Why is micro-usb still the defacto standard in hobbyist keybo
 
 No compromise:
 --------------
-No compromise doesn't mean: let's put all the features on one board. There are board like this and they are great as a playground and to discover features one likes. No compromise here means: let's build the right board for a specific user profile with exactly the right set of feature and nothing more. No trade-off or compromise will be needed for flexibility because flexibility can be obtained by enabling the user to create their own modification to fit their taste.
+No compromise doesn't mean: let's put all the features on one board. There are boards like this and they are great as a playground and to discover features one likes. No compromise here means: let's build the right board for a specific user profile with exactly the right set of features and nothing more. No trade-off or compromise will be needed for flexibility because flexibility can be obtained by enabling the user to create their own modification to fit their taste.
 
 Work In Progress:
 -----------------
