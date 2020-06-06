@@ -240,14 +240,6 @@ F 3 "" H 1850 4900 60  0000 C CNN
 	1    1850 4900
 	1    0    0    -1  
 $EndComp
-Text Label 4150 4700 0    50   ~ 0
-row0,0
-Text Label 4150 5100 0    50   ~ 0
-row0,2
-Text Label 4150 5200 0    50   ~ 0
-row0,3
-Text Label 4150 4800 0    50   ~ 0
-row0,1
 Connection ~ 1550 5300
 Wire Wire Line
 	1550 5400 1550 5300
@@ -1306,16 +1298,6 @@ Wire Wire Line
 	8450 6350 9300 6350
 Wire Wire Line
 	8550 2700 9250 2700
-Text Label 4150 7100 0    50   ~ 0
-col0
-Text Label 4150 7000 0    50   ~ 0
-col1
-Text Label 4150 6900 0    50   ~ 0
-col2
-Text Label 4150 6800 0    50   ~ 0
-col3
-Text Label 4150 6700 0    50   ~ 0
-col4
 NoConn ~ 2950 4800
 NoConn ~ 1550 5700
 NoConn ~ 1550 5800
@@ -1744,19 +1726,12 @@ Wire Wire Line
 	4550 5100 4650 5100
 Connection ~ 4650 5100
 NoConn ~ 4150 4200
-NoConn ~ 4150 4300
-NoConn ~ 4150 4400
-NoConn ~ 4150 4500
-NoConn ~ 4150 4600
 NoConn ~ 4150 4900
 NoConn ~ 4150 5600
 NoConn ~ 4150 5700
 NoConn ~ 4150 5800
 NoConn ~ 4150 5900
-NoConn ~ 4150 6000
-NoConn ~ 4150 6100
 NoConn ~ 4150 6400
-NoConn ~ 4150 6600
 $Comp
 L keyboard_parts:GND #PWR0111
 U 1 1 5F9DF3EB
@@ -1805,10 +1780,10 @@ F 3 "~" H 9150 5350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VDD #PWR?
+L power:VDD #PWR0112
 U 1 1 5FA6F90D
 P 9000 5350
-F 0 "#PWR?" H 9000 5200 50  0001 C CNN
+F 0 "#PWR0112" H 9000 5200 50  0001 C CNN
 F 1 "VDD" V 9015 5477 50  0000 L CNN
 F 2 "" H 9000 5350 50  0001 C CNN
 F 3 "" H 9000 5350 50  0001 C CNN
@@ -1826,4 +1801,22 @@ Wire Wire Line
 Connection ~ 9300 6050
 Wire Wire Line
 	9300 6050 9300 6350
+Text Label 4150 4500 0    50   ~ 0
+row0,0
+Text Label 4150 4400 0    50   ~ 0
+row0,1
+Text Label 4150 4300 0    50   ~ 0
+row0,2
+Text Label 4150 6600 0    50   ~ 0
+row0,3
+Text Label 4150 6000 0    50   ~ 0
+col0
+Text Label 4150 6100 0    50   ~ 0
+col1
+Text Label 4150 4600 0    50   ~ 0
+col2
+Text Label 4150 4700 0    50   ~ 0
+col3
+Text Label 4150 4800 0    50   ~ 0
+col4
 $EndSCHEMATC
