@@ -43,16 +43,16 @@ D3_3,D,D_SOD-123,90.2,-83.4,165,top
 D3_4,D,D_SOD-123,112.3,-90.9,150,top
 D3_5,D,D_SOD-123,139.6,-90.9,210,top
 D3_6,D,D_SOD-123,161.75,-83.45,195,top
-F1,500mA,Fuse_1206_3216Metric,119.98,-72,90,top
+F1,500mA,Fuse_1206_3216Metric,119.08,-71,0,top
 J1,USB C,USB_C_Receptacle_HRO_TYPE-C-31-M-12,116.695,-61.015,180,top
 R1,10k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,43.035,-78.86,0,top
 R2,10k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,74,-89.8,180,top
-R3,22,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,116.75,-72,90,top
-R4,22,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,113.35,-72,90,top
+R3,22,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,115.53,-75,90,top
+R4,22,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,113.1,-75,90,top
 R5,5.1K,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,119.5,-68,180,top
 R6,5.1K,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,114,-68,0,top
-R7,4.7k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,119.5,-76,0,top
-R8,4.7k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,114,-76,0,top
+R7,4.7k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,117.97,-75,90,top
+R8,4.7k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,120.4,-75,270,top
 R9,10k,R_0805_2012Metric_Pad1.15x1.40mm_HandSolder,136.3,-76.45,0,top
 SW1,SW_PUSH,SW_SPST_B3U-1000P,42,-83.5,90,top
 U1,ATmega32U4-AU,TQFP-44_10x10mm_P0.8mm,64.5,-84,270,top
