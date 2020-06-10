@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 37)
+    (drawings 39)
     (tracks 815)
     (zones 0)
     (modules 99)
@@ -7005,7 +7005,13 @@
     )
   )
 
-  (gr_text "Ferris v0.1\n" (at 136.61 58.15) (layer B.SilkS)
+  (gr_text "by @pierrec83" (at 115.91 58) (layer B.SilkS) (tstamp 5EE10A87)
+    (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+  )
+  (gr_text "Illustration adapted from \"Safe and unsafe rust\" by @whoisaldeka" (at 61.14 89.3 350) (layer B.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+  )
+  (gr_text "Ferris v0.1" (at 136.61 58) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_line (start 122.02 57.615) (end 122.02 84.59) (layer Edge.Cuts) (width 0.05) (tstamp 5EDAAAB2))

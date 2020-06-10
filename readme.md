@@ -50,6 +50,7 @@ The lines are few and clean. The traces are carefully routed with the intent to 
 All the components are top-mounted for eye candy and a ferris the crab logo decorates the right hand board.
 The SOD-123 diodes are tiny and live under switches in the spot that is usually reserved for the per-key backlights. This means that they are not visible once assembled.
 The back is really bare, without any components or text. Only a few traces and the solder joints for the switches, TRRS jacks and the USB C connector should show. The intention is to only add a few fabric pads on the bottom side to be used as feet and protect the desk's surface from solder joints.
+The silkscreen on the underside of the pcb is decorated with [the nice illustrations from @whoisaldeka on Twitter representing safe and unsafe rust](https://twitter.com/whoisaldeka/status/674465785557860353) that is licensed under CC-BY. The design was adapted for use on a PCB.
 
 Portability:
 ------------
