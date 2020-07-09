@@ -7,6 +7,8 @@ Named after the Rustlang mascott, ferris is a 34 keys split keyboard that tries 
 
 Ferris is minimalistic: it aims to be a functional, ergonomic keyboard that is pleasing to use as a daily driver. It only supports choc keyswitches, although it would be easy to make a MX version if there was interest.
 
+It is fully Open-Source: the kicad files are released under [the solderpad license, version 2.1](LICENSE). The firmware, contributed to [the QMK project](https://github.com/qmk/qmk_firmware/) is released under the GPL.
+
 Design philosophy
 -----------------
 
@@ -69,7 +71,7 @@ In rev 0.2, I would like to implement the following changes:
 How to I print one?
 -------------------
 
-For a given version, you will find a release in this repository containing a zip file with the erber files. This should be ready to send to a PCB manufacturer for assembly.
+For a given version, you will find a release in this repository containing a zip file with the gerber files. This should be ready to send to a PCB manufacturer for assembly.
 The repository also contains a bill of materials (bom.csv) with a list of the components you need and their reference number on LCSC.com. You may use another vendor for the components, as long as you make sure to get components that are equivalent.
 
 How do I assemble one?
@@ -99,9 +101,9 @@ Here are some key pieces of advice I can give from my experience assembling 3 of
 
 I took many pictures while building a board. If you want to build a Ferris while following along,
 Part 1:
-![build log, part 1](https://imgur.com/gallery/jYbxkxE)
+[build log, part 1](https://imgur.com/gallery/jYbxkxE)
 Part 2:
-![build log, part 2](https://imgur.com/gallery/gs19F6E)
+[build log, part 2](https://imgur.com/gallery/gs19F6E)
 
 Where is the firmware?
 ----------------------
@@ -115,4 +117,4 @@ Status:
 v 0.1 is confirmed to work: I have printed 5 on jlcpcb.com and assembled 3. I have flashed the firmware on all of these and made sure that all keys are recognized as intended. I am also typing these words on a Ferris.
 
 Here is a short demo of a working Ferris:
-![typing test](https://imgur.com/gallery/Wxc3nms)
+[typing test](https://i.imgur.com/E8Wipxz.mp4)
