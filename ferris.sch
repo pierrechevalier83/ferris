@@ -116,7 +116,7 @@ Wire Wire Line
 	2150 6350 2150 6000
 Connection ~ 2150 6350
 $Comp
-L keyboard_parts:SW_PUSH SW1
+L ferris-rescue:SW_PUSH-keyboard_parts SW1
 U 1 1 5ECF50EB
 P 2600 4200
 F 0 "SW1" H 2600 4200 50  0000 C CNN
@@ -238,12 +238,12 @@ F 4 "C165948" H 950 5200 50  0001 C CNN "LCSC Part #"
 $EndComp
 Connection ~ 1550 5200
 $Comp
-L keyboard_parts:KEYSW K0_0
+L ferris-rescue:KEYSW-keyboard_parts K0_0
 U 1 1 5EE18079
 P 1350 1200
 F 0 "K0_0" H 1350 1433 60  0000 C CNN
 F 1 "KEYSW" H 1350 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 1350 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 1350 1200 60  0001 C CNN
 F 3 "" H 1350 1200 60  0000 C CNN
 F 4 "C489144" H 1350 1200 50  0001 C CNN "LCSC Part #"
 	1    1350 1200
@@ -272,12 +272,12 @@ Wire Wire Line
 Text Label 900  2100 2    50   ~ 0
 row0,1
 $Comp
-L keyboard_parts:KEYSW K1_0
+L ferris-rescue:KEYSW-keyboard_parts K1_0
 U 1 1 5EE22042
 P 1350 1800
 F 0 "K1_0" H 1350 2033 60  0000 C CNN
 F 1 "KEYSW" H 1350 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 1350 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 1350 1800 60  0001 C CNN
 F 3 "" H 1350 1800 60  0000 C CNN
 	1    1350 1800
 	1    0    0    -1  
@@ -328,12 +328,12 @@ F 3 "~" H 1750 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K1_1
+L ferris-rescue:KEYSW-keyboard_parts K1_1
 U 1 1 5EE47E8A
 P 2050 1800
 F 0 "K1_1" H 2050 2033 60  0000 C CNN
 F 1 "KEYSW" H 2050 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 2050 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 2050 1800 60  0001 C CNN
 F 3 "" H 2050 1800 60  0000 C CNN
 	1    2050 1800
 	1    0    0    -1  
@@ -344,12 +344,12 @@ Wire Wire Line
 	1050 2100 1750 2100
 Connection ~ 1050 2100
 $Comp
-L keyboard_parts:KEYSW K0_2
+L ferris-rescue:KEYSW-keyboard_parts K0_2
 U 1 1 5EE8C569
 P 2750 1200
 F 0 "K0_2" H 2750 1433 60  0000 C CNN
 F 1 "KEYSW" H 2750 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 2750 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 2750 1200 60  0001 C CNN
 F 3 "" H 2750 1200 60  0000 C CNN
 	1    2750 1200
 	1    0    0    -1  
@@ -366,12 +366,12 @@ F 3 "~" H 2450 1350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K0_1
+L ferris-rescue:KEYSW-keyboard_parts K0_1
 U 1 1 5EEBC822
 P 2050 1200
 F 0 "K0_1" H 2050 1433 60  0000 C CNN
 F 1 "KEYSW" H 2050 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 2050 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 2050 1200 60  0001 C CNN
 F 3 "" H 2050 1200 60  0000 C CNN
 	1    2050 1200
 	1    0    0    -1  
@@ -383,12 +383,12 @@ Wire Wire Line
 	1750 1500 2450 1500
 Connection ~ 1750 1500
 $Comp
-L keyboard_parts:KEYSW K1_2
+L ferris-rescue:KEYSW-keyboard_parts K1_2
 U 1 1 5EECD1C4
 P 2750 1800
 F 0 "K1_2" H 2750 2033 60  0000 C CNN
 F 1 "KEYSW" H 2750 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 2750 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 2750 1800 60  0001 C CNN
 F 3 "" H 2750 1800 60  0000 C CNN
 	1    2750 1800
 	1    0    0    -1  
@@ -410,12 +410,12 @@ F 3 "~" H 2450 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_0
+L ferris-rescue:KEYSW-keyboard_parts K2_0
 U 1 1 5EED2FA2
 P 1350 2400
 F 0 "K2_0" H 1350 2633 60  0000 C CNN
 F 1 "KEYSW" H 1350 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 1350 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 1350 2400 60  0001 C CNN
 F 3 "" H 1350 2400 60  0000 C CNN
 	1    1350 2400
 	1    0    0    -1  
@@ -437,23 +437,23 @@ Wire Wire Line
 	1650 1800 1650 2400
 Connection ~ 1650 1800
 $Comp
-L keyboard_parts:KEYSW K2_1
+L ferris-rescue:KEYSW-keyboard_parts K2_1
 U 1 1 5EED5B60
 P 2050 2400
 F 0 "K2_1" H 2050 2633 60  0000 C CNN
 F 1 "KEYSW" H 2050 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 2050 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 2050 2400 60  0001 C CNN
 F 3 "" H 2050 2400 60  0000 C CNN
 	1    2050 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_2
+L ferris-rescue:KEYSW-keyboard_parts K2_2
 U 1 1 5EED6065
 P 2750 2400
 F 0 "K2_2" H 2750 2633 60  0000 C CNN
 F 1 "KEYSW" H 2750 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 2750 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 2750 2400 60  0001 C CNN
 F 3 "" H 2750 2400 60  0000 C CNN
 	1    2750 2400
 	1    0    0    -1  
@@ -498,34 +498,34 @@ Connection ~ 1750 2700
 Wire Wire Line
 	1750 2700 2450 2700
 $Comp
-L keyboard_parts:KEYSW K0_3
+L ferris-rescue:KEYSW-keyboard_parts K0_3
 U 1 1 5EEF6C30
 P 3450 1200
 F 0 "K0_3" H 3450 1433 60  0000 C CNN
 F 1 "KEYSW" H 3450 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 3450 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 3450 1200 60  0001 C CNN
 F 3 "" H 3450 1200 60  0000 C CNN
 	1    3450 1200
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K1_3
+L ferris-rescue:KEYSW-keyboard_parts K1_3
 U 1 1 5EEF70F9
 P 3450 1800
 F 0 "K1_3" H 3450 2033 60  0000 C CNN
 F 1 "KEYSW" H 3450 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 3450 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 3450 1800 60  0001 C CNN
 F 3 "" H 3450 1800 60  0000 C CNN
 	1    3450 1800
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_3
+L ferris-rescue:KEYSW-keyboard_parts K2_3
 U 1 1 5EEF764A
 P 3450 2400
 F 0 "K2_3" H 3450 2633 60  0000 C CNN
 F 1 "KEYSW" H 3450 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 3450 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 3450 2400 60  0001 C CNN
 F 3 "" H 3450 2400 60  0000 C CNN
 	1    3450 2400
 	1    0    0    -1  
@@ -564,12 +564,12 @@ F 3 "~" H 3150 2550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K0_4
+L ferris-rescue:KEYSW-keyboard_parts K0_4
 U 1 1 5EEF9889
 P 4150 1200
 F 0 "K0_4" H 4150 1433 60  0000 C CNN
 F 1 "KEYSW" H 4150 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 4150 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 4150 1200 60  0001 C CNN
 F 3 "" H 4150 1200 60  0000 C CNN
 	1    4150 1200
 	1    0    0    -1  
@@ -586,12 +586,12 @@ F 3 "~" H 3850 1350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K1_4
+L ferris-rescue:KEYSW-keyboard_parts K1_4
 U 1 1 5EEFA968
 P 4150 1800
 F 0 "K1_4" H 4150 2033 60  0000 C CNN
 F 1 "KEYSW" H 4150 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 4150 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 4150 1800 60  0001 C CNN
 F 3 "" H 4150 1800 60  0000 C CNN
 	1    4150 1800
 	1    0    0    -1  
@@ -608,12 +608,12 @@ F 3 "~" H 3850 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_4
+L ferris-rescue:KEYSW-keyboard_parts K2_4
 U 1 1 5EEFBA25
 P 4150 2400
 F 0 "K2_4" H 4150 2633 60  0000 C CNN
 F 1 "KEYSW" H 4150 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 4150 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 4150 2400 60  0001 C CNN
 F 3 "" H 4150 2400 60  0000 C CNN
 	1    4150 2400
 	1    0    0    -1  
@@ -667,23 +667,23 @@ Wire Wire Line
 Wire Wire Line
 	3850 2700 3150 2700
 $Comp
-L keyboard_parts:KEYSW K3_3
+L ferris-rescue:KEYSW-keyboard_parts K3_3
 U 1 1 5EF1C6CA
 P 3450 3000
 F 0 "K3_3" H 3450 3233 60  0000 C CNN
 F 1 "KEYSW" H 3450 2900 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 3450 3000 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 3450 3000 60  0001 C CNN
 F 3 "" H 3450 3000 60  0000 C CNN
 	1    3450 3000
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K3_4
+L ferris-rescue:KEYSW-keyboard_parts K3_4
 U 1 1 5EF1CAA2
 P 4150 3000
 F 0 "K3_4" H 4150 3233 60  0000 C CNN
 F 1 "KEYSW" H 4150 2900 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 4150 3000 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 4150 3000 60  0001 C CNN
 F 3 "" H 4150 3000 60  0000 C CNN
 	1    4150 3000
 	1    0    0    -1  
@@ -721,12 +721,12 @@ Wire Wire Line
 	3850 1500 4450 1500
 Connection ~ 3850 1500
 $Comp
-L keyboard_parts:KEYSW K0_5
+L ferris-rescue:KEYSW-keyboard_parts K0_5
 U 1 1 5FD3ADBA
 P 7450 1200
 F 0 "K0_5" H 7450 1433 60  0000 C CNN
 F 1 "KEYSW" H 7450 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 7450 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 7450 1200 60  0001 C CNN
 F 3 "" H 7450 1200 60  0000 C CNN
 	1    7450 1200
 	1    0    0    -1  
@@ -753,12 +753,12 @@ Wire Wire Line
 Text Label 7000 2100 2    50   ~ 0
 row1,1
 $Comp
-L keyboard_parts:KEYSW K1_5
+L ferris-rescue:KEYSW-keyboard_parts K1_5
 U 1 1 5FD3ADD3
 P 7450 1800
 F 0 "K1_5" H 7450 2033 60  0000 C CNN
 F 1 "KEYSW" H 7450 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 7450 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 7450 1800 60  0001 C CNN
 F 3 "" H 7450 1800 60  0000 C CNN
 	1    7450 1800
 	1    0    0    -1  
@@ -809,12 +809,12 @@ F 3 "~" H 7850 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K1_6
+L ferris-rescue:KEYSW-keyboard_parts K1_6
 U 1 1 5FD3AE02
 P 8150 1800
 F 0 "K1_6" H 8150 2033 60  0000 C CNN
 F 1 "KEYSW" H 8150 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8150 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8150 1800 60  0001 C CNN
 F 3 "" H 8150 1800 60  0000 C CNN
 	1    8150 1800
 	1    0    0    -1  
@@ -825,12 +825,12 @@ Wire Wire Line
 	7150 2100 7850 2100
 Connection ~ 7150 2100
 $Comp
-L keyboard_parts:KEYSW K0_7
+L ferris-rescue:KEYSW-keyboard_parts K0_7
 U 1 1 5FD3AE0F
 P 8850 1200
 F 0 "K0_7" H 8850 1433 60  0000 C CNN
 F 1 "KEYSW" H 8850 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8850 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8850 1200 60  0001 C CNN
 F 3 "" H 8850 1200 60  0000 C CNN
 	1    8850 1200
 	1    0    0    -1  
@@ -847,12 +847,12 @@ F 3 "~" H 8550 1350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K0_6
+L ferris-rescue:KEYSW-keyboard_parts K0_6
 U 1 1 5FD3AE23
 P 8150 1200
 F 0 "K0_6" H 8150 1433 60  0000 C CNN
 F 1 "KEYSW" H 8150 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8150 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8150 1200 60  0001 C CNN
 F 3 "" H 8150 1200 60  0000 C CNN
 	1    8150 1200
 	1    0    0    -1  
@@ -864,12 +864,12 @@ Wire Wire Line
 	7850 1500 8550 1500
 Connection ~ 7850 1500
 $Comp
-L keyboard_parts:KEYSW K1_7
+L ferris-rescue:KEYSW-keyboard_parts K1_7
 U 1 1 5FD3AE31
 P 8850 1800
 F 0 "K1_7" H 8850 2033 60  0000 C CNN
 F 1 "KEYSW" H 8850 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8850 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8850 1800 60  0001 C CNN
 F 3 "" H 8850 1800 60  0000 C CNN
 	1    8850 1800
 	1    0    0    -1  
@@ -891,12 +891,12 @@ F 3 "~" H 8550 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_5
+L ferris-rescue:KEYSW-keyboard_parts K2_5
 U 1 1 5FD3AE48
 P 7450 2400
 F 0 "K2_5" H 7450 2633 60  0000 C CNN
 F 1 "KEYSW" H 7450 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 7450 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 7450 2400 60  0001 C CNN
 F 3 "" H 7450 2400 60  0000 C CNN
 	1    7450 2400
 	1    0    0    -1  
@@ -918,23 +918,23 @@ Wire Wire Line
 	7750 1800 7750 2400
 Connection ~ 7750 1800
 $Comp
-L keyboard_parts:KEYSW K2_6
+L ferris-rescue:KEYSW-keyboard_parts K2_6
 U 1 1 5FD3AE5F
 P 8150 2400
 F 0 "K2_6" H 8150 2633 60  0000 C CNN
 F 1 "KEYSW" H 8150 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8150 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8150 2400 60  0001 C CNN
 F 3 "" H 8150 2400 60  0000 C CNN
 	1    8150 2400
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_7
+L ferris-rescue:KEYSW-keyboard_parts K2_7
 U 1 1 5FD3AE69
 P 8850 2400
 F 0 "K2_7" H 8850 2633 60  0000 C CNN
 F 1 "KEYSW" H 8850 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8850 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8850 2400 60  0001 C CNN
 F 3 "" H 8850 2400 60  0000 C CNN
 	1    8850 2400
 	1    0    0    -1  
@@ -979,34 +979,34 @@ Connection ~ 7850 2700
 Wire Wire Line
 	7850 2700 8550 2700
 $Comp
-L keyboard_parts:KEYSW K0_8
+L ferris-rescue:KEYSW-keyboard_parts K0_8
 U 1 1 5FD3AE92
 P 9550 1200
 F 0 "K0_8" H 9550 1433 60  0000 C CNN
 F 1 "KEYSW" H 9550 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 9550 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 9550 1200 60  0001 C CNN
 F 3 "" H 9550 1200 60  0000 C CNN
 	1    9550 1200
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K1_8
+L ferris-rescue:KEYSW-keyboard_parts K1_8
 U 1 1 5FD3AE9C
 P 9550 1800
 F 0 "K1_8" H 9550 2033 60  0000 C CNN
 F 1 "KEYSW" H 9550 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 9550 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 9550 1800 60  0001 C CNN
 F 3 "" H 9550 1800 60  0000 C CNN
 	1    9550 1800
 	1    0    0    -1  
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_8
+L ferris-rescue:KEYSW-keyboard_parts K2_8
 U 1 1 5FD3AEA6
 P 9550 2400
 F 0 "K2_8" H 9550 2633 60  0000 C CNN
 F 1 "KEYSW" H 9550 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 9550 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 9550 2400 60  0001 C CNN
 F 3 "" H 9550 2400 60  0000 C CNN
 	1    9550 2400
 	1    0    0    -1  
@@ -1045,12 +1045,12 @@ F 3 "~" H 9250 2550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K0_9
+L ferris-rescue:KEYSW-keyboard_parts K0_9
 U 1 1 5FD3AECE
 P 10250 1200
 F 0 "K0_9" H 10250 1433 60  0000 C CNN
 F 1 "KEYSW" H 10250 1100 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 10250 1200 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 10250 1200 60  0001 C CNN
 F 3 "" H 10250 1200 60  0000 C CNN
 	1    10250 1200
 	1    0    0    -1  
@@ -1067,12 +1067,12 @@ F 3 "~" H 9950 1350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K1_9
+L ferris-rescue:KEYSW-keyboard_parts K1_9
 U 1 1 5FD3AEE2
 P 10250 1800
 F 0 "K1_9" H 10250 2033 60  0000 C CNN
 F 1 "KEYSW" H 10250 1700 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 10250 1800 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 10250 1800 60  0001 C CNN
 F 3 "" H 10250 1800 60  0000 C CNN
 	1    10250 1800
 	1    0    0    -1  
@@ -1089,12 +1089,12 @@ F 3 "~" H 9950 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K2_9
+L ferris-rescue:KEYSW-keyboard_parts K2_9
 U 1 1 5FD3AEF6
 P 10250 2400
 F 0 "K2_9" H 10250 2633 60  0000 C CNN
 F 1 "KEYSW" H 10250 2300 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 10250 2400 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 10250 2400 60  0001 C CNN
 F 3 "" H 10250 2400 60  0000 C CNN
 	1    10250 2400
 	1    0    0    -1  
@@ -1296,12 +1296,12 @@ Wire Wire Line
 Connection ~ 3150 3300
 Connection ~ 8450 2400
 $Comp
-L keyboard_parts:KEYSW K3_5
+L ferris-rescue:KEYSW-keyboard_parts K3_5
 U 1 1 5FD3AF30
 P 7450 3000
 F 0 "K3_5" H 7450 3233 60  0000 C CNN
 F 1 "KEYSW" H 7450 2900 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 7450 3000 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 7450 3000 60  0001 C CNN
 F 3 "" H 7450 3000 60  0000 C CNN
 	1    7450 3000
 	1    0    0    -1  
@@ -1335,12 +1335,12 @@ F 3 "~" H 7850 3150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L keyboard_parts:KEYSW K3_6
+L ferris-rescue:KEYSW-keyboard_parts K3_6
 U 1 1 5FD3AF3A
 P 8150 3000
 F 0 "K3_6" H 8150 3233 60  0000 C CNN
 F 1 "KEYSW" H 8150 2900 60  0001 C CNN
-F 2 "ferris:SW_PG1350" H 8150 3000 60  0001 C CNN
+F 2 "MX:MXOnly-1U-NoLED" H 8150 3000 60  0001 C CNN
 F 3 "" H 8150 3000 60  0000 C CNN
 	1    8150 3000
 	1    0    0    -1  

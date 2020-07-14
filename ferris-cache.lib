@@ -286,11 +286,11 @@ X PB1 9 600 1400 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# keyboard_parts_KEYSW
+# ferris-rescue_KEYSW-keyboard_parts
 #
-DEF keyboard_parts_KEYSW K? 0 40 Y Y 1 F N
+DEF ferris-rescue_KEYSW-keyboard_parts K? 0 40 Y Y 1 F N
 F0 "K?" -50 0 60 H V C CNN
-F1 "keyboard_parts_KEYSW" 0 -100 60 H I C CNN
+F1 "ferris-rescue_KEYSW-keyboard_parts" 0 -100 60 H I C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -302,11 +302,11 @@ X ~ 2 -300 0 50 R 60 60 1 1 P
 ENDDRAW
 ENDDEF
 #
-# keyboard_parts_SW_PUSH
+# ferris-rescue_SW_PUSH-keyboard_parts
 #
-DEF keyboard_parts_SW_PUSH SW 0 40 N N 1 F N
+DEF ferris-rescue_SW_PUSH-keyboard_parts SW 0 40 N N 1 F N
 F0 "SW" 150 110 50 H V C CNN
-F1 "keyboard_parts_SW_PUSH" 0 -80 50 H V C CNN
+F1 "ferris-rescue_SW_PUSH-keyboard_parts" 0 -80 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
