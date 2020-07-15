@@ -96,7 +96,7 @@ I have found it easier to control how much solder I use with a soldering iron.
 
 Here are some key pieces of advice I can give from my experience assembling 3 of them so far:
 * Be mindful of the orientation for the components that are polarized:
-  * Diodes: cathode bar on the right side for both pcbs
+  * Diodes: cathode bar on the side of the pad's rectangle that is closed (bar). This differs between variants, so take extra care!
   * Crystal: text readable looking at it from the controller
   * Controller: pin 1 dot indicator in the top right
   * IO expander: pin 1 dot indicator in the top left
