@@ -87,9 +87,13 @@ The repository also contains a bill of materials (bom.csv) with a list of the co
 How do I assemble one?
 ----------------------
 
+If you received a kit from me, you will notice the package contains [these cards](docs/assembly_guide.md)
+
 Here is where the components go on the pcb:
-![components around the microcontroller](https://i.imgur.com/DC6uJEx.png)
-![components around the usb c and the io expander](https://i.imgur.com/zMLJDx9.png)
+![Keeb map](https://i.imgur.com/3QpTI6m.jpeg)
+![Diodes](https://i.imgur.com/WgII1Tx.jpeg)
+![Microcontroller](https://i.imgur.com/m1sC2Tc.jpeg)
+![Jacks](https://i.imgur.com/cJ2TTdF.jpeg)
 
 Most of these components are smd mounted. They can be soldered in with hot air and solder paste or with a soldering iron, solder wire and flux.
 I have found it easier to control how much solder I use with a soldering iron.
