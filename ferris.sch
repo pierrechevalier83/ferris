@@ -1670,8 +1670,6 @@ F 3 "" H 3450 7500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3450 7500
-Wire Wire Line
-	650  6100 950  6100
 $Comp
 L power:GND #PWR0111
 U 1 1 5F0EFAA9
@@ -1683,7 +1681,6 @@ F 3 "" H 2050 6000 60  0000 C CNN
 	1    2050 6000
 	1    0    0    -1  
 $EndComp
-Connection ~ 950  6100
 $Comp
 L power:GND #PWR0115
 U 1 1 5F0FEF96
@@ -1861,4 +1858,5 @@ F 3 "" H 5350 7100 60  0000 C CNN
 	1    5350 7100
 	0    -1   -1   0   
 $EndComp
+NoConn ~ 650  6100
 $EndSCHEMATC
