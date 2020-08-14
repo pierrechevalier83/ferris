@@ -1,3 +1,6 @@
 [submodule "lib/kicad_lib_tmk"]
 	path = lib/kicad_lib_tmk
 	url = https://github.com/tmk/kicad_lib_tmk.git
+[submodule "Panelization.pretty"]
+	path = Panelization.pretty
+	url = git@github.com:madworm/Panelization.pretty.git
