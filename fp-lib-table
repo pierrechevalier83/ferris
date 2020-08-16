@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name ferris)(type KiCad)(uri ${KIPRJMOD}/ferris.pretty)(options "")(descr ""))
+  (lib (name Panelization)(type KiCad)(uri ${KIPRJMOD}/Panelization.pretty)(options "")(descr ""))
 )
