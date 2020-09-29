@@ -1,13 +1,15 @@
 Meet Ferris, a minimalistic keyboard
 ====================================
 
-Named after the Rustlang mascott, ferris is a 34 keys split keyboard that tries to be about as cute as its namesake.
+Named after the Rustlang mascott, Ferris is a 34 keys split keyboard that tries to be about as cute as its namesake.
 
-![Ferris](https://i.imgur.com/qOv4XDe.jpeg)
+![Ferris](https://i.imgur.com/TCjkquR.jpg)
 
 Ferris is minimalistic: it aims to be a functional, ergonomic keyboard that is pleasing to use as a daily driver. It only supports choc keyswitches, although it would be easy to make a MX version if there was interest.
 
 It is fully Open-Source: the kicad files are released under [the solderpad license, version 2.1](LICENSE). The firmware, contributed to [the QMK project](https://github.com/qmk/qmk_firmware/) is released under the GPL.
+The Ferris 0.1 is certified by the Open Source Hardware.
+![OSHWA](https://imgur.com/917TZru)
 
 Design philosophy
 -----------------
@@ -36,7 +38,18 @@ You may read more about how each feature (and mostly lack thereof) contributes t
 Technical details
 -----------------
 
-### Base variant, rev 0.1
+There are currently two versions of the Ferris:
+* v0.1 used an atmega32u4 microcontroller.
+* v0.2 is in prototyping stage and uses an Arm chip (STM32F072CBT6) which is more capable and cheaper than the atmega32u4. v0.2 also adds better ESD protection. The plan for v0.2 is to eventually offer full rust firmware as an alternative to qmk.
+
+Whithin each version, a number of variants have been designed.
+
+### rev 0.1
+
+#### Base variant
+
+![Base variant](https://i.imgur.com/s6nTn0C.jpg)
+![Base variant silk](https://i.imgur.com/Ymlac2A.jpg)
 
 This describes the first ever iteration of the Ferris keyboard: a plain pcb with support for choc switches, and the same layout as the Kyria (but limited to 34 keys).
 
@@ -51,22 +64,57 @@ This describes the first ever iteration of the Ferris keyboard: a plain pcb with
 * Switches are spaced by 19mm from each other in each direction (almost exactly what's known as MX spacing [19.05x19.05]). This allows for a wider variety of compatible keycaps for the price of gaps for certain keycaps that respect the Kailh choc specification
 * Columnar stagger identical to the one on the Kyria
 
+Status: Working boards were produced.
+
+#### Ferris high
+![Ferris High](https://i.imgur.com/JfCLJa0.jpg)
+![Ferris High silk](https://i.imgur.com/ZjXNqry.jpg)
+
+The Ferris high is similar the base variant, but with support for MX switches and updated copper pad and silkscreen.
+
+Status: Working boards were produced.
+
+#### Ferris low
+![Ferris Low](https://i.imgur.com/MwBP3hJ.jpg)
+![Ferris Low silk](https://i.imgur.com/6oXWj0b.jpg)
+
+The Ferris low is similar to the base variant, but with support for Choc mini switches and updated copper pad and silkscreen.
+
+Status: Working boards were produced.
+
+#### Ferris compact
+![Ferris Compact](https://i.imgur.com/wcE4eT5.jpg)
+![Ferris Compact silk](https://i.imgur.com/FD1pJfh.jpg)
+
+The Ferris compact is similar to the base variant, but with Choc spacing (17x18 mm) instead of MX spacing (18x19 mm). This means it isn't compatible with as many keycaps, but doesn't have gaps with keycaps that conform to the Kailh datasheet, like the MBK keycaps pictured. 
+
+Status: Working boards were produced.
+
 ### Upcoming changes
 
-In rev 0.2, I would like to implement the following changes:
+### rev 0.2
 
-* Microcontroller: [Arm STM32F030F4P6TR](https://lcsc.com/product-detail/Others_STMicroelectronics_STM32F030F4P6TR_STMicroelectronics-STM32F030F4P6TR_C89040.html) instead of [Atmega32u4](https://lcsc.com/product-detail/ATMEL-AVR_ATMEL_ATMEGA32U4-AU_ATMEGA32U4-AU_C44854.html)
-  * Cheaper: 0.83$ instead of $3.63, less unused pins, easier to solder, more flash, more ram, better rust support for possible pure rust firmware
-* IO Expander: [PCA9539PW ](https://lcsc.com/product-detail/I-O-Expansion_NXP_PCA9539PW_PCA9539PW_C129516.html) instead of [MCP23017](https://lcsc.com/product-detail/Interface-ICs_MICROCHIP_MCP23017-E-SO_MCP23017-E-SO_C47023.html)
-  * Cheaper 0.76$ instead of 1.56$
-* Spacing: 0.18x0.19 instead of 0.19x0.19
-  * Avoids gaps with keycaps that conform with the Kailh specifications
-  * More ergonomic as fingers don't have to move as far up and down
-  * Con: Looses compatibility to some keycaps
-* Ferris MX:
-  * I would like to also do a run with MX only footprints for anyone interested
-* Ferris tent:
-  * I would like to add four mounting holes on each hand to support the tenting puck that Thomas Baart at splitkb.com is currently designing
+All rev 0.2 variants come with the STM32F072CBT6 arm microcontroller and electrostatic discharge protection.
+
+#### Ferris bling
+![Ferris Bling](https://i.imgur.com/pv87NEC.jpeg)
+![Ferris Bling silk](https://i.imgur.com/YB40hqn.jpeg)
+
+The Ferris bling diverges slightly from the minimalism of other variants to offer a broader appeal.
+Notable features:
+* Choc spacing
+* Choc switches
+* RGB backlighting
+* Tenting puck support
+* Case support
+* All microcontroller pads are broken out for ease of repairability and modability
+
+#### Ferris mini
+![Ferris Mini](https://i.imgur.com/KgupmOg.jpeg)
+![Ferris Mini silk](https://i.imgur.com/tEfUbvH.jpeg)
+
+The Ferris Mini is a barebone Ferris supporting choc mini switches in choc spacing. It also exposes all microcontroller pads for ease of repairability and modability.
+
 
 How to I print one?
 -------------------
@@ -112,13 +160,14 @@ Part 2:
 Where is the firmware?
 ----------------------
 
-For now, the Ferris keyboard is powered by QMK. Firmware for it is available [in this PR](https://github.com/qmk/qmk_firmware/pull/9634) and should make it upstream once the review process has taken its course.
+For now, the Ferris keyboard is powered by QMK.
+Firmware for it (currently only v0.1) is available [upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/ferris) in handwired, and will move a directory up in due course.
 
-The default keymap is very minimalistic. I will come up with something fancier in due time.
 
-Status:
--------
-v 0.1 is confirmed to work: I have printed 5 on jlcpcb.com and assembled 3. I have flashed the firmware on all of these and made sure that all keys are recognized as intended. I am also typing these words on a Ferris.
+The default keymap showcases one possible way to make a 34 keys keyboard usable and is documented [in its readme upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/ferris/keymaps/default).
+
+Does it actually work?
+----------------------
 
 Here is a short demo of a working Ferris:
 [typing test](https://i.imgur.com/E8Wipxz.mp4)
