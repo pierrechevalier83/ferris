@@ -1,3 +1,9 @@
 [submodule "lib/kicad_lib_tmk"]
 	path = lib/kicad_lib_tmk
 	url = https://github.com/tmk/kicad_lib_tmk.git
+[submodule "keyboard_footprints"]
+	path = keyboard_footprints
+	url = git@github.com:pierrechevalier83/keyboard_footprints
+[submodule "ferris_pcb_art"]
+	path = ferris_pcb_art
+	url = git@github.com:pierrechevalier83/ferris_pcb_art
