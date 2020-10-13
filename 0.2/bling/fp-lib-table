@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name rgb)(type KiCad)(uri /home/pierrec/Documents/code/ferris/keyboard_footprints/rgb.pretty)(options "")(descr ""))
+  (lib (name puck)(type KiCad)(uri /home/pierrec/Documents/code/ferris/keyboard_footprints/puck.pretty)(options "")(descr ""))
+  (lib (name silkscreens)(type KiCad)(uri /home/pierrec/Documents/code/ferris/ferris_pcb_art/silkscreens.pretty)(options "")(descr ""))
+  (lib (name copper_pads)(type KiCad)(uri /home/pierrec/Documents/code/ferris/ferris_pcb_art/copper_pads.pretty)(options "")(descr ""))
+  (lib (name panelization)(type KiCad)(uri /home/pierrec/Documents/code/ferris/keyboard_footprints/panelization.pretty)(options "")(descr ""))
+)
