@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name keyboard_parts)(type Legacy)(uri ${KIPRJMOD}/lib/kicad_lib_tmk/keyboard_parts.lib)(options "")(descr ""))
-  (lib (name MCU_Microchip_ATmega)(type Legacy)(uri ${KIPRJMOD}/lib/MCU_Microchip_ATmega/MCU_Microchip_ATmega.lib)(options "")(descr ""))
-)
