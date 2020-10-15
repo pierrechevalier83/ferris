@@ -1119,12 +1119,12 @@ F 4 "C12569" H 4750 7500 50  0001 C CNN "LCSC Part #"
 	-1   0    0    1   
 $EndComp
 $Comp
-L MCU_ST_STM32F0:STM32F072CBTx U1
+L MCU_ST_STM32F0:STM32F072CBUx U1
 U 1 1 5F410845
 P 5900 4650
 F 0 "U1" H 5900 4700 50  0000 C CNN
 F 1 "STM32F072CBTx" H 5850 4600 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5300 3250 50  0001 R CNN
+F 2 "breakout_pins:Dual_MCU_QFP_QFN_48_with_breakout_pins" H 5300 3250 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf" H 5900 4650 50  0001 C CNN
 F 4 "C81720" H 5900 4650 50  0001 C CNN "LCSC Part #"
 	1    5900 4650
@@ -2119,273 +2119,30 @@ Text GLabel 9300 4450 0    50   Input ~ 0
 i2c_sda_right
 Text GLabel 9300 4550 0    50   Input ~ 0
 i2c_scl_right
-Text GLabel 6500 5150 2    50   Input ~ 0
-PA7
-Text GLabel 6500 5050 2    50   Input ~ 0
-PA6
-Text GLabel 6500 4950 2    50   Input ~ 0
-PA5
-Text GLabel 6500 4850 2    50   Input ~ 0
-PA4
-Text GLabel 5200 3750 0    50   Input ~ 0
-PF0
-Text GLabel 5200 3850 0    50   Input ~ 0
-PF1
-Text GLabel 5200 4050 0    50   Input ~ 0
-PC13
-Text GLabel 5200 4150 0    50   Input ~ 0
-PC14
-Text GLabel 5200 4250 0    50   Input ~ 0
-PC15
-Text GLabel 5200 4450 0    50   Input ~ 0
-PB0
-Text GLabel 5200 4550 0    50   Input ~ 0
-PB1
-Text GLabel 5200 4650 0    50   Input ~ 0
-PB2
-Text GLabel 5200 5350 0    50   Input ~ 0
-PB9
-Text GLabel 5200 5750 0    50   Input ~ 0
-PB13
-Text GLabel 5200 5650 0    50   Input ~ 0
-PB12
-Text GLabel 5200 5850 0    50   Input ~ 0
-PB14
-Text GLabel 5200 5950 0    50   Input ~ 0
-PB15
-Text GLabel 6500 4450 2    50   Input ~ 0
-PA0
-Text GLabel 6500 4550 2    50   Input ~ 0
-PA1
-Text GLabel 6500 4750 2    50   Input ~ 0
-PA3
-Text GLabel 6500 5250 2    50   Input ~ 0
-PA8
-Text GLabel 6500 5350 2    50   Input ~ 0
-PA9
-Text GLabel 6500 5450 2    50   Input ~ 0
-PA10
-Text GLabel 6500 5750 2    50   Input ~ 0
-PA13
-$Comp
-L Connector:Conn_01x12_Female Pins1_12
-U 1 1 5F8CB8DB
-P 7700 4200
-F 0 "Pins1_12" H 7400 4850 50  0000 L CNN
-F 1 "MCU_Breakout" H 7200 4950 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x12_P1.00mm_Vertical" H 7700 4200 50  0001 C CNN
-F 3 "~" H 7700 4200 50  0001 C CNN
-	1    7700 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0147
-U 1 1 5F8DC5A8
-P 7500 3700
-F 0 "#PWR0147" H 7500 3550 50  0001 C CNN
-F 1 "+3.3V" V 7500 3950 50  0000 C CNN
-F 2 "" H 7500 3700 50  0001 C CNN
-F 3 "" H 7500 3700 50  0001 C CNN
-	1    7500 3700
-	0    -1   -1   0   
-$EndComp
-Text GLabel 7500 3800 0    50   Input ~ 0
-PC13
-Text GLabel 7500 3900 0    50   Input ~ 0
-PC14
-Text GLabel 7500 4000 0    50   Input ~ 0
-PC15
-Text GLabel 7500 4100 0    50   Input ~ 0
-PF0
-Text GLabel 7500 4200 0    50   Input ~ 0
-PF1
-Text GLabel 7500 4300 0    50   Input ~ 0
-NRST
-$Comp
-L power:GND #PWR0148
-U 1 1 5F8EFE81
-P 7500 4400
-F 0 "#PWR0148" H 7500 4150 50  0001 C CNN
-F 1 "GND" V 7500 4150 50  0000 C CNN
-F 2 "" H 7500 4400 50  0001 C CNN
-F 3 "" H 7500 4400 50  0001 C CNN
-	1    7500 4400
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0149
-U 1 1 5F8F1CEF
-P 7500 4500
-F 0 "#PWR0149" H 7500 4350 50  0001 C CNN
-F 1 "+3.3V" V 7500 4750 50  0000 C CNN
-F 2 "" H 7500 4500 50  0001 C CNN
-F 3 "" H 7500 4500 50  0001 C CNN
-	1    7500 4500
-	0    -1   -1   0   
-$EndComp
-Text GLabel 7500 4600 0    50   Input ~ 0
-PA0
-Text GLabel 7500 4700 0    50   Input ~ 0
-PA1
-Text Label 7500 4800 2    50   ~ 0
-row0,3
-$Comp
-L Connector:Conn_01x12_Female Pins13_24
-U 1 1 5F8F2FF7
-P 7700 5700
-F 0 "Pins13_24" H 7350 6350 50  0000 L CNN
-F 1 "MCU_Breakout" H 7200 6450 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x12_P1.00mm_Vertical" H 7700 5700 50  0001 C CNN
-F 3 "~" H 7700 5700 50  0001 C CNN
-	1    7700 5700
-	1    0    0    -1  
-$EndComp
-Text GLabel 7500 5200 0    50   Input ~ 0
-PA3
-Text GLabel 7500 5300 0    50   Input ~ 0
-PA4
-Text GLabel 7500 5400 0    50   Input ~ 0
-PA5
-Text GLabel 7500 5500 0    50   Input ~ 0
-PA6
-Text GLabel 7500 5600 0    50   Input ~ 0
-PA7
-Text GLabel 7500 5700 0    50   Input ~ 0
-PB0
-Text GLabel 7500 5800 0    50   Input ~ 0
-PB1
-Text GLabel 7500 5900 0    50   Input ~ 0
-PB2
-Text GLabel 7500 6000 0    50   Input ~ 0
-i2c_scl
-Text GLabel 7500 6100 0    50   Input ~ 0
-i2c_sda
-$Comp
-L power:GND #PWR0150
-U 1 1 5F8F774C
-P 7500 6200
-F 0 "#PWR0150" H 7500 5950 50  0001 C CNN
-F 1 "GND" V 7500 5950 50  0000 C CNN
-F 2 "" H 7500 6200 50  0001 C CNN
-F 3 "" H 7500 6200 50  0001 C CNN
-	1    7500 6200
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0151
-U 1 1 5F8F7FC6
-P 7500 6300
-F 0 "#PWR0151" H 7500 6150 50  0001 C CNN
-F 1 "+3.3V" V 7500 6550 50  0000 C CNN
-F 2 "" H 7500 6300 50  0001 C CNN
-F 3 "" H 7500 6300 50  0001 C CNN
-	1    7500 6300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x12_Female Pins25_36
-U 1 1 5F961870
-P 8650 4200
-F 0 "Pins25_36" H 8350 4850 50  0000 L CNN
-F 1 "MCU_Breakout" H 8150 4950 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x12_P1.00mm_Vertical" H 8650 4200 50  0001 C CNN
-F 3 "~" H 8650 4200 50  0001 C CNN
-	1    8650 4200
-	1    0    0    -1  
-$EndComp
-Text GLabel 8450 3700 0    50   Input ~ 0
-PB12
-Text GLabel 8450 3800 0    50   Input ~ 0
-PB13
-Text GLabel 8450 3900 0    50   Input ~ 0
-PB14
-Text GLabel 8450 4000 0    50   Input ~ 0
-PB15
-Text GLabel 8450 4100 0    50   Input ~ 0
-PA8
-Text GLabel 8450 4200 0    50   Input ~ 0
-PA9
-Text GLabel 8450 4300 0    50   Input ~ 0
-PA10
-Text Label 8450 4400 2    50   ~ 0
-D-
-Text Label 8450 4500 2    50   ~ 0
-D+
-Text GLabel 8450 4600 0    50   Input ~ 0
-PA13
-$Comp
-L power:GND #PWR0152
-U 1 1 5F96949E
-P 8450 4700
-F 0 "#PWR0152" H 8450 4450 50  0001 C CNN
-F 1 "GND" V 8450 4450 50  0000 C CNN
-F 2 "" H 8450 4700 50  0001 C CNN
-F 3 "" H 8450 4700 50  0001 C CNN
-	1    8450 4700
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0153
-U 1 1 5F969CB4
-P 8450 4800
-F 0 "#PWR0153" H 8450 4650 50  0001 C CNN
-F 1 "+3.3V" V 8450 5050 50  0000 C CNN
-F 2 "" H 8450 4800 50  0001 C CNN
-F 3 "" H 8450 4800 50  0001 C CNN
-	1    8450 4800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x12_Female Pins37_48
-U 1 1 5F96AD84
-P 8650 5700
-F 0 "Pins37_48" H 8350 6350 50  0000 L CNN
-F 1 "MCU_Breakout" H 8150 6450 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x12_P1.00mm_Vertical" H 8650 5700 50  0001 C CNN
-F 3 "~" H 8650 5700 50  0001 C CNN
-	1    8650 5700
-	1    0    0    -1  
-$EndComp
-Text Label 8450 5200 2    50   ~ 0
-col4
-Text Label 8450 5300 2    50   ~ 0
-col3
-Text Label 8450 5400 2    50   ~ 0
-col2
-Text Label 8450 5500 2    50   ~ 0
-col1
-Text Label 8450 5600 2    50   ~ 0
-row0,2
-Text Label 8450 5700 2    50   ~ 0
-row0,1
-Text Label 8450 5800 2    50   ~ 0
-row0,0
-Text GLabel 8450 5900 0    50   Input ~ 0
-BOOT0
-Text Label 8450 6000 2    50   ~ 0
-col0
-Text GLabel 8450 6100 0    50   Input ~ 0
-PB9
-$Comp
-L power:GND #PWR0154
-U 1 1 5F96F9D5
-P 8450 6200
-F 0 "#PWR0154" H 8450 5950 50  0001 C CNN
-F 1 "GND" V 8450 5950 50  0000 C CNN
-F 2 "" H 8450 6200 50  0001 C CNN
-F 3 "" H 8450 6200 50  0001 C CNN
-	1    8450 6200
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0155
-U 1 1 5F970461
-P 8450 6300
-F 0 "#PWR0155" H 8450 6150 50  0001 C CNN
-F 1 "+3.3V" V 8450 6550 50  0000 C CNN
-F 2 "" H 8450 6300 50  0001 C CNN
-F 3 "" H 8450 6300 50  0001 C CNN
-	1    8450 6300
-	0    -1   -1   0   
-$EndComp
+Wire Wire Line
+	6000 6150 6100 6150
+NoConn ~ 5200 3750
+NoConn ~ 5200 3850
+NoConn ~ 5200 4050
+NoConn ~ 5200 4150
+NoConn ~ 5200 4250
+NoConn ~ 5200 4450
+NoConn ~ 5200 4550
+NoConn ~ 5200 4650
+NoConn ~ 5200 5350
+NoConn ~ 5200 5650
+NoConn ~ 5200 5750
+NoConn ~ 5200 5850
+NoConn ~ 5200 5950
+NoConn ~ 6500 5750
+NoConn ~ 6500 5450
+NoConn ~ 6500 5350
+NoConn ~ 6500 5250
+NoConn ~ 6500 5150
+NoConn ~ 6500 5050
+NoConn ~ 6500 4950
+NoConn ~ 6500 4850
+NoConn ~ 6500 4750
+NoConn ~ 6500 4450
+NoConn ~ 6500 4550
 $EndSCHEMATC
