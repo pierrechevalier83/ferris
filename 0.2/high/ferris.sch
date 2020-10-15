@@ -1,0 +1,2142 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L keyboard_parts:KEYSW K0_0
+U 1 1 5EE18079
+P 1350 1200
+F 0 "K0_0" H 1350 1433 60  0000 C CNN
+F 1 "KEYSW" H 1350 1100 60  0001 C CNN
+F 2 "switches:MX" H 1350 1200 60  0001 C CNN
+F 3 "" H 1350 1200 60  0000 C CNN
+F 4 "C489144" H 1350 1200 50  0001 C CNN "LCSC Part #"
+	1    1350 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_0
+U 1 1 5EE1B34F
+P 1050 1350
+F 0 "D0_0" V 1096 1270 50  0000 R CNN
+F 1 "D" V 1005 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1050 1350 50  0001 C CNN
+F 3 "~" H 1050 1350 50  0001 C CNN
+F 4 "C81598" V 1050 1350 50  0001 C CNN "LCSC Part #"
+	1    1050 1350
+	0    -1   -1   0   
+$EndComp
+Text Label 1650 900  0    50   ~ 0
+col0
+Wire Wire Line
+	1650 900  1650 1200
+Text Label 900  1500 2    50   ~ 0
+row0,0
+Wire Wire Line
+	900  1500 1050 1500
+Text Label 900  2100 2    50   ~ 0
+row0,1
+$Comp
+L keyboard_parts:KEYSW K1_0
+U 1 1 5EE22042
+P 1350 1800
+F 0 "K1_0" H 1350 2033 60  0000 C CNN
+F 1 "KEYSW" H 1350 1700 60  0001 C CNN
+F 2 "switches:MX" H 1350 1800 60  0001 C CNN
+F 3 "" H 1350 1800 60  0000 C CNN
+	1    1350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1_0
+U 1 1 5EE22835
+P 1050 1950
+F 0 "D1_0" V 1096 1870 50  0000 R CNN
+F 1 "D" V 1005 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1050 1950 50  0001 C CNN
+F 3 "~" H 1050 1950 50  0001 C CNN
+	1    1050 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1650 1200 1650 1800
+Connection ~ 1650 1200
+Wire Wire Line
+	900  2100 1050 2100
+Text Label 2350 900  0    50   ~ 0
+col1
+Wire Wire Line
+	2350 900  2350 1200
+$Comp
+L Device:D D0_1
+U 1 1 5EE44032
+P 1750 1350
+F 0 "D0_1" V 1796 1270 50  0000 R CNN
+F 1 "D" V 1705 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1750 1350 50  0001 C CNN
+F 3 "~" H 1750 1350 50  0001 C CNN
+	1    1750 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1050 1500 1750 1500
+Connection ~ 1050 1500
+$Comp
+L Device:D D1_1
+U 1 1 5EE478DC
+P 1750 1950
+F 0 "D1_1" V 1796 1870 50  0000 R CNN
+F 1 "D" V 1705 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1750 1950 50  0001 C CNN
+F 3 "~" H 1750 1950 50  0001 C CNN
+	1    1750 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K1_1
+U 1 1 5EE47E8A
+P 2050 1800
+F 0 "K1_1" H 2050 2033 60  0000 C CNN
+F 1 "KEYSW" H 2050 1700 60  0001 C CNN
+F 2 "switches:MX" H 2050 1800 60  0001 C CNN
+F 3 "" H 2050 1800 60  0000 C CNN
+	1    2050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1200 2350 1800
+Wire Wire Line
+	1050 2100 1750 2100
+Connection ~ 1050 2100
+$Comp
+L keyboard_parts:KEYSW K0_2
+U 1 1 5EE8C569
+P 2750 1200
+F 0 "K0_2" H 2750 1433 60  0000 C CNN
+F 1 "KEYSW" H 2750 1100 60  0001 C CNN
+F 2 "switches:MX" H 2750 1200 60  0001 C CNN
+F 3 "" H 2750 1200 60  0000 C CNN
+	1    2750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_2
+U 1 1 5EE8DCFE
+P 2450 1350
+F 0 "D0_2" V 2496 1270 50  0000 R CNN
+F 1 "D" V 2405 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 2450 1350 50  0001 C CNN
+F 3 "~" H 2450 1350 50  0001 C CNN
+	1    2450 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K0_1
+U 1 1 5EEBC822
+P 2050 1200
+F 0 "K0_1" H 2050 1433 60  0000 C CNN
+F 1 "KEYSW" H 2050 1100 60  0001 C CNN
+F 2 "switches:MX" H 2050 1200 60  0001 C CNN
+F 3 "" H 2050 1200 60  0000 C CNN
+	1    2050 1200
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 1200
+Text Label 3050 900  0    50   ~ 0
+col2
+Wire Wire Line
+	1750 1500 2450 1500
+Connection ~ 1750 1500
+$Comp
+L keyboard_parts:KEYSW K1_2
+U 1 1 5EECD1C4
+P 2750 1800
+F 0 "K1_2" H 2750 2033 60  0000 C CNN
+F 1 "KEYSW" H 2750 1700 60  0001 C CNN
+F 2 "switches:MX" H 2750 1800 60  0001 C CNN
+F 3 "" H 2750 1800 60  0000 C CNN
+	1    2750 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 900  3050 1200
+Wire Wire Line
+	3050 1200 3050 1800
+Connection ~ 3050 1200
+$Comp
+L Device:D D1_2
+U 1 1 5EED29B3
+P 2450 1950
+F 0 "D1_2" V 2496 1870 50  0000 R CNN
+F 1 "D" V 2405 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 2450 1950 50  0001 C CNN
+F 3 "~" H 2450 1950 50  0001 C CNN
+	1    2450 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_0
+U 1 1 5EED2FA2
+P 1350 2400
+F 0 "K2_0" H 1350 2633 60  0000 C CNN
+F 1 "KEYSW" H 1350 2300 60  0001 C CNN
+F 2 "switches:MX" H 1350 2400 60  0001 C CNN
+F 3 "" H 1350 2400 60  0000 C CNN
+	1    1350 2400
+	1    0    0    -1  
+$EndComp
+Text Label 900  2700 2    50   ~ 0
+row0,2
+$Comp
+L Device:D D2_0
+U 1 1 5EED3821
+P 1050 2550
+F 0 "D2_0" V 1096 2470 50  0000 R CNN
+F 1 "D" V 1005 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1050 2550 50  0001 C CNN
+F 3 "~" H 1050 2550 50  0001 C CNN
+	1    1050 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1650 1800 1650 2400
+Connection ~ 1650 1800
+$Comp
+L keyboard_parts:KEYSW K2_1
+U 1 1 5EED5B60
+P 2050 2400
+F 0 "K2_1" H 2050 2633 60  0000 C CNN
+F 1 "KEYSW" H 2050 2300 60  0001 C CNN
+F 2 "switches:MX" H 2050 2400 60  0001 C CNN
+F 3 "" H 2050 2400 60  0000 C CNN
+	1    2050 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_2
+U 1 1 5EED6065
+P 2750 2400
+F 0 "K2_2" H 2750 2633 60  0000 C CNN
+F 1 "KEYSW" H 2750 2300 60  0001 C CNN
+F 2 "switches:MX" H 2750 2400 60  0001 C CNN
+F 3 "" H 2750 2400 60  0000 C CNN
+	1    2750 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1800 2350 2400
+Connection ~ 2350 1800
+Wire Wire Line
+	3050 1800 3050 2400
+Connection ~ 3050 1800
+Wire Wire Line
+	1750 2100 2450 2100
+Connection ~ 1750 2100
+$Comp
+L Device:D D2_1
+U 1 1 5EEEC45B
+P 1750 2550
+F 0 "D2_1" V 1796 2470 50  0000 R CNN
+F 1 "D" V 1705 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1750 2550 50  0001 C CNN
+F 3 "~" H 1750 2550 50  0001 C CNN
+	1    1750 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D2_2
+U 1 1 5EEECA76
+P 2450 2550
+F 0 "D2_2" V 2496 2470 50  0000 R CNN
+F 1 "D" V 2405 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 2450 2550 50  0001 C CNN
+F 3 "~" H 2450 2550 50  0001 C CNN
+	1    2450 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	900  2700 1050 2700
+Connection ~ 1050 2700
+Wire Wire Line
+	1050 2700 1750 2700
+Connection ~ 1750 2700
+Wire Wire Line
+	1750 2700 2450 2700
+$Comp
+L keyboard_parts:KEYSW K0_3
+U 1 1 5EEF6C30
+P 3450 1200
+F 0 "K0_3" H 3450 1433 60  0000 C CNN
+F 1 "KEYSW" H 3450 1100 60  0001 C CNN
+F 2 "switches:MX" H 3450 1200 60  0001 C CNN
+F 3 "" H 3450 1200 60  0000 C CNN
+	1    3450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K1_3
+U 1 1 5EEF70F9
+P 3450 1800
+F 0 "K1_3" H 3450 2033 60  0000 C CNN
+F 1 "KEYSW" H 3450 1700 60  0001 C CNN
+F 2 "switches:MX" H 3450 1800 60  0001 C CNN
+F 3 "" H 3450 1800 60  0000 C CNN
+	1    3450 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_3
+U 1 1 5EEF764A
+P 3450 2400
+F 0 "K2_3" H 3450 2633 60  0000 C CNN
+F 1 "KEYSW" H 3450 2300 60  0001 C CNN
+F 2 "switches:MX" H 3450 2400 60  0001 C CNN
+F 3 "" H 3450 2400 60  0000 C CNN
+	1    3450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_3
+U 1 1 5EEF7A7A
+P 3150 1350
+F 0 "D0_3" V 3196 1270 50  0000 R CNN
+F 1 "D" V 3105 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3150 1350 50  0001 C CNN
+F 3 "~" H 3150 1350 50  0001 C CNN
+	1    3150 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D1_3
+U 1 1 5EEF7F2D
+P 3150 1950
+F 0 "D1_3" V 3196 1870 50  0000 R CNN
+F 1 "D" V 3105 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3150 1950 50  0001 C CNN
+F 3 "~" H 3150 1950 50  0001 C CNN
+	1    3150 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D2_3
+U 1 1 5EEF838C
+P 3150 2550
+F 0 "D2_3" V 3196 2470 50  0000 R CNN
+F 1 "D" V 3105 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3150 2550 50  0001 C CNN
+F 3 "~" H 3150 2550 50  0001 C CNN
+	1    3150 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K0_4
+U 1 1 5EEF9889
+P 4150 1200
+F 0 "K0_4" H 4150 1433 60  0000 C CNN
+F 1 "KEYSW" H 4150 1100 60  0001 C CNN
+F 2 "switches:MX" H 4150 1200 60  0001 C CNN
+F 3 "" H 4150 1200 60  0000 C CNN
+	1    4150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_4
+U 1 1 5EEFA013
+P 3850 1350
+F 0 "D0_4" V 3896 1270 50  0000 R CNN
+F 1 "D" V 3805 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3850 1350 50  0001 C CNN
+F 3 "~" H 3850 1350 50  0001 C CNN
+	1    3850 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K1_4
+U 1 1 5EEFA968
+P 4150 1800
+F 0 "K1_4" H 4150 2033 60  0000 C CNN
+F 1 "KEYSW" H 4150 1700 60  0001 C CNN
+F 2 "switches:MX" H 4150 1800 60  0001 C CNN
+F 3 "" H 4150 1800 60  0000 C CNN
+	1    4150 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1_4
+U 1 1 5EEFB5C1
+P 3850 1950
+F 0 "D1_4" V 3896 1870 50  0000 R CNN
+F 1 "D" V 3805 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3850 1950 50  0001 C CNN
+F 3 "~" H 3850 1950 50  0001 C CNN
+	1    3850 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_4
+U 1 1 5EEFBA25
+P 4150 2400
+F 0 "K2_4" H 4150 2633 60  0000 C CNN
+F 1 "KEYSW" H 4150 2300 60  0001 C CNN
+F 2 "switches:MX" H 4150 2400 60  0001 C CNN
+F 3 "" H 4150 2400 60  0000 C CNN
+	1    4150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2_4
+U 1 1 5EEFC892
+P 3850 2550
+F 0 "D2_4" V 3896 2470 50  0000 R CNN
+F 1 "D" V 3805 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3850 2550 50  0001 C CNN
+F 3 "~" H 3850 2550 50  0001 C CNN
+	1    3850 2550
+	0    -1   -1   0   
+$EndComp
+Text Label 3750 900  0    50   ~ 0
+col3
+Text Label 4450 900  0    50   ~ 0
+col4
+Wire Wire Line
+	4450 900  4450 1200
+Connection ~ 4450 1200
+Connection ~ 4450 1800
+Wire Wire Line
+	3750 900  3750 1200
+Connection ~ 3750 1200
+Wire Wire Line
+	3750 1200 3750 1800
+Connection ~ 3750 1800
+Wire Wire Line
+	3750 1800 3750 2400
+Connection ~ 2450 1500
+Connection ~ 3150 1500
+Wire Wire Line
+	3150 1500 2450 1500
+Wire Wire Line
+	3850 1500 3150 1500
+Wire Wire Line
+	4450 2100 3850 2100
+Connection ~ 2450 2100
+Connection ~ 3150 2100
+Wire Wire Line
+	3150 2100 2450 2100
+Connection ~ 3850 2100
+Wire Wire Line
+	3850 2100 3150 2100
+Connection ~ 2450 2700
+Connection ~ 3150 2700
+Wire Wire Line
+	3150 2700 2450 2700
+Wire Wire Line
+	3850 2700 3150 2700
+$Comp
+L keyboard_parts:KEYSW K3_3
+U 1 1 5EF1C6CA
+P 3450 3000
+F 0 "K3_3" H 3450 3233 60  0000 C CNN
+F 1 "KEYSW" H 3450 2900 60  0001 C CNN
+F 2 "switches:MX" H 3450 3000 60  0001 C CNN
+F 3 "" H 3450 3000 60  0000 C CNN
+	1    3450 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K3_4
+U 1 1 5EF1CAA2
+P 4150 3000
+F 0 "K3_4" H 4150 3233 60  0000 C CNN
+F 1 "KEYSW" H 4150 2900 60  0001 C CNN
+F 2 "switches:MX" H 4150 3000 60  0001 C CNN
+F 3 "" H 4150 3000 60  0000 C CNN
+	1    4150 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D3_3
+U 1 1 5EF1DB01
+P 3150 3150
+F 0 "D3_3" V 3196 3070 50  0000 R CNN
+F 1 "D" V 3105 3070 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3150 3150 50  0001 C CNN
+F 3 "~" H 3150 3150 50  0001 C CNN
+	1    3150 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D3_4
+U 1 1 5EF1DFD1
+P 3850 3150
+F 0 "D3_4" V 3896 3070 50  0000 R CNN
+F 1 "D" V 3805 3070 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 3850 3150 50  0001 C CNN
+F 3 "~" H 3850 3150 50  0001 C CNN
+	1    3850 3150
+	0    -1   -1   0   
+$EndComp
+Text Label 900  3300 2    50   ~ 0
+row0,3
+Wire Wire Line
+	4450 3000 4450 2400
+Wire Wire Line
+	3150 3300 3850 3300
+Connection ~ 3750 2400
+Wire Wire Line
+	3850 1500 4450 1500
+Connection ~ 3850 1500
+$Comp
+L keyboard_parts:KEYSW K0_5
+U 1 1 5FD3ADBA
+P 7450 1200
+F 0 "K0_5" H 7450 1433 60  0000 C CNN
+F 1 "KEYSW" H 7450 1100 60  0001 C CNN
+F 2 "switches:MX" H 7450 1200 60  0001 C CNN
+F 3 "" H 7450 1200 60  0000 C CNN
+	1    7450 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_5
+U 1 1 5FD3ADC4
+P 7150 1350
+F 0 "D0_5" V 7196 1270 50  0000 R CNN
+F 1 "D" V 7105 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7150 1350 50  0001 C CNN
+F 3 "~" H 7150 1350 50  0001 C CNN
+	1    7150 1350
+	0    -1   -1   0   
+$EndComp
+Text Label 7750 900  0    50   ~ 0
+col5
+Wire Wire Line
+	7750 900  7750 1200
+Text Label 7000 1500 2    50   ~ 0
+row1,0
+Wire Wire Line
+	7000 1500 7150 1500
+Text Label 7000 2100 2    50   ~ 0
+row1,1
+$Comp
+L keyboard_parts:KEYSW K1_5
+U 1 1 5FD3ADD3
+P 7450 1800
+F 0 "K1_5" H 7450 2033 60  0000 C CNN
+F 1 "KEYSW" H 7450 1700 60  0001 C CNN
+F 2 "switches:MX" H 7450 1800 60  0001 C CNN
+F 3 "" H 7450 1800 60  0000 C CNN
+	1    7450 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1_5
+U 1 1 5FD3ADDD
+P 7150 1950
+F 0 "D1_5" V 7196 1870 50  0000 R CNN
+F 1 "D" V 7105 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7150 1950 50  0001 C CNN
+F 3 "~" H 7150 1950 50  0001 C CNN
+	1    7150 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 1200 7750 1800
+Connection ~ 7750 1200
+Wire Wire Line
+	7000 2100 7150 2100
+Text Label 8450 900  0    50   ~ 0
+col6
+Wire Wire Line
+	8450 900  8450 1200
+$Comp
+L Device:D D0_6
+U 1 1 5FD3ADEC
+P 7850 1350
+F 0 "D0_6" V 7896 1270 50  0000 R CNN
+F 1 "D" V 7805 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7850 1350 50  0001 C CNN
+F 3 "~" H 7850 1350 50  0001 C CNN
+	1    7850 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 1500 7850 1500
+Connection ~ 7150 1500
+$Comp
+L Device:D D1_6
+U 1 1 5FD3ADF8
+P 7850 1950
+F 0 "D1_6" V 7896 1870 50  0000 R CNN
+F 1 "D" V 7805 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7850 1950 50  0001 C CNN
+F 3 "~" H 7850 1950 50  0001 C CNN
+	1    7850 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K1_6
+U 1 1 5FD3AE02
+P 8150 1800
+F 0 "K1_6" H 8150 2033 60  0000 C CNN
+F 1 "KEYSW" H 8150 1700 60  0001 C CNN
+F 2 "switches:MX" H 8150 1800 60  0001 C CNN
+F 3 "" H 8150 1800 60  0000 C CNN
+	1    8150 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 1200 8450 1800
+Wire Wire Line
+	7150 2100 7850 2100
+Connection ~ 7150 2100
+$Comp
+L keyboard_parts:KEYSW K0_7
+U 1 1 5FD3AE0F
+P 8850 1200
+F 0 "K0_7" H 8850 1433 60  0000 C CNN
+F 1 "KEYSW" H 8850 1100 60  0001 C CNN
+F 2 "switches:MX" H 8850 1200 60  0001 C CNN
+F 3 "" H 8850 1200 60  0000 C CNN
+	1    8850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_7
+U 1 1 5FD3AE19
+P 8550 1350
+F 0 "D0_7" V 8596 1270 50  0000 R CNN
+F 1 "D" V 8505 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 8550 1350 50  0001 C CNN
+F 3 "~" H 8550 1350 50  0001 C CNN
+	1    8550 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K0_6
+U 1 1 5FD3AE23
+P 8150 1200
+F 0 "K0_6" H 8150 1433 60  0000 C CNN
+F 1 "KEYSW" H 8150 1100 60  0001 C CNN
+F 2 "switches:MX" H 8150 1200 60  0001 C CNN
+F 3 "" H 8150 1200 60  0000 C CNN
+	1    8150 1200
+	1    0    0    -1  
+$EndComp
+Connection ~ 8450 1200
+Text Label 9150 900  0    50   ~ 0
+col7
+Wire Wire Line
+	7850 1500 8550 1500
+Connection ~ 7850 1500
+$Comp
+L keyboard_parts:KEYSW K1_7
+U 1 1 5FD3AE31
+P 8850 1800
+F 0 "K1_7" H 8850 2033 60  0000 C CNN
+F 1 "KEYSW" H 8850 1700 60  0001 C CNN
+F 2 "switches:MX" H 8850 1800 60  0001 C CNN
+F 3 "" H 8850 1800 60  0000 C CNN
+	1    8850 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 900  9150 1200
+Wire Wire Line
+	9150 1200 9150 1800
+Connection ~ 9150 1200
+$Comp
+L Device:D D1_7
+U 1 1 5FD3AE3E
+P 8550 1950
+F 0 "D1_7" V 8596 1870 50  0000 R CNN
+F 1 "D" V 8505 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 8550 1950 50  0001 C CNN
+F 3 "~" H 8550 1950 50  0001 C CNN
+	1    8550 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_5
+U 1 1 5FD3AE48
+P 7450 2400
+F 0 "K2_5" H 7450 2633 60  0000 C CNN
+F 1 "KEYSW" H 7450 2300 60  0001 C CNN
+F 2 "switches:MX" H 7450 2400 60  0001 C CNN
+F 3 "" H 7450 2400 60  0000 C CNN
+	1    7450 2400
+	1    0    0    -1  
+$EndComp
+Text Label 7000 2700 2    50   ~ 0
+row1,2
+$Comp
+L Device:D D2_5
+U 1 1 5FD3AE53
+P 7150 2550
+F 0 "D2_5" V 7196 2470 50  0000 R CNN
+F 1 "D" V 7105 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7150 2550 50  0001 C CNN
+F 3 "~" H 7150 2550 50  0001 C CNN
+	1    7150 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 1800 7750 2400
+Connection ~ 7750 1800
+$Comp
+L keyboard_parts:KEYSW K2_6
+U 1 1 5FD3AE5F
+P 8150 2400
+F 0 "K2_6" H 8150 2633 60  0000 C CNN
+F 1 "KEYSW" H 8150 2300 60  0001 C CNN
+F 2 "switches:MX" H 8150 2400 60  0001 C CNN
+F 3 "" H 8150 2400 60  0000 C CNN
+	1    8150 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_7
+U 1 1 5FD3AE69
+P 8850 2400
+F 0 "K2_7" H 8850 2633 60  0000 C CNN
+F 1 "KEYSW" H 8850 2300 60  0001 C CNN
+F 2 "switches:MX" H 8850 2400 60  0001 C CNN
+F 3 "" H 8850 2400 60  0000 C CNN
+	1    8850 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 1800 8450 2400
+Connection ~ 8450 1800
+Wire Wire Line
+	9150 1800 9150 2400
+Connection ~ 9150 1800
+Wire Wire Line
+	7850 2100 8550 2100
+Connection ~ 7850 2100
+$Comp
+L Device:D D2_6
+U 1 1 5FD3AE79
+P 7850 2550
+F 0 "D2_6" V 7896 2470 50  0000 R CNN
+F 1 "D" V 7805 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7850 2550 50  0001 C CNN
+F 3 "~" H 7850 2550 50  0001 C CNN
+	1    7850 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D2_7
+U 1 1 5FD3AE83
+P 8550 2550
+F 0 "D2_7" V 8596 2470 50  0000 R CNN
+F 1 "D" V 8505 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 8550 2550 50  0001 C CNN
+F 3 "~" H 8550 2550 50  0001 C CNN
+	1    8550 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7000 2700 7150 2700
+Connection ~ 7150 2700
+Wire Wire Line
+	7150 2700 7850 2700
+Connection ~ 7850 2700
+Wire Wire Line
+	7850 2700 8550 2700
+$Comp
+L keyboard_parts:KEYSW K0_8
+U 1 1 5FD3AE92
+P 9550 1200
+F 0 "K0_8" H 9550 1433 60  0000 C CNN
+F 1 "KEYSW" H 9550 1100 60  0001 C CNN
+F 2 "switches:MX" H 9550 1200 60  0001 C CNN
+F 3 "" H 9550 1200 60  0000 C CNN
+	1    9550 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K1_8
+U 1 1 5FD3AE9C
+P 9550 1800
+F 0 "K1_8" H 9550 2033 60  0000 C CNN
+F 1 "KEYSW" H 9550 1700 60  0001 C CNN
+F 2 "switches:MX" H 9550 1800 60  0001 C CNN
+F 3 "" H 9550 1800 60  0000 C CNN
+	1    9550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_8
+U 1 1 5FD3AEA6
+P 9550 2400
+F 0 "K2_8" H 9550 2633 60  0000 C CNN
+F 1 "KEYSW" H 9550 2300 60  0001 C CNN
+F 2 "switches:MX" H 9550 2400 60  0001 C CNN
+F 3 "" H 9550 2400 60  0000 C CNN
+	1    9550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_8
+U 1 1 5FD3AEB0
+P 9250 1350
+F 0 "D0_8" V 9296 1270 50  0000 R CNN
+F 1 "D" V 9205 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 9250 1350 50  0001 C CNN
+F 3 "~" H 9250 1350 50  0001 C CNN
+	1    9250 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D1_8
+U 1 1 5FD3AEBA
+P 9250 1950
+F 0 "D1_8" V 9296 1870 50  0000 R CNN
+F 1 "D" V 9205 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 9250 1950 50  0001 C CNN
+F 3 "~" H 9250 1950 50  0001 C CNN
+	1    9250 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D2_8
+U 1 1 5FD3AEC4
+P 9250 2550
+F 0 "D2_8" V 9296 2470 50  0000 R CNN
+F 1 "D" V 9205 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 9250 2550 50  0001 C CNN
+F 3 "~" H 9250 2550 50  0001 C CNN
+	1    9250 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K0_9
+U 1 1 5FD3AECE
+P 10250 1200
+F 0 "K0_9" H 10250 1433 60  0000 C CNN
+F 1 "KEYSW" H 10250 1100 60  0001 C CNN
+F 2 "switches:MX" H 10250 1200 60  0001 C CNN
+F 3 "" H 10250 1200 60  0000 C CNN
+	1    10250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D0_9
+U 1 1 5FD3AED8
+P 9950 1350
+F 0 "D0_9" V 9996 1270 50  0000 R CNN
+F 1 "D" V 9905 1270 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 9950 1350 50  0001 C CNN
+F 3 "~" H 9950 1350 50  0001 C CNN
+	1    9950 1350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K1_9
+U 1 1 5FD3AEE2
+P 10250 1800
+F 0 "K1_9" H 10250 2033 60  0000 C CNN
+F 1 "KEYSW" H 10250 1700 60  0001 C CNN
+F 2 "switches:MX" H 10250 1800 60  0001 C CNN
+F 3 "" H 10250 1800 60  0000 C CNN
+	1    10250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1_9
+U 1 1 5FD3AEEC
+P 9950 1950
+F 0 "D1_9" V 9996 1870 50  0000 R CNN
+F 1 "D" V 9905 1870 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 9950 1950 50  0001 C CNN
+F 3 "~" H 9950 1950 50  0001 C CNN
+	1    9950 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K2_9
+U 1 1 5FD3AEF6
+P 10250 2400
+F 0 "K2_9" H 10250 2633 60  0000 C CNN
+F 1 "KEYSW" H 10250 2300 60  0001 C CNN
+F 2 "switches:MX" H 10250 2400 60  0001 C CNN
+F 3 "" H 10250 2400 60  0000 C CNN
+	1    10250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D2_9
+U 1 1 5FD3AF00
+P 9950 2550
+F 0 "D2_9" V 9996 2470 50  0000 R CNN
+F 1 "D" V 9905 2470 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 9950 2550 50  0001 C CNN
+F 3 "~" H 9950 2550 50  0001 C CNN
+	1    9950 2550
+	0    -1   -1   0   
+$EndComp
+Text Label 9850 900  0    50   ~ 0
+col8
+Text Label 10550 900  0    50   ~ 0
+col9
+Wire Wire Line
+	10550 900  10550 1200
+Connection ~ 10550 1200
+Connection ~ 10550 1800
+Wire Wire Line
+	9850 900  9850 1200
+Connection ~ 9850 1200
+Wire Wire Line
+	9850 1200 9850 1800
+Connection ~ 9850 1800
+Wire Wire Line
+	9850 1800 9850 2400
+Connection ~ 8550 1500
+Connection ~ 9250 1500
+Wire Wire Line
+	9250 1500 8550 1500
+Wire Wire Line
+	9950 1500 9250 1500
+Wire Wire Line
+	10550 2100 9950 2100
+Connection ~ 8550 2100
+Connection ~ 9250 2100
+Wire Wire Line
+	9250 2100 8550 2100
+Connection ~ 9950 2100
+Wire Wire Line
+	9950 2100 9250 2100
+Connection ~ 8550 2700
+Connection ~ 9250 2700
+Wire Wire Line
+	9950 2700 9250 2700
+Text Label 7000 3300 2    50   ~ 0
+row1,3
+Wire Wire Line
+	9950 1500 10550 1500
+Connection ~ 9950 1500
+Text Label 10700 4450 0    50   ~ 0
+row1,0
+Text Label 10700 4550 0    50   ~ 0
+row1,1
+Text Label 10700 4650 0    50   ~ 0
+row1,2
+Text Label 10700 4750 0    50   ~ 0
+row1,3
+Text Label 10700 5350 0    50   ~ 0
+col5
+Text Label 10700 5450 0    50   ~ 0
+col6
+Text Label 10700 5550 0    50   ~ 0
+col7
+Text Label 10700 5650 0    50   ~ 0
+col8
+Text Label 10700 5750 0    50   ~ 0
+col9
+Wire Wire Line
+	8550 2700 9250 2700
+NoConn ~ 9300 5050
+NoConn ~ 9300 5150
+NoConn ~ 10700 6050
+NoConn ~ 10700 5950
+NoConn ~ 10700 5850
+NoConn ~ 10700 5150
+NoConn ~ 10700 5050
+NoConn ~ 10700 4950
+NoConn ~ 10700 4850
+NoConn ~ 15300 3700
+Wire Wire Line
+	4450 1200 4450 1800
+Wire Wire Line
+	4450 1800 4450 2400
+Wire Wire Line
+	10550 1800 10550 2400
+Wire Wire Line
+	10550 1200 10550 1800
+$Comp
+L Interface_Expansion:MCP23017_SO U2
+U 1 1 5ED65123
+P 10000 5250
+F 0 "U2" V 9900 5250 50  0000 C CNN
+F 1 "MCP23017_SO" V 10000 5250 50  0000 C CNN
+F 2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" H 10200 4250 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 10200 4150 50  0001 L CNN
+F 4 "C47023" H 10000 5250 50  0001 C CNN "LCSC Part #"
+	1    10000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 5ED8F3F5
+P 8900 5850
+F 0 "C12" V 8800 5800 50  0000 L CNN
+F 1 "0.1u" V 9000 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8900 5850 50  0001 C CNN
+F 3 "~" H 8900 5850 50  0001 C CNN
+F 4 "C49678" V 8900 5850 50  0001 C CNN "LCSC Part #"
+	1    8900 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 3000 3750 2400
+Connection ~ 4450 2400
+Wire Wire Line
+	850  3300 3150 3300
+Connection ~ 3150 3300
+Connection ~ 8450 2400
+$Comp
+L keyboard_parts:KEYSW K3_5
+U 1 1 5FD3AF30
+P 7450 3000
+F 0 "K3_5" H 7450 3233 60  0000 C CNN
+F 1 "KEYSW" H 7450 2900 60  0001 C CNN
+F 2 "switches:MX" H 7450 3000 60  0001 C CNN
+F 3 "" H 7450 3000 60  0000 C CNN
+	1    7450 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D3_5
+U 1 1 5FD3AF4E
+P 7150 3150
+F 0 "D3_5" V 7196 3070 50  0000 R CNN
+F 1 "D" V 7105 3070 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7150 3150 50  0001 C CNN
+F 3 "~" H 7150 3150 50  0001 C CNN
+	1    7150 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8450 2400 8450 3000
+Wire Wire Line
+	7150 3300 7850 3300
+Wire Wire Line
+	7750 3000 7750 2400
+$Comp
+L Device:D D3_6
+U 1 1 5FD3AF58
+P 7850 3150
+F 0 "D3_6" V 7896 3070 50  0000 R CNN
+F 1 "D" V 7805 3070 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7850 3150 50  0001 C CNN
+F 3 "~" H 7850 3150 50  0001 C CNN
+	1    7850 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L keyboard_parts:KEYSW K3_6
+U 1 1 5FD3AF3A
+P 8150 3000
+F 0 "K3_6" H 8150 3233 60  0000 C CNN
+F 1 "KEYSW" H 8150 2900 60  0001 C CNN
+F 2 "switches:MX" H 8150 3000 60  0001 C CNN
+F 3 "" H 8150 3000 60  0000 C CNN
+	1    8150 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 7750 2400
+Wire Wire Line
+	7000 3300 7150 3300
+Connection ~ 7150 3300
+Wire Wire Line
+	4550 7500 4500 7500
+$Comp
+L Device:C_Small C13
+U 1 1 5F9F59AE
+P 8900 6150
+F 0 "C13" V 8800 6100 50  0000 L CNN
+F 1 "0.1u" V 9000 6050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8900 6150 50  0001 C CNN
+F 3 "~" H 8900 6150 50  0001 C CNN
+F 4 "C49678" V 8900 6150 50  0001 C CNN "LCSC Part #"
+	1    8900 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 6150 9000 5850
+Wire Wire Line
+	8800 6150 8800 5850
+Wire Wire Line
+	9100 5850 9000 5850
+Connection ~ 9000 5850
+Connection ~ 8800 5850
+$Comp
+L Device:R R6
+U 1 1 5FA6C6B0
+P 9150 5350
+F 0 "R6" V 9050 5350 50  0000 C CNN
+F 1 "10k" V 9150 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9080 5350 50  0001 C CNN
+F 3 "~" H 9150 5350 50  0001 C CNN
+F 4 "C17414" V 9150 5350 50  0001 C CNN "LCSC Part #"
+	1    9150 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9300 5850 9300 5950
+Connection ~ 9300 5950
+Wire Wire Line
+	9300 5950 9300 6050
+Wire Wire Line
+	9300 6350 10000 6350
+Connection ~ 9300 6050
+Wire Wire Line
+	9300 6050 9300 6350
+Wire Wire Line
+	8700 5850 8800 5850
+$Comp
+L power:GND #PWR0106
+U 1 1 5F0D6F7A
+P 4550 7600
+F 0 "#PWR0106" H 4550 7650 20  0001 C CNN
+F 1 "GND" H 4600 7550 30  0000 L CNN
+F 2 "" H 4550 7600 60  0000 C CNN
+F 3 "" H 4550 7600 60  0000 C CNN
+	1    4550 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack4 Jack0
+U 1 1 5FF96E70
+P 4750 7500
+F 0 "Jack0" H 4750 7700 50  0000 R CNN
+F 1 "TRRS" H 4750 7150 50  0000 R CNN
+F 2 "kbd:TRRS-PJ-320A" H 4750 7500 50  0001 C CNN
+F 3 "" H 4750 7500 50  0001 C CNN
+F 4 "C12569" H 4750 7500 50  0001 C CNN "LCSC Part #"
+	1    4750 7500
+	-1   0    0    1   
+$EndComp
+$Comp
+L MCU_ST_STM32F0:STM32F072CBUx U1
+U 1 1 5F410845
+P 5900 4650
+F 0 "U1" H 5900 4700 50  0000 C CNN
+F 1 "STM32F072CBTx" H 5850 4600 50  0000 C CNN
+F 2 "breakout_pins:Dual_MCU_QFP_QFN_48_with_breakout_pins" H 5300 3250 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf" H 5900 4650 50  0001 C CNN
+F 4 "C81720" H 5900 4650 50  0001 C CNN "LCSC Part #"
+	1    5900 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3150 5800 3150
+Connection ~ 5800 3150
+Wire Wire Line
+	5800 3150 5900 3150
+Connection ~ 5900 3150
+Wire Wire Line
+	5900 3150 6000 3150
+Connection ~ 6000 3150
+Wire Wire Line
+	6000 3150 6100 3150
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5F4EF4D2
+P 6100 3150
+F 0 "#PWR0101" H 6100 3000 50  0001 C CNN
+F 1 "+3.3V" H 6115 3323 50  0000 C CNN
+F 2 "" H 6100 3150 50  0001 C CNN
+F 3 "" H 6100 3150 50  0001 C CNN
+	1    6100 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6100 3150
+Wire Wire Line
+	5700 6150 5800 6150
+Connection ~ 5800 6150
+Wire Wire Line
+	5800 6150 5900 6150
+Connection ~ 5900 6150
+Wire Wire Line
+	5900 6150 6000 6150
+$Comp
+L Device:C_Small C3
+U 1 1 5F515E8B
+P 1400 7600
+F 0 "C3" H 1200 7500 50  0000 L CNN
+F 1 "10uF" H 1100 7400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1400 7600 50  0001 C CNN
+F 3 "~" H 1400 7600 50  0001 C CNN
+F 4 "C17024" H 1400 7600 50  0001 C CNN "LCSC Part #"
+	1    1400 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5F517791
+P 1550 7600
+F 0 "R5" H 1609 7646 50  0000 L CNN
+F 1 "100k" H 1609 7555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1550 7600 50  0001 C CNN
+F 3 "~" H 1550 7600 50  0001 C CNN
+	1    1550 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 5F51983E
+P 1250 7500
+F 0 "D3" V 1350 7600 50  0000 R CNN
+F 1 "D" V 1250 7600 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 1250 7500 50  0001 C CNN
+F 3 "~" H 1250 7500 50  0001 C CNN
+	1    1250 7500
+	-1   0    0    1   
+$EndComp
+$Comp
+L keyboard_parts:SW_PUSH SW1
+U 1 1 5F572C93
+P 800 7500
+F 0 "SW1" H 800 7500 50  0000 C CNN
+F 1 "SW_PUSH" H 800 7650 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3U-1000P" H 800 7500 60  0001 C CNN
+F 3 "" H 800 7500 60  0001 C CNN
+F 4 "C231329" H 800 7500 50  0001 C CNN "LCSC Part #"
+	1    800  7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 5F5736B7
+P 500 7500
+F 0 "#PWR0104" H 500 7350 50  0001 C CNN
+F 1 "+3.3V" H 515 7673 50  0000 C CNN
+F 2 "" H 500 7500 50  0001 C CNN
+F 3 "" H 500 7500 50  0001 C CNN
+	1    500  7500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 7500
+Wire Wire Line
+	1750 7500 1550 7500
+Wire Wire Line
+	1550 7500 1400 7500
+Connection ~ 1550 7500
+$Comp
+L Device:C_Small C4
+U 1 1 5F5C1502
+P 1650 7000
+F 0 "C4" H 1742 7046 50  0000 L CNN
+F 1 "4.7nF" H 1600 6900 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1650 7000 50  0001 C CNN
+F 3 "~" H 1650 7000 50  0001 C CNN
+F 4 "C717014" H 1650 7000 50  0001 C CNN "LCSC Part #"
+	1    1650 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:DTC123J Q1
+U 1 1 5F5C26BA
+P 1350 7100
+F 0 "Q1" H 1000 7000 50  0000 L CNN
+F 1 "DTC123J" H 1150 7300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1350 7100 50  0001 L CNN
+F 3 "" H 1350 7100 50  0001 L CNN
+F 4 "C406040" H 1350 7100 50  0001 C CNN "LCSC Part #"
+	1    1350 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 6900 1650 6900
+Text Label 6500 5650 0    50   ~ 0
+D+
+NoConn ~ 750  5350
+Wire Wire Line
+	1950 4050 1950 4150
+$Comp
+L power:+5V #PWR0102
+U 1 1 5EF7A4D9
+P 1950 3850
+F 0 "#PWR0102" H 1950 3820 20  0001 C CNN
+F 1 "+5V" H 1965 4008 30  0000 C CNN
+F 2 "" H 1950 3850 60  0000 C CNN
+F 3 "" H 1950 3850 60  0000 C CNN
+	1    1950 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 1650 3850
+$Comp
+L Device:Polyfuse F1
+U 1 1 5EF6C20F
+P 1800 3850
+F 0 "F1" V 1700 3850 50  0000 C CNN
+F 1 "500mA" V 1800 3850 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 1850 3650 50  0001 L CNN
+F 3 "~" H 1800 3850 50  0001 C CNN
+F 4 "C151162" V 1800 3850 50  0001 C CNN "LCSC Part #"
+	1    1800 3850
+	0    1    1    0   
+$EndComp
+Text Label 4000 3950 0    50   ~ 0
+D-
+Text Label 4000 5150 0    50   ~ 0
+D+
+$Comp
+L power:VCC #PWR0109
+U 1 1 5F35FC78
+P 1650 3850
+F 0 "#PWR0109" H 1650 3700 50  0001 C CNN
+F 1 "VCC" V 1665 3977 50  0000 L CNN
+F 2 "" H 1650 3850 50  0001 C CNN
+F 3 "" H 1650 3850 50  0001 C CNN
+	1    1650 3850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1650 5050
+NoConn ~ 1650 4950
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J1
+U 1 1 5EF5D00C
+P 1050 4450
+F 0 "J1" H 1157 5317 50  0000 C CNN
+F 1 "USB C" H 1157 5226 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12" H 1200 4450 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1200 4450 50  0001 C CNN
+F 4 "C165948" H 1050 4450 50  0001 C CNN "LCSC Part #"
+	1    1050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5ED69FD6
+P 1800 4150
+F 0 "R2" V 1900 4150 50  0000 C CNN
+F 1 "5.1K" V 1800 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1730 4150 50  0001 C CNN
+F 3 "~" H 1800 4150 50  0001 C CNN
+	1    1800 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5ED68FE1
+P 1800 4050
+F 0 "R1" V 1700 4050 50  0000 C CNN
+F 1 "5.1K" V 1800 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1730 4050 50  0001 C CNN
+F 3 "~" H 1800 4050 50  0001 C CNN
+F 4 "C27834" V 1800 4050 50  0001 C CNN "LCSC Part #"
+	1    1800 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_TVS D1
+U 1 1 5F7742E5
+P 2100 3850
+F 0 "D1" H 2100 4067 50  0000 C CNN
+F 1 "SMF9.0CA" H 2100 3976 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 2100 3850 50  0001 C CNN
+F 3 "~" H 2100 3850 50  0001 C CNN
+F 4 "C435473" H 2100 3850 50  0001 C CNN "LCSC Part #"
+	1    2100 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 3850
+$Comp
+L Diode:SB160 D2
+U 1 1 5F77E041
+P 1350 5850
+F 0 "D2" H 1350 6067 50  0000 C CNN
+F 1 "RB060M-30TR" H 1350 5976 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 1350 5675 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds23022.pdf" H 1350 5850 50  0001 C CNN
+F 4 "C559324" H 1350 5850 50  0001 C CNN "LCSC Part #"
+	1    1350 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5F7A600F
+P 1700 6300
+F 0 "C2" H 1792 6346 50  0000 L CNN
+F 1 "1uF" H 1792 6255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1700 6300 50  0001 C CNN
+F 3 "~" H 1700 6300 50  0001 C CNN
+	1    1700 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5F7A7ED9
+P 1950 6300
+F 0 "R4" H 2009 6346 50  0000 L CNN
+F 1 "100k" H 2009 6255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1950 6300 50  0001 C CNN
+F 3 "~" H 1950 6300 50  0001 C CNN
+	1    1950 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5F7A908E
+P 1000 6300
+F 0 "C1" H 850 6300 50  0000 L CNN
+F 1 "1uF" H 850 6200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1000 6300 50  0001 C CNN
+F 3 "~" H 1000 6300 50  0001 C CNN
+F 4 "C28323" H 1000 6300 50  0001 C CNN "LCSC Part #"
+	1    1000 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5F7AA074
+P 800 6300
+F 0 "R3" H 650 6350 50  0000 L CNN
+F 1 "100k" H 550 6250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 800 6300 50  0001 C CNN
+F 3 "~" H 800 6300 50  0001 C CNN
+F 4 "C149504" H 800 6300 50  0001 C CNN "LCSC Part #"
+	1    800  6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0114
+U 1 1 5F7CFDB7
+P 1950 6200
+F 0 "#PWR0114" H 1950 6050 50  0001 C CNN
+F 1 "+3.3V" H 1965 6373 50  0000 C CNN
+F 2 "" H 1950 6200 50  0001 C CNN
+F 3 "" H 1950 6200 50  0001 C CNN
+	1    1950 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5F812062
+P 2550 6900
+F 0 "C7" V 2450 6850 50  0000 L CNN
+F 1 "1uF" V 2650 6800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2550 6900 50  0001 C CNN
+F 3 "~" H 2550 6900 50  0001 C CNN
+F 4 "C49678" V 2550 6900 50  0001 C CNN "LCSC Part #"
+	1    2550 6900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5F8185CF
+P 2550 6600
+F 0 "C6" V 2450 6550 50  0000 L CNN
+F 1 "4.7uF" V 2650 6500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2550 6600 50  0001 C CNN
+F 3 "~" H 2550 6600 50  0001 C CNN
+F 4 "C49678" V 2550 6600 50  0001 C CNN "LCSC Part #"
+	1    2550 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5F81D133
+P 2550 7250
+F 0 "C8" V 2450 7200 50  0000 L CNN
+F 1 "10uF" V 2650 7150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2550 7250 50  0001 C CNN
+F 3 "~" H 2550 7250 50  0001 C CNN
+F 4 "C49678" V 2550 7250 50  0001 C CNN "LCSC Part #"
+	1    2550 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5F81D63C
+P 2550 6300
+F 0 "C5" V 2450 6250 50  0000 L CNN
+F 1 "0.1uF" V 2650 6200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2550 6300 50  0001 C CNN
+F 3 "~" H 2550 6300 50  0001 C CNN
+F 4 "C49678" V 2550 6300 50  0001 C CNN "LCSC Part #"
+	1    2550 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5F81DB23
+P 3000 6300
+F 0 "C9" V 2900 6250 50  0000 L CNN
+F 1 "0.1uF" V 3100 6200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3000 6300 50  0001 C CNN
+F 3 "~" H 3000 6300 50  0001 C CNN
+F 4 "C49678" V 3000 6300 50  0001 C CNN "LCSC Part #"
+	1    3000 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5F81E072
+P 3000 6600
+F 0 "C10" V 2900 6550 50  0000 L CNN
+F 1 "0.1uF" V 3100 6500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3000 6600 50  0001 C CNN
+F 3 "~" H 3000 6600 50  0001 C CNN
+F 4 "C49678" V 3000 6600 50  0001 C CNN "LCSC Part #"
+	1    3000 6600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5F81E43D
+P 3000 6900
+F 0 "C11" V 2900 6850 50  0000 L CNN
+F 1 "4.7uF" V 3100 6800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3000 6900 50  0001 C CNN
+F 3 "~" H 3000 6900 50  0001 C CNN
+F 4 "C49678" V 3000 6900 50  0001 C CNN "LCSC Part #"
+	1    3000 6900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 6300 2450 6600
+Connection ~ 2450 6600
+Wire Wire Line
+	2450 6600 2450 6900
+Connection ~ 2450 6900
+Wire Wire Line
+	2450 6900 2450 7250
+Wire Wire Line
+	2650 6300 2650 6600
+Connection ~ 2650 6600
+Wire Wire Line
+	2650 6600 2650 6900
+Connection ~ 2650 6900
+Wire Wire Line
+	2650 6900 2650 7250
+Wire Wire Line
+	2900 6300 2900 6600
+Connection ~ 2900 6600
+Wire Wire Line
+	2900 6600 2900 6900
+Wire Wire Line
+	3100 6900 3100 6600
+Connection ~ 3100 6600
+Wire Wire Line
+	3100 6600 3100 6300
+Wire Wire Line
+	2650 6300 2650 6050
+Wire Wire Line
+	2650 6050 2900 6050
+Wire Wire Line
+	2900 6050 2900 6300
+Connection ~ 2650 6300
+Connection ~ 2900 6300
+$Comp
+L power:+3.3V #PWR0115
+U 1 1 5F8901E7
+P 2650 6050
+F 0 "#PWR0115" H 2650 5900 50  0001 C CNN
+F 1 "+3.3V" H 2665 6223 50  0000 C CNN
+F 2 "" H 2650 6050 50  0001 C CNN
+F 3 "" H 2650 6050 50  0001 C CNN
+	1    2650 6050
+	1    0    0    -1  
+$EndComp
+Connection ~ 2650 6050
+$Comp
+L power:GND #PWR0116
+U 1 1 5F8A22E9
+P 2650 7550
+F 0 "#PWR0116" H 2650 7600 20  0001 C CNN
+F 1 "GND" H 2700 7500 30  0000 L CNN
+F 2 "" H 2650 7550 60  0000 C CNN
+F 3 "" H 2650 7550 60  0000 C CNN
+	1    2650 7550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4000 7300 0    50   Input ~ 0
+i2c_scl
+Text GLabel 5200 5450 0    50   Input ~ 0
+i2c_scl
+Text GLabel 5200 5550 0    50   Input ~ 0
+i2c_sda
+Text GLabel 4000 7400 0    50   Input ~ 0
+i2c_sda
+Text Label 5200 5150 2    50   ~ 0
+row0,0
+Text Label 5200 5050 2    50   ~ 0
+row0,1
+Text Label 5200 4950 2    50   ~ 0
+row0,2
+Text Label 6500 4650 0    50   ~ 0
+row0,3
+Text Label 5200 5250 2    50   ~ 0
+col0
+Text Label 5200 4850 2    50   ~ 0
+col1
+Text Label 5200 4750 2    50   ~ 0
+col2
+Text Label 6500 5950 0    50   ~ 0
+col3
+Text Label 6500 5850 0    50   ~ 0
+col4
+$Comp
+L Regulator_Linear:MCP1700-3302E_SOT23 U3
+U 1 1 5F77927A
+P 1350 6200
+F 0 "U3" H 1350 6350 50  0000 C CNN
+F 1 "MCP1700-3302E_SOT23" H 1350 6450 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1350 6425 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 1350 6200 50  0001 C CNN
+F 4 "C39051" H 1350 6200 50  0001 C CNN "LCSC Part #"
+	1    1350 6200
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 6500
+Wire Wire Line
+	1350 6500 1350 6600
+Wire Wire Line
+	1650 6200 1700 6200
+Connection ~ 1950 6200
+Connection ~ 1700 6200
+Wire Wire Line
+	1700 6200 1950 6200
+Wire Wire Line
+	1700 6200 1700 5850
+Wire Wire Line
+	1700 5850 1500 5850
+Wire Wire Line
+	1050 6200 1000 6200
+Connection ~ 1000 6200
+Wire Wire Line
+	1000 6200 800  6200
+Wire Wire Line
+	1000 5850 1200 5850
+Wire Wire Line
+	800  6400 1000 6400
+Wire Wire Line
+	1000 6400 1000 6500
+Wire Wire Line
+	1000 6500 1350 6500
+Connection ~ 1000 6400
+Wire Wire Line
+	1700 6500 1700 6400
+Wire Wire Line
+	1350 6500 1700 6500
+Wire Wire Line
+	1700 6400 1950 6400
+Connection ~ 1700 6400
+Wire Wire Line
+	2450 7250 2450 7550
+Wire Wire Line
+	2450 7550 2650 7550
+Connection ~ 2450 7250
+Connection ~ 2650 7550
+Wire Wire Line
+	3100 7550 3100 6900
+Wire Wire Line
+	2650 7550 3100 7550
+Connection ~ 3100 6900
+Wire Wire Line
+	1400 7700 1550 7700
+Wire Wire Line
+	1750 7300 1750 6900
+Connection ~ 1100 7500
+Connection ~ 1650 6900
+Wire Wire Line
+	1100 7100 1100 7500
+Wire Wire Line
+	1450 6900 1650 6900
+Wire Wire Line
+	1650 7300 1650 7100
+Wire Wire Line
+	1450 7300 1650 7300
+$Comp
+L power:VCC #PWR0124
+U 1 1 5FF60B05
+P 6450 7350
+F 0 "#PWR0124" H 6450 7200 50  0001 C CNN
+F 1 "VCC" V 6465 7477 50  0000 L CNN
+F 2 "" H 6450 7350 50  0001 C CNN
+F 3 "" H 6450 7350 50  0001 C CNN
+	1    6450 7350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FF64D4C
+P 6450 7350
+F 0 "#FLG0102" H 6450 7425 50  0001 C CNN
+F 1 "PWR_FLAG" V 6450 7477 50  0000 L CNN
+F 2 "" H 6450 7350 50  0001 C CNN
+F 3 "~" H 6450 7350 50  0001 C CNN
+	1    6450 7350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VDD #PWR0112
+U 1 1 5FF700CF
+P 10000 4150
+F 0 "#PWR0112" H 10000 4000 50  0001 C CNN
+F 1 "VDD" H 10015 4323 50  0000 C CNN
+F 2 "" H 10000 4150 50  0001 C CNN
+F 3 "" H 10000 4150 50  0001 C CNN
+	1    10000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0119
+U 1 1 5FF72636
+P 8700 5850
+F 0 "#PWR0119" H 8700 5700 50  0001 C CNN
+F 1 "VDD" H 8715 6023 50  0000 C CNN
+F 2 "" H 8700 5850 50  0001 C CNN
+F 3 "" H 8700 5850 50  0001 C CNN
+	1    8700 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0121
+U 1 1 5FF75284
+P 9000 5350
+F 0 "#PWR0121" H 9000 5200 50  0001 C CNN
+F 1 "VDD" H 9015 5523 50  0000 C CNN
+F 2 "" H 9000 5350 50  0001 C CNN
+F 3 "" H 9000 5350 50  0001 C CNN
+	1    9000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0126
+U 1 1 5FF75F6C
+P 6450 6950
+F 0 "#PWR0126" H 6450 6800 50  0001 C CNN
+F 1 "VDD" V 6465 7078 50  0000 L CNN
+F 2 "" H 6450 6950 50  0001 C CNN
+F 3 "" H 6450 6950 50  0001 C CNN
+	1    6450 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5FF79F3E
+P 6450 6950
+F 0 "#FLG0104" H 6450 7025 50  0001 C CNN
+F 1 "PWR_FLAG" V 6450 7077 50  0000 L CNN
+F 2 "" H 6450 6950 50  0001 C CNN
+F 3 "~" H 6450 6950 50  0001 C CNN
+	1    6450 6950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5FF975F5
+P 6450 6800
+F 0 "#FLG0105" H 6450 6875 50  0001 C CNN
+F 1 "PWR_FLAG" V 6450 6927 50  0000 L CNN
+F 2 "" H 6450 6800 50  0001 C CNN
+F 3 "~" H 6450 6800 50  0001 C CNN
+	1    6450 6800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 6200 1000 5850
+Text GLabel 5200 3350 0    50   Input ~ 0
+NRST
+Text GLabel 1750 7300 2    50   Input ~ 0
+NRST
+Text GLabel 5200 3550 0    50   Input ~ 0
+BOOT0
+Text GLabel 1750 7500 2    50   Input ~ 0
+BOOT0
+Connection ~ 800  6200
+$Comp
+L power:+5V #PWR0113
+U 1 1 5F7C4E09
+P 800 6200
+F 0 "#PWR0113" H 800 6170 20  0001 C CNN
+F 1 "+5V" H 815 6358 30  0000 C CNN
+F 2 "" H 800 6200 60  0000 C CNN
+F 3 "" H 800 6200 60  0000 C CNN
+	1    800  6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR0123
+U 1 1 601946EC
+P 6450 6800
+F 0 "#PWR0123" H 6450 6550 50  0001 C CNN
+F 1 "GND1" V 6455 6672 50  0000 R CNN
+F 2 "" H 6450 6800 50  0001 C CNN
+F 3 "" H 6450 6800 50  0001 C CNN
+	1    6450 6800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6019CFDF
+P 6450 7150
+F 0 "#FLG0101" H 6450 7225 50  0001 C CNN
+F 1 "PWR_FLAG" V 6450 7277 50  0000 L CNN
+F 2 "" H 6450 7150 50  0001 C CNN
+F 3 "~" H 6450 7150 50  0001 C CNN
+	1    6450 7150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 601A28C6
+P 6000 6150
+F 0 "#PWR0103" H 6000 5900 50  0001 C CNN
+F 1 "GND" H 6005 5977 50  0000 C CNN
+F 2 "" H 6000 6150 50  0001 C CNN
+F 3 "" H 6000 6150 50  0001 C CNN
+	1    6000 6150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 6150
+$Comp
+L power:GND #PWR0125
+U 1 1 601AFD47
+P 1650 7300
+F 0 "#PWR0125" H 1650 7050 50  0001 C CNN
+F 1 "GND" H 1550 7200 50  0000 C CNN
+F 2 "" H 1650 7300 50  0001 C CNN
+F 3 "" H 1650 7300 50  0001 C CNN
+	1    1650 7300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1650 7300
+$Comp
+L power:GND #PWR0107
+U 1 1 601B957E
+P 2250 3850
+F 0 "#PWR0107" H 2250 3600 50  0001 C CNN
+F 1 "GND" H 2255 3677 50  0000 C CNN
+F 2 "" H 2250 3850 50  0001 C CNN
+F 3 "" H 2250 3850 50  0001 C CNN
+	1    2250 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 601BCBB6
+P 1950 4150
+F 0 "#PWR0108" H 1950 3900 50  0001 C CNN
+F 1 "GND" H 1955 3977 50  0000 C CNN
+F 2 "" H 1950 4150 50  0001 C CNN
+F 3 "" H 1950 4150 50  0001 C CNN
+	1    1950 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 4150
+$Comp
+L power:GND #PWR0110
+U 1 1 601BFF1D
+P 1050 5350
+F 0 "#PWR0110" H 1050 5100 50  0001 C CNN
+F 1 "GND" H 1055 5177 50  0000 C CNN
+F 2 "" H 1050 5350 50  0001 C CNN
+F 3 "" H 1050 5350 50  0001 C CNN
+	1    1050 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 601C1568
+P 1350 6600
+F 0 "#PWR0122" H 1350 6350 50  0001 C CNN
+F 1 "GND" H 1355 6427 50  0000 C CNN
+F 2 "" H 1350 6600 50  0001 C CNN
+F 3 "" H 1350 6600 50  0001 C CNN
+	1    1350 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0127
+U 1 1 601C5480
+P 6450 7150
+F 0 "#PWR0127" H 6450 7120 20  0001 C CNN
+F 1 "+5V" H 6465 7308 30  0000 C CNN
+F 2 "" H 6450 7150 60  0000 C CNN
+F 3 "" H 6450 7150 60  0000 C CNN
+	1    6450 7150
+	0    1    1    0   
+$EndComp
+Connection ~ 1400 7700
+$Comp
+L power:GND #PWR0111
+U 1 1 601ADBBE
+P 1400 7700
+F 0 "#PWR0111" H 1400 7450 50  0001 C CNN
+F 1 "GND" H 1405 7527 50  0000 C CNN
+F 2 "" H 1400 7700 50  0001 C CNN
+F 3 "" H 1400 7700 50  0001 C CNN
+	1    1400 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 601A49A2
+P 6450 7550
+F 0 "#PWR0105" H 6450 7300 50  0001 C CNN
+F 1 "GND" V 6455 7422 50  0000 R CNN
+F 2 "" H 6450 7550 50  0001 C CNN
+F 3 "" H 6450 7550 50  0001 C CNN
+	1    6450 7550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FF6712B
+P 6450 7550
+F 0 "#FLG0103" H 6450 7625 50  0001 C CNN
+F 1 "PWR_FLAG" V 6450 7677 50  0000 L CNN
+F 2 "" H 6450 7550 50  0001 C CNN
+F 3 "~" H 6450 7550 50  0001 C CNN
+	1    6450 7550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Power_Protection:SRV05-4 U4
+U 1 1 5F443F1C
+P 3350 4600
+F 0 "U4" V 3304 5144 50  0000 L CNN
+F 1 "SRV05-4" V 3395 5144 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 4050 4150 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF" H 3350 4600 50  0001 C CNN
+F 4 "C558418" H 3350 4600 50  0001 C CNN "LCSC Part #"
+	1    3350 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 5F543FD4
+P 2850 4600
+F 0 "#PWR0128" H 2850 4350 50  0001 C CNN
+F 1 "GND" H 2855 4427 50  0000 C CNN
+F 2 "" H 2850 4600 50  0001 C CNN
+F 3 "" H 2850 4600 50  0001 C CNN
+	1    2850 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0129
+U 1 1 5F55855E
+P 3850 4600
+F 0 "#PWR0129" H 3850 4450 50  0001 C CNN
+F 1 "+3.3V" H 3865 4773 50  0000 C CNN
+F 2 "" H 3850 4600 50  0001 C CNN
+F 3 "" H 3850 4600 50  0001 C CNN
+	1    3850 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4350 2650 4350
+Wire Wire Line
+	2650 4350 2650 3950
+Wire Wire Line
+	2650 3950 3450 3950
+Wire Wire Line
+	3450 3950 3450 4100
+Wire Wire Line
+	3450 3950 4000 3950
+Connection ~ 3450 3950
+Wire Wire Line
+	1650 4450 2650 4450
+Wire Wire Line
+	2650 4450 2650 5250
+Wire Wire Line
+	2650 5250 3450 5250
+Wire Wire Line
+	3450 5250 3450 5100
+Text Label 4000 5250 0    50   ~ 0
+D-
+Wire Wire Line
+	3450 5250 4000 5250
+Connection ~ 3450 5250
+Text Label 4000 4050 0    50   ~ 0
+D+
+Wire Wire Line
+	1650 4550 2750 4550
+Wire Wire Line
+	2750 4550 2750 4050
+Wire Wire Line
+	2750 4050 3250 4050
+Wire Wire Line
+	1650 4650 2750 4650
+Wire Wire Line
+	2750 4650 2750 5150
+Wire Wire Line
+	2750 5150 3250 5150
+Wire Wire Line
+	3250 5150 3250 5100
+Connection ~ 3250 5150
+Wire Wire Line
+	3250 5150 4000 5150
+Wire Wire Line
+	3250 4050 3250 4100
+Connection ~ 3250 4050
+Wire Wire Line
+	3250 4050 4000 4050
+Wire Wire Line
+	4000 7300 4550 7300
+Wire Wire Line
+	4000 7400 4550 7400
+$Comp
+L power:+3.3V #PWR0117
+U 1 1 5FB556CB
+P 4500 7500
+F 0 "#PWR0117" H 4500 7350 50  0001 C CNN
+F 1 "+3.3V" V 4500 7750 50  0000 C CNN
+F 2 "" H 4500 7500 50  0001 C CNN
+F 3 "" H 4500 7500 50  0001 C CNN
+	1    4500 7500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 5F46F984
+P 10000 6350
+F 0 "#PWR0118" H 10000 6100 50  0001 C CNN
+F 1 "GND" H 10005 6177 50  0000 C CNN
+F 2 "" H 10000 6350 50  0001 C CNN
+F 3 "" H 10000 6350 50  0001 C CNN
+	1    10000 6350
+	1    0    0    -1  
+$EndComp
+Connection ~ 10000 6350
+$Comp
+L power:GND #PWR0120
+U 1 1 5F4A1F2E
+P 9100 5850
+F 0 "#PWR0120" H 9100 5600 50  0001 C CNN
+F 1 "GND" H 9105 5677 50  0000 C CNN
+F 2 "" H 9100 5850 50  0001 C CNN
+F 3 "" H 9100 5850 50  0001 C CNN
+	1    9100 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 10200 3150
+Connection ~ 10050 3650
+Wire Wire Line
+	10200 3650 10200 3150
+Wire Wire Line
+	10050 3650 10200 3650
+Wire Wire Line
+	10050 3650 9900 3650
+Wire Wire Line
+	10050 3550 10050 3650
+Wire Wire Line
+	9900 3050 10400 3050
+Wire Wire Line
+	9900 3150 10200 3150
+Wire Wire Line
+	9900 3250 10050 3250
+$Comp
+L Connector:AudioJack4 Jack1
+U 1 1 5EFEDC58
+P 9700 3150
+F 0 "Jack1" H 9750 2700 50  0000 R CNN
+F 1 "TRRS" H 9700 2800 50  0000 R CNN
+F 2 "kbd:TRRS-PJ-320A" H 9700 3150 50  0001 C CNN
+F 3 "" H 9700 3150 50  0001 C CNN
+	1    9700 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 602A653D
+P 10050 3400
+F 0 "R8" V 10150 3450 50  0000 C CNN
+F 1 "4.7k" V 10050 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9980 3400 50  0001 C CNN
+F 3 "~" H 10050 3400 50  0001 C CNN
+	1    10050 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60281202
+P 9900 3500
+F 0 "R7" V 10000 3450 50  0000 C CNN
+F 1 "4.7k" V 9900 3500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9830 3500 50  0001 C CNN
+F 3 "~" H 9900 3500 50  0001 C CNN
+F 4 "C17673" V 9900 3500 50  0001 C CNN "LCSC Part #"
+	1    9900 3500
+	-1   0    0    1   
+$EndComp
+Text GLabel 10350 3350 2    50   Input ~ 0
+i2c_scl_right
+Text GLabel 10350 3250 2    50   Input ~ 0
+i2c_sda_right
+$Comp
+L power:VDD #PWR0130
+U 1 1 5F796DB8
+P 10700 3100
+F 0 "#PWR0130" H 10700 2950 50  0001 C CNN
+F 1 "VDD" H 10715 3273 50  0000 C CNN
+F 2 "" H 10700 3100 50  0001 C CNN
+F 3 "" H 10700 3100 50  0001 C CNN
+	1    10700 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0131
+U 1 1 5F7979FF
+P 10550 2850
+F 0 "#PWR0131" H 10550 2600 50  0001 C CNN
+F 1 "GND" H 10555 2677 50  0000 C CNN
+F 2 "" H 10550 2850 50  0001 C CNN
+F 3 "" H 10550 2850 50  0001 C CNN
+	1    10550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 3350 10350 3350
+Connection ~ 9900 3350
+Wire Wire Line
+	10050 3250 10350 3250
+Connection ~ 10050 3250
+Wire Wire Line
+	10700 3150 10700 3100
+Wire Wire Line
+	10200 3150 10700 3150
+Wire Wire Line
+	10400 3050 10400 2850
+Wire Wire Line
+	10400 2850 10550 2850
+Text GLabel 9300 4450 0    50   Input ~ 0
+i2c_sda_right
+Text GLabel 9300 4550 0    50   Input ~ 0
+i2c_scl_right
+Wire Wire Line
+	6100 6150 6000 6150
+Text Label 6500 5550 0    50   ~ 0
+D-
+NoConn ~ 5200 3750
+NoConn ~ 5200 3850
+NoConn ~ 5200 4050
+NoConn ~ 5200 4150
+NoConn ~ 5200 4250
+NoConn ~ 5200 4450
+NoConn ~ 5200 4550
+NoConn ~ 5200 4650
+NoConn ~ 5200 5350
+NoConn ~ 6500 4450
+NoConn ~ 6500 4550
+NoConn ~ 6500 4750
+NoConn ~ 6500 4850
+NoConn ~ 6500 4950
+NoConn ~ 6500 5050
+NoConn ~ 6500 5150
+NoConn ~ 6500 5250
+NoConn ~ 6500 5350
+NoConn ~ 6500 5450
+NoConn ~ 5200 5650
+NoConn ~ 5200 5750
+NoConn ~ 5200 5850
+NoConn ~ 5200 5950
+NoConn ~ 6500 5750
+$EndSCHEMATC
