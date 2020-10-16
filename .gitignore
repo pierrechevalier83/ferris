@@ -28,3 +28,5 @@ gerber/
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
+
+gerberdir
