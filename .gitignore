@@ -29,4 +29,4 @@ gerber/
 *.dsn
 *.ses
 
-gerberdir
+build

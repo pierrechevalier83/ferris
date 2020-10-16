@@ -1,0 +1,176 @@
+[
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.1/base/ferris.kicad_pcb -c ../.kiplot.yml -d 0.1/base",
+    "file": "../0.1/base/ferris.kicad_pcb",
+    "output": "0.1/base/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.1/compact/ferris.kicad_pcb -c ../.kiplot.yml -d 0.1/compact",
+    "file": "../0.1/compact/ferris.kicad_pcb",
+    "output": "0.1/compact/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.1/high/ferris.kicad_pcb -c ../.kiplot.yml -d 0.1/high",
+    "file": "../0.1/high/ferris.kicad_pcb",
+    "output": "0.1/high/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.1/low/ferris.kicad_pcb -c ../.kiplot.yml -d 0.1/low",
+    "file": "../0.1/low/ferris.kicad_pcb",
+    "output": "0.1/low/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.2/bling/ferris.kicad_pcb -c ../.kiplot.yml -d 0.2/bling",
+    "file": "../0.2/bling/ferris.kicad_pcb",
+    "output": "0.2/bling/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.2/compact/ferris.kicad_pcb -c ../.kiplot.yml -d 0.2/compact",
+    "file": "../0.2/compact/ferris.kicad_pcb",
+    "output": "0.2/compact/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.2/high/ferris.kicad_pcb -c ../.kiplot.yml -d 0.2/high",
+    "file": "../0.2/high/ferris.kicad_pcb",
+    "output": "0.2/high/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/home/pierrec/.local/bin/kiplot -b ../0.2/mini/ferris.kicad_pcb -c ../.kiplot.yml -d 0_2_mini_gerbers",
+    "file": "../0.2/mini/ferris.kicad_pcb",
+    "output": "0.2/mini/ferris-B_Cu.gbr"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson test --no-rebuild --print-errorlogs",
+    "file": "all",
+    "output": "meson-test"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-test",
+    "output": "test"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson test --benchmark --logbase benchmarklog --num-processes=1 --no-rebuild",
+    "file": "all",
+    "output": "meson-benchmark"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-benchmark",
+    "output": "benchmark"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson install --no-rebuild",
+    "file": "PHONY",
+    "output": "meson-install"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-install",
+    "output": "install"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson dist",
+    "file": "PHONY",
+    "output": "meson-dist"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-dist",
+    "output": "dist"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson --internal scanbuild /home/pierrec/Documents/code/ferris /home/pierrec/Documents/code/ferris/clean /usr/bin/meson",
+    "file": "PHONY",
+    "output": "meson-scan-build"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-scan-build",
+    "output": "scan-build"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson --internal tags ctags /home/pierrec/Documents/code/ferris",
+    "file": "PHONY",
+    "output": "meson-ctags"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-ctags",
+    "output": "ctags"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson --internal uninstall",
+    "file": "PHONY",
+    "output": "meson-uninstall"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-uninstall",
+    "output": "uninstall"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "0.2/mini/ferris-B_Cu.gbr",
+    "output": "all"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-clean",
+    "output": "clean"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson --internal cleantrees /home/pierrec/Documents/code/ferris/clean/meson-private/cleantrees.dat",
+    "file": "PHONY",
+    "output": "meson-clean-ctlist"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "",
+    "file": "meson-clean-ctlist",
+    "output": "clean-ctlist"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/ninja -t clean",
+    "file": "PHONY",
+    "output": "meson-clean"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson --internal regenerate /home/pierrec/Documents/code/ferris /home/pierrec/Documents/code/ferris/clean --backend ninja",
+    "file": "../meson.build",
+    "output": "build.ninja"
+  },
+  {
+    "directory": "/home/pierrec/Documents/code/ferris/clean",
+    "command": "/usr/bin/meson --internal regenerate /home/pierrec/Documents/code/ferris /home/pierrec/Documents/code/ferris/clean --backend ninja",
+    "file": "PHONY",
+    "output": "reconfigure"
+  }
+]

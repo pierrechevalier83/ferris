@@ -15,7 +15,7 @@ outputs:
   - name: 'gerbers'
     comment: "Gerbers for the board house"
     type: gerber
-    dir: gerberdir
+    dir: .
     options:
       # generic layer options
       exclude_edge_layer: true
