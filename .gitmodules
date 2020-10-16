@@ -7,3 +7,6 @@
 [submodule "ferris_pcb_art"]
 	path = ferris_pcb_art
 	url = git@github.com:pierrechevalier83/ferris_pcb_art
+[submodule "kicad_lib_tmk"]
+	path = kicad_lib_tmk
+	url = git@github.com:tmk/kicad_lib_tmk
