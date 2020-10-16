@@ -1,4 +1,4 @@
 (fp_lib_table
-  (lib (name silkscreens)(type KiCad)(uri ${KIPRJMOD}/../../ferris_pcb_art/silkscreens.pretty)(options "")(descr ""))
-  (lib (name copper_pads)(type KiCad)(uri ${KIPRJMOD}/../../ferris_pcb_art/copper_pads.pretty)(options "")(descr ""))
+  (lib (name silkscreens)(type KiCad)(uri ${KIPRJMOD}/../../fp/ferris_pcb_art/silkscreens.pretty)(options "")(descr ""))
+  (lib (name copper_pads)(type KiCad)(uri ${KIPRJMOD}/../../fp/ferris_pcb_art/copper_pads.pretty)(options "")(descr ""))
 )
