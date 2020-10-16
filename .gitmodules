@@ -10,3 +10,6 @@
 [submodule "kicad_lib_tmk"]
 	path = sym/kicad_lib_tmk
 	url = git@github.com:tmk/kicad_lib_tmk
+[submodule "tools/kiplot"]
+	path = tools/kiplot
+	url = git@github.com:johnbeard/kiplot.git
