@@ -44,7 +44,7 @@ def add_erc_rule(ninja, variant):
         name=erc_rule,
         command=[f"./run_erc.sh {variant} && touch {erc_file}"],
     )
-    ninja.build(outputs=[erc_file], rule=erc_rule)
+    ninja.build(inputs=["./run_erc.sh"], outputs=[erc_file], rule=erc_rule)
     ninja.newline()
 
 
@@ -64,7 +64,7 @@ def add_drc_rule(ninja, variant):
         name=drc_rule,
         command=[f"./run_drc.sh {variant} && touch {drc_file}"],
     )
-    ninja.build(outputs=[drc_file], rule=drc_rule)
+    ninja.build(inputs=["./run_drc.sh"], outputs=[drc_file], rule=drc_rule)
     ninja.newline()
 
 
