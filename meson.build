@@ -10,6 +10,8 @@ gerbers_out = ['ferris-B_Cu.gbr', 'ferris-B_Mask.gbr', 'ferris-B_Paste.gbr', 'fe
 
 gerbers_cmd = [find_program('kiplot'), '-b', '@INPUT0@', '-c', '@INPUT1@']
 
+zip_cmd = ['zip', '-r', '@OUTPUT@', '@INPUT@']
+
 # Custom targets for each subdirectory will be declared in the subdirectories as it is the only way for the relative paths to be evaluated correctly in the context of each subdirectory
 
 subdir('0.1/base')
