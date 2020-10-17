@@ -34,6 +34,7 @@ build build/0_1_base_gerbers.zip: 0_1_base_gerbers_zip $
     build/0.1/base/ferris-F_Mask.gbr build/0.1/base/ferris-F_Paste.gbr $
     build/0.1/base/ferris-F_SilkS.gbr
 
+build 0.1/base: phony build/0_1_base_gerbers.zip
 # 0.1/compact
 
 rule 0_1_compact_erc
@@ -75,6 +76,7 @@ build build/0_1_compact_gerbers.zip: 0_1_compact_gerbers_zip $
     build/0.1/compact/ferris-F_Cu.gbr build/0.1/compact/ferris-F_Mask.gbr $
     build/0.1/compact/ferris-F_Paste.gbr build/0.1/compact/ferris-F_SilkS.gbr
 
+build 0.1/compact: phony build/0_1_compact_gerbers.zip
 # 0.1/high
 
 rule 0_1_high_erc
@@ -111,6 +113,7 @@ build build/0_1_high_gerbers.zip: 0_1_high_gerbers_zip $
     build/0.1/high/ferris-F_Mask.gbr build/0.1/high/ferris-F_Paste.gbr $
     build/0.1/high/ferris-F_SilkS.gbr
 
+build 0.1/high: phony build/0_1_high_gerbers.zip
 # 0.1/low
 
 rule 0_1_low_erc
@@ -145,6 +148,7 @@ build build/0_1_low_gerbers.zip: 0_1_low_gerbers_zip $
     build/0.1/low/ferris-F_Mask.gbr build/0.1/low/ferris-F_Paste.gbr $
     build/0.1/low/ferris-F_SilkS.gbr
 
+build 0.1/low: phony build/0_1_low_gerbers.zip
 # 0.2/bling
 
 rule 0_2_bling_erc
@@ -181,6 +185,7 @@ build build/0_2_bling_gerbers.zip: 0_2_bling_gerbers_zip $
     build/0.2/bling/ferris-F_Mask.gbr build/0.2/bling/ferris-F_Paste.gbr $
     build/0.2/bling/ferris-F_SilkS.gbr
 
+build 0.2/bling: phony build/0_2_bling_gerbers.zip
 # 0.2/compact
 
 rule 0_2_compact_erc
@@ -222,6 +227,7 @@ build build/0_2_compact_gerbers.zip: 0_2_compact_gerbers_zip $
     build/0.2/compact/ferris-F_Cu.gbr build/0.2/compact/ferris-F_Mask.gbr $
     build/0.2/compact/ferris-F_Paste.gbr build/0.2/compact/ferris-F_SilkS.gbr
 
+build 0.2/compact: phony build/0_2_compact_gerbers.zip
 # 0.2/high
 
 rule 0_2_high_erc
@@ -258,6 +264,7 @@ build build/0_2_high_gerbers.zip: 0_2_high_gerbers_zip $
     build/0.2/high/ferris-F_Mask.gbr build/0.2/high/ferris-F_Paste.gbr $
     build/0.2/high/ferris-F_SilkS.gbr
 
+build 0.2/high: phony build/0_2_high_gerbers.zip
 # 0.2/mini
 
 rule 0_2_mini_erc
@@ -294,3 +301,6 @@ build build/0_2_mini_gerbers.zip: 0_2_mini_gerbers_zip $
     build/0.2/mini/ferris-F_Mask.gbr build/0.2/mini/ferris-F_Paste.gbr $
     build/0.2/mini/ferris-F_SilkS.gbr
 
+build 0.2/mini: phony build/0_2_mini_gerbers.zip
+build 0.1: phony 0.1/base 0.1/compact 0.1/high 0.1/low
+build 0.2: phony 0.2/bling 0.2/compact 0.2/high 0.2/mini

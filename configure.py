@@ -3,16 +3,19 @@
 from tools.ninja.misc.ninja_syntax import Writer
 
 OUTPUT_DIR = "build"
-VARIANTS = [
+VARIANTS_0_1 = [
     "0.1/base",
     "0.1/compact",
     "0.1/high",
     "0.1/low",
+]
+VARIANTS_0_2 = [
     "0.2/bling",
     "0.2/compact",
     "0.2/high",
     "0.2/mini",
 ]
+VARIANTS = VARIANTS_0_1 + VARIANTS_0_2
 
 
 def add_comment_header(ninja, variant):
@@ -48,7 +51,11 @@ def add_erc_rule(ninja, variant):
         name=erc_rule,
         command=[f"./run_erc.sh {variant} && touch {erc_file}"],
     )
-    ninja.build(inputs=["./run_erc.sh", make_sch_file_name(variant)], outputs=[erc_file], rule=erc_rule)
+    ninja.build(
+        inputs=["./run_erc.sh", make_sch_file_name(variant)],
+        outputs=[erc_file],
+        rule=erc_rule,
+    )
     ninja.newline()
 
 
@@ -72,7 +79,11 @@ def add_drc_rule(ninja, variant):
         name=drc_rule,
         command=[f"./run_drc.sh {variant} && touch {drc_file}"],
     )
-    ninja.build(inputs=["./run_drc.sh", make_pcb_file_name(variant)], outputs=[drc_file], rule=drc_rule)
+    ninja.build(
+        inputs=["./run_drc.sh", make_pcb_file_name(variant)],
+        outputs=[drc_file],
+        rule=drc_rule,
+    )
     ninja.newline()
 
 
@@ -127,14 +138,32 @@ def make_zip_gerber_rule_name(variant):
     return underscorify(make_zip_filename(variant))
 
 
+def make_zip_gerber_output(variant):
+    return f"{OUTPUT_DIR}/{make_zip_filename(variant)}"
+
+
 def add_zip_gerber_rule(ninja, variant):
     zip_gerber_rule = make_zip_gerber_rule_name(variant)
-    zip_file = f"{OUTPUT_DIR}/{make_zip_filename(variant)}"
+    zip_file = make_zip_gerber_output(variant)
     gerber_files = make_gerber_output_paths(variant)
     gerber_rule = make_gerber_rule_name(variant)
     ninja.rule(name=zip_gerber_rule, command=[f"zip -r {zip_file}"] + gerber_files)
     ninja.build(inputs=gerber_files, outputs=zip_file, rule=zip_gerber_rule)
     ninja.newline()
+
+
+def add_shorthand_rule(ninja, variant):
+    ninja.build(
+        inputs=[make_zip_gerber_output(variant)], outputs=[variant], rule="phony"
+    )
+
+
+def add_0_1_shorthand_rule(ninja):
+    ninja.build(inputs=VARIANTS_0_1, outputs=["0.1"], rule="phony")
+
+
+def add_0_2_shorthand_rule(ninja):
+    ninja.build(inputs=VARIANTS_0_2, outputs=["0.2"], rule="phony")
 
 
 def generate_buildfile_content():
@@ -146,6 +175,9 @@ def generate_buildfile_content():
         add_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)
         add_zip_gerber_rule(ninja, variant)
+        add_shorthand_rule(ninja, variant)
+    add_0_1_shorthand_rule(ninja)
+    add_0_2_shorthand_rule(ninja)
     return ninja
 
 
