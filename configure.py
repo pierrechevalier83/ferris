@@ -48,6 +48,26 @@ def add_erc_rule(ninja, variant):
     ninja.newline()
 
 
+def make_drc_rule_name(variant):
+    return underscorify(variant) + "_drc"
+
+
+def make_drc_success_stub_file(variant):
+    return f"{make_variant_out_dir(variant)}/drc_success"
+
+
+def add_drc_rule(ninja, variant):
+    drc_rule = make_drc_rule_name(variant)
+    drc_file = make_drc_success_stub_file(variant)
+    # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if DRC fails.
+    ninja.rule(
+        name=drc_rule,
+        command=[f"./run_drc.sh {variant} && touch {drc_file}"],
+    )
+    ninja.build(outputs=[drc_file], rule=drc_rule)
+    ninja.newline()
+
+
 def make_gerber_rule_name(variant):
     return underscorify(variant) + "_gerbers"
 
@@ -81,7 +101,10 @@ def add_gerber_rule(ninja, variant):
         command=[f"mkdir -p {out_dir} && kiplot -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
-        inputs=[make_erc_success_stub_file(variant)],
+        inputs=[
+            make_erc_success_stub_file(variant),
+            make_drc_success_stub_file(variant),
+        ],
         outputs=make_gerber_output_paths(variant),
         rule=gerber_rule,
     )
@@ -112,6 +135,7 @@ def generate_buildfile_content():
     for variant in variants:
         add_comment_header(ninja, variant)
         add_erc_rule(ninja, variant)
+        add_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)
         add_zip_gerber_rule(ninja, variant)
     return ninja
