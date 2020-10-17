@@ -24,16 +24,36 @@ def underscorify(variant):
     return variant.replace("/", "_").replace(".", "_")
 
 
+def make_erc_rule_name(variant):
+    return underscorify(variant) + "_erc"
+
+
+def make_variant_out_dir(variant):
+    return f"{OUTPUT_DIR}/{variant}"
+
+
+def make_erc_success_stub_file(variant):
+    return f"{make_variant_out_dir(variant)}/erc_success"
+
+
+def add_erc_rule(ninja, variant):
+    erc_rule = make_erc_rule_name(variant)
+    erc_file = make_erc_success_stub_file(variant)
+    # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if ERC fails.
+    ninja.rule(
+        name=erc_rule,
+        command=[f"./run_erc.sh {variant} && touch {erc_file}"],
+    )
+    ninja.build(outputs=[erc_file], rule=erc_rule)
+    ninja.newline()
+
+
 def make_gerber_rule_name(variant):
     return underscorify(variant) + "_gerbers"
 
 
 def make_board_path(variant):
     return variant + "/ferris.kicad_pcb"
-
-
-def make_variant_out_dir(variant):
-    return f"{OUTPUT_DIR}/{variant}"
 
 
 def make_gerber_output_paths(variant):
@@ -60,7 +80,11 @@ def add_gerber_rule(ninja, variant):
         name=gerber_rule,
         command=[f"mkdir -p {out_dir} && kiplot -b {board} -c {config} -d {out_dir}"],
     )
-    ninja.build(outputs=make_gerber_output_paths(variant), rule=gerber_rule)
+    ninja.build(
+        inputs=[make_erc_success_stub_file(variant)],
+        outputs=make_gerber_output_paths(variant),
+        rule=gerber_rule,
+    )
     ninja.newline()
 
 
@@ -87,6 +111,7 @@ def generate_buildfile_content():
     variants = VARIANTS
     for variant in variants:
         add_comment_header(ninja, variant)
+        add_erc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)
         add_zip_gerber_rule(ninja, variant)
     return ninja
