@@ -161,10 +161,10 @@ Where is the firmware?
 ----------------------
 
 For now, the Ferris keyboard is powered by QMK.
-Firmware for it (currently only v0.1) is available [upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/ferris) in handwired, and will move a directory up in due course.
+Firmware for it (currently only v0.1 and sweep) is available [upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/ferris).
 
 
-The default keymap showcases one possible way to make a 34 keys keyboard usable and is documented [in its readme upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/handwired/ferris/keymaps/default).
+The default keymap showcases one possible way to make a 34 keys keyboard usable and is documented [in its readme upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/ferris/keymaps/default).
 
 Does it actually work?
 ----------------------
