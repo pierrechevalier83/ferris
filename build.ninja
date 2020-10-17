@@ -1,0 +1,209 @@
+# 0.1/base
+
+rule 0_1_base_gerbers
+  command = mkdir -p build/0.1/base && kiplot -b 0.1/base/ferris.kicad_pcb $
+      -c .kiplot.yml -d build/0.1/base
+build build/0.1/base/ferris-B_Cu.gbr build/0.1/base/ferris-B_Mask.gbr $
+    build/0.1/base/ferris-B_Paste.gbr build/0.1/base/ferris-B_SilkS.gbr $
+    build/0.1/base/ferris-Edge_Cuts.gbr build/0.1/base/ferris-F_Cu.gbr $
+    build/0.1/base/ferris-F_Mask.gbr build/0.1/base/ferris-F_Paste.gbr $
+    build/0.1/base/ferris-F_SilkS.gbr: 0_1_base_gerbers
+
+rule 0_1_base_gerbers_zip
+  command = zip -r build/0_1_base_gerbers.zip $
+      build/0.1/base/ferris-B_Cu.gbr build/0.1/base/ferris-B_Mask.gbr $
+      build/0.1/base/ferris-B_Paste.gbr build/0.1/base/ferris-B_SilkS.gbr $
+      build/0.1/base/ferris-Edge_Cuts.gbr build/0.1/base/ferris-F_Cu.gbr $
+      build/0.1/base/ferris-F_Mask.gbr build/0.1/base/ferris-F_Paste.gbr $
+      build/0.1/base/ferris-F_SilkS.gbr
+build build/0_1_base_gerbers.zip: 0_1_base_gerbers_zip $
+    build/0.1/base/ferris-B_Cu.gbr build/0.1/base/ferris-B_Mask.gbr $
+    build/0.1/base/ferris-B_Paste.gbr build/0.1/base/ferris-B_SilkS.gbr $
+    build/0.1/base/ferris-Edge_Cuts.gbr build/0.1/base/ferris-F_Cu.gbr $
+    build/0.1/base/ferris-F_Mask.gbr build/0.1/base/ferris-F_Paste.gbr $
+    build/0.1/base/ferris-F_SilkS.gbr
+
+# 0.1/compact
+
+rule 0_1_compact_gerbers
+  command = mkdir -p build/0.1/compact && kiplot -b $
+      0.1/compact/ferris.kicad_pcb -c .kiplot.yml -d build/0.1/compact
+build build/0.1/compact/ferris-B_Cu.gbr build/0.1/compact/ferris-B_Mask.gbr $
+    build/0.1/compact/ferris-B_Paste.gbr $
+    build/0.1/compact/ferris-B_SilkS.gbr $
+    build/0.1/compact/ferris-Edge_Cuts.gbr $
+    build/0.1/compact/ferris-F_Cu.gbr build/0.1/compact/ferris-F_Mask.gbr $
+    build/0.1/compact/ferris-F_Paste.gbr $
+    build/0.1/compact/ferris-F_SilkS.gbr: 0_1_compact_gerbers
+
+rule 0_1_compact_gerbers_zip
+  command = zip -r build/0_1_compact_gerbers.zip $
+      build/0.1/compact/ferris-B_Cu.gbr build/0.1/compact/ferris-B_Mask.gbr $
+      build/0.1/compact/ferris-B_Paste.gbr $
+      build/0.1/compact/ferris-B_SilkS.gbr $
+      build/0.1/compact/ferris-Edge_Cuts.gbr $
+      build/0.1/compact/ferris-F_Cu.gbr build/0.1/compact/ferris-F_Mask.gbr $
+      build/0.1/compact/ferris-F_Paste.gbr $
+      build/0.1/compact/ferris-F_SilkS.gbr
+build build/0_1_compact_gerbers.zip: 0_1_compact_gerbers_zip $
+    build/0.1/compact/ferris-B_Cu.gbr build/0.1/compact/ferris-B_Mask.gbr $
+    build/0.1/compact/ferris-B_Paste.gbr $
+    build/0.1/compact/ferris-B_SilkS.gbr $
+    build/0.1/compact/ferris-Edge_Cuts.gbr $
+    build/0.1/compact/ferris-F_Cu.gbr build/0.1/compact/ferris-F_Mask.gbr $
+    build/0.1/compact/ferris-F_Paste.gbr build/0.1/compact/ferris-F_SilkS.gbr
+
+# 0.1/high
+
+rule 0_1_high_gerbers
+  command = mkdir -p build/0.1/high && kiplot -b 0.1/high/ferris.kicad_pcb $
+      -c .kiplot.yml -d build/0.1/high
+build build/0.1/high/ferris-B_Cu.gbr build/0.1/high/ferris-B_Mask.gbr $
+    build/0.1/high/ferris-B_Paste.gbr build/0.1/high/ferris-B_SilkS.gbr $
+    build/0.1/high/ferris-Edge_Cuts.gbr build/0.1/high/ferris-F_Cu.gbr $
+    build/0.1/high/ferris-F_Mask.gbr build/0.1/high/ferris-F_Paste.gbr $
+    build/0.1/high/ferris-F_SilkS.gbr: 0_1_high_gerbers
+
+rule 0_1_high_gerbers_zip
+  command = zip -r build/0_1_high_gerbers.zip $
+      build/0.1/high/ferris-B_Cu.gbr build/0.1/high/ferris-B_Mask.gbr $
+      build/0.1/high/ferris-B_Paste.gbr build/0.1/high/ferris-B_SilkS.gbr $
+      build/0.1/high/ferris-Edge_Cuts.gbr build/0.1/high/ferris-F_Cu.gbr $
+      build/0.1/high/ferris-F_Mask.gbr build/0.1/high/ferris-F_Paste.gbr $
+      build/0.1/high/ferris-F_SilkS.gbr
+build build/0_1_high_gerbers.zip: 0_1_high_gerbers_zip $
+    build/0.1/high/ferris-B_Cu.gbr build/0.1/high/ferris-B_Mask.gbr $
+    build/0.1/high/ferris-B_Paste.gbr build/0.1/high/ferris-B_SilkS.gbr $
+    build/0.1/high/ferris-Edge_Cuts.gbr build/0.1/high/ferris-F_Cu.gbr $
+    build/0.1/high/ferris-F_Mask.gbr build/0.1/high/ferris-F_Paste.gbr $
+    build/0.1/high/ferris-F_SilkS.gbr
+
+# 0.1/low
+
+rule 0_1_low_gerbers
+  command = mkdir -p build/0.1/low && kiplot -b 0.1/low/ferris.kicad_pcb -c $
+      .kiplot.yml -d build/0.1/low
+build build/0.1/low/ferris-B_Cu.gbr build/0.1/low/ferris-B_Mask.gbr $
+    build/0.1/low/ferris-B_Paste.gbr build/0.1/low/ferris-B_SilkS.gbr $
+    build/0.1/low/ferris-Edge_Cuts.gbr build/0.1/low/ferris-F_Cu.gbr $
+    build/0.1/low/ferris-F_Mask.gbr build/0.1/low/ferris-F_Paste.gbr $
+    build/0.1/low/ferris-F_SilkS.gbr: 0_1_low_gerbers
+
+rule 0_1_low_gerbers_zip
+  command = zip -r build/0_1_low_gerbers.zip build/0.1/low/ferris-B_Cu.gbr $
+      build/0.1/low/ferris-B_Mask.gbr build/0.1/low/ferris-B_Paste.gbr $
+      build/0.1/low/ferris-B_SilkS.gbr build/0.1/low/ferris-Edge_Cuts.gbr $
+      build/0.1/low/ferris-F_Cu.gbr build/0.1/low/ferris-F_Mask.gbr $
+      build/0.1/low/ferris-F_Paste.gbr build/0.1/low/ferris-F_SilkS.gbr
+build build/0_1_low_gerbers.zip: 0_1_low_gerbers_zip $
+    build/0.1/low/ferris-B_Cu.gbr build/0.1/low/ferris-B_Mask.gbr $
+    build/0.1/low/ferris-B_Paste.gbr build/0.1/low/ferris-B_SilkS.gbr $
+    build/0.1/low/ferris-Edge_Cuts.gbr build/0.1/low/ferris-F_Cu.gbr $
+    build/0.1/low/ferris-F_Mask.gbr build/0.1/low/ferris-F_Paste.gbr $
+    build/0.1/low/ferris-F_SilkS.gbr
+
+# 0.2/bling
+
+rule 0_2_bling_gerbers
+  command = mkdir -p build/0.2/bling && kiplot -b $
+      0.2/bling/ferris.kicad_pcb -c .kiplot.yml -d build/0.2/bling
+build build/0.2/bling/ferris-B_Cu.gbr build/0.2/bling/ferris-B_Mask.gbr $
+    build/0.2/bling/ferris-B_Paste.gbr build/0.2/bling/ferris-B_SilkS.gbr $
+    build/0.2/bling/ferris-Edge_Cuts.gbr build/0.2/bling/ferris-F_Cu.gbr $
+    build/0.2/bling/ferris-F_Mask.gbr build/0.2/bling/ferris-F_Paste.gbr $
+    build/0.2/bling/ferris-F_SilkS.gbr: 0_2_bling_gerbers
+
+rule 0_2_bling_gerbers_zip
+  command = zip -r build/0_2_bling_gerbers.zip $
+      build/0.2/bling/ferris-B_Cu.gbr build/0.2/bling/ferris-B_Mask.gbr $
+      build/0.2/bling/ferris-B_Paste.gbr build/0.2/bling/ferris-B_SilkS.gbr $
+      build/0.2/bling/ferris-Edge_Cuts.gbr build/0.2/bling/ferris-F_Cu.gbr $
+      build/0.2/bling/ferris-F_Mask.gbr build/0.2/bling/ferris-F_Paste.gbr $
+      build/0.2/bling/ferris-F_SilkS.gbr
+build build/0_2_bling_gerbers.zip: 0_2_bling_gerbers_zip $
+    build/0.2/bling/ferris-B_Cu.gbr build/0.2/bling/ferris-B_Mask.gbr $
+    build/0.2/bling/ferris-B_Paste.gbr build/0.2/bling/ferris-B_SilkS.gbr $
+    build/0.2/bling/ferris-Edge_Cuts.gbr build/0.2/bling/ferris-F_Cu.gbr $
+    build/0.2/bling/ferris-F_Mask.gbr build/0.2/bling/ferris-F_Paste.gbr $
+    build/0.2/bling/ferris-F_SilkS.gbr
+
+# 0.2/compact
+
+rule 0_2_compact_gerbers
+  command = mkdir -p build/0.2/compact && kiplot -b $
+      0.2/compact/ferris.kicad_pcb -c .kiplot.yml -d build/0.2/compact
+build build/0.2/compact/ferris-B_Cu.gbr build/0.2/compact/ferris-B_Mask.gbr $
+    build/0.2/compact/ferris-B_Paste.gbr $
+    build/0.2/compact/ferris-B_SilkS.gbr $
+    build/0.2/compact/ferris-Edge_Cuts.gbr $
+    build/0.2/compact/ferris-F_Cu.gbr build/0.2/compact/ferris-F_Mask.gbr $
+    build/0.2/compact/ferris-F_Paste.gbr $
+    build/0.2/compact/ferris-F_SilkS.gbr: 0_2_compact_gerbers
+
+rule 0_2_compact_gerbers_zip
+  command = zip -r build/0_2_compact_gerbers.zip $
+      build/0.2/compact/ferris-B_Cu.gbr build/0.2/compact/ferris-B_Mask.gbr $
+      build/0.2/compact/ferris-B_Paste.gbr $
+      build/0.2/compact/ferris-B_SilkS.gbr $
+      build/0.2/compact/ferris-Edge_Cuts.gbr $
+      build/0.2/compact/ferris-F_Cu.gbr build/0.2/compact/ferris-F_Mask.gbr $
+      build/0.2/compact/ferris-F_Paste.gbr $
+      build/0.2/compact/ferris-F_SilkS.gbr
+build build/0_2_compact_gerbers.zip: 0_2_compact_gerbers_zip $
+    build/0.2/compact/ferris-B_Cu.gbr build/0.2/compact/ferris-B_Mask.gbr $
+    build/0.2/compact/ferris-B_Paste.gbr $
+    build/0.2/compact/ferris-B_SilkS.gbr $
+    build/0.2/compact/ferris-Edge_Cuts.gbr $
+    build/0.2/compact/ferris-F_Cu.gbr build/0.2/compact/ferris-F_Mask.gbr $
+    build/0.2/compact/ferris-F_Paste.gbr build/0.2/compact/ferris-F_SilkS.gbr
+
+# 0.2/high
+
+rule 0_2_high_gerbers
+  command = mkdir -p build/0.2/high && kiplot -b 0.2/high/ferris.kicad_pcb $
+      -c .kiplot.yml -d build/0.2/high
+build build/0.2/high/ferris-B_Cu.gbr build/0.2/high/ferris-B_Mask.gbr $
+    build/0.2/high/ferris-B_Paste.gbr build/0.2/high/ferris-B_SilkS.gbr $
+    build/0.2/high/ferris-Edge_Cuts.gbr build/0.2/high/ferris-F_Cu.gbr $
+    build/0.2/high/ferris-F_Mask.gbr build/0.2/high/ferris-F_Paste.gbr $
+    build/0.2/high/ferris-F_SilkS.gbr: 0_2_high_gerbers
+
+rule 0_2_high_gerbers_zip
+  command = zip -r build/0_2_high_gerbers.zip $
+      build/0.2/high/ferris-B_Cu.gbr build/0.2/high/ferris-B_Mask.gbr $
+      build/0.2/high/ferris-B_Paste.gbr build/0.2/high/ferris-B_SilkS.gbr $
+      build/0.2/high/ferris-Edge_Cuts.gbr build/0.2/high/ferris-F_Cu.gbr $
+      build/0.2/high/ferris-F_Mask.gbr build/0.2/high/ferris-F_Paste.gbr $
+      build/0.2/high/ferris-F_SilkS.gbr
+build build/0_2_high_gerbers.zip: 0_2_high_gerbers_zip $
+    build/0.2/high/ferris-B_Cu.gbr build/0.2/high/ferris-B_Mask.gbr $
+    build/0.2/high/ferris-B_Paste.gbr build/0.2/high/ferris-B_SilkS.gbr $
+    build/0.2/high/ferris-Edge_Cuts.gbr build/0.2/high/ferris-F_Cu.gbr $
+    build/0.2/high/ferris-F_Mask.gbr build/0.2/high/ferris-F_Paste.gbr $
+    build/0.2/high/ferris-F_SilkS.gbr
+
+# 0.2/mini
+
+rule 0_2_mini_gerbers
+  command = mkdir -p build/0.2/mini && kiplot -b 0.2/mini/ferris.kicad_pcb $
+      -c .kiplot.yml -d build/0.2/mini
+build build/0.2/mini/ferris-B_Cu.gbr build/0.2/mini/ferris-B_Mask.gbr $
+    build/0.2/mini/ferris-B_Paste.gbr build/0.2/mini/ferris-B_SilkS.gbr $
+    build/0.2/mini/ferris-Edge_Cuts.gbr build/0.2/mini/ferris-F_Cu.gbr $
+    build/0.2/mini/ferris-F_Mask.gbr build/0.2/mini/ferris-F_Paste.gbr $
+    build/0.2/mini/ferris-F_SilkS.gbr: 0_2_mini_gerbers
+
+rule 0_2_mini_gerbers_zip
+  command = zip -r build/0_2_mini_gerbers.zip $
+      build/0.2/mini/ferris-B_Cu.gbr build/0.2/mini/ferris-B_Mask.gbr $
+      build/0.2/mini/ferris-B_Paste.gbr build/0.2/mini/ferris-B_SilkS.gbr $
+      build/0.2/mini/ferris-Edge_Cuts.gbr build/0.2/mini/ferris-F_Cu.gbr $
+      build/0.2/mini/ferris-F_Mask.gbr build/0.2/mini/ferris-F_Paste.gbr $
+      build/0.2/mini/ferris-F_SilkS.gbr
+build build/0_2_mini_gerbers.zip: 0_2_mini_gerbers_zip $
+    build/0.2/mini/ferris-B_Cu.gbr build/0.2/mini/ferris-B_Mask.gbr $
+    build/0.2/mini/ferris-B_Paste.gbr build/0.2/mini/ferris-B_SilkS.gbr $
+    build/0.2/mini/ferris-Edge_Cuts.gbr build/0.2/mini/ferris-F_Cu.gbr $
+    build/0.2/mini/ferris-F_Mask.gbr build/0.2/mini/ferris-F_Paste.gbr $
+    build/0.2/mini/ferris-F_SilkS.gbr
+

@@ -29,4 +29,7 @@ gerber/
 *.dsn
 *.ses
 
+# Build artifacts
 build
+.ninja_log
+

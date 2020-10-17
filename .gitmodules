@@ -13,3 +13,6 @@
 [submodule "tools/kiplot"]
 	path = tools/kiplot
 	url = git@github.com:johnbeard/kiplot.git
+[submodule "tools/ninja"]
+	path = tools/ninja
+	url = git@github.com:ninja-build/ninja.git
