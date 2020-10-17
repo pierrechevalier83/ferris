@@ -36,6 +36,10 @@ def make_erc_success_stub_file(variant):
     return f"{make_variant_out_dir(variant)}/erc_success"
 
 
+def make_sch_file_name(variant):
+    return f"{variant}/ferris.sch"
+
+
 def add_erc_rule(ninja, variant):
     erc_rule = make_erc_rule_name(variant)
     erc_file = make_erc_success_stub_file(variant)
@@ -44,7 +48,7 @@ def add_erc_rule(ninja, variant):
         name=erc_rule,
         command=[f"./run_erc.sh {variant} && touch {erc_file}"],
     )
-    ninja.build(inputs=["./run_erc.sh"], outputs=[erc_file], rule=erc_rule)
+    ninja.build(inputs=["./run_erc.sh", make_sch_file_name(variant)], outputs=[erc_file], rule=erc_rule)
     ninja.newline()
 
 
@@ -56,6 +60,10 @@ def make_drc_success_stub_file(variant):
     return f"{make_variant_out_dir(variant)}/drc_success"
 
 
+def make_pcb_file_name(variant):
+    return f"{variant}/ferris.kicad_pcb"
+
+
 def add_drc_rule(ninja, variant):
     drc_rule = make_drc_rule_name(variant)
     drc_file = make_drc_success_stub_file(variant)
@@ -64,7 +72,7 @@ def add_drc_rule(ninja, variant):
         name=drc_rule,
         command=[f"./run_drc.sh {variant} && touch {drc_file}"],
     )
-    ninja.build(inputs=["./run_drc.sh"], outputs=[drc_file], rule=drc_rule)
+    ninja.build(inputs=["./run_drc.sh", make_pcb_file_name(variant)], outputs=[drc_file], rule=drc_rule)
     ninja.newline()
 
 
