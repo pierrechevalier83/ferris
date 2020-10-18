@@ -19,6 +19,7 @@ VARIANTS = VARIANTS_0_1 + VARIANTS_0_2
 PCBDRAW_DIR = "tools/PcbDraw/pcbdraw"
 KIPLOT_DIR = "tools/kiplot/src/kiplot"
 IBOM_DIR = "tools/InteractiveHtmlBom/InteractiveHtmlBom"
+JLCBOM_DIR = "tools/kicad-jlcpcb-bom-plugin"
 RENDER_COLORS = {
     "0.1/base": "white",
     "0.1/compact": "white",
@@ -105,13 +106,30 @@ def add_interactive_bom_rule(ninja, variant):
     ninja.rule(
         name=ibom_rule,
         command=[
-            f'python {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {raw_bom} --extra-fields "LCSC Part #" --dnp-field "DNP" --no-browser'
+            f'python {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {raw_bom} --extra-fields "LCSC Part" --dnp-field "DNP" --no-browser'
         ],
     )
     ninja.build(
         inputs=[ibom_generator, pcb, raw_bom],
         outputs=[ibom_output],
         rule=ibom_rule,
+    )
+    ninja.newline()
+
+
+def add_jlc_bom_rule(ninja, variant):
+    jlc_bom_generator = f"{JLCBOM_DIR}/bom_csv_jlcpcb.py"
+    jlc_bom = make_output_file_path(variant, "bom_jlcpcb.csv")
+    raw_bom = make_raw_bom_file_name(variant)
+    jlc_bom_rule = make_rule_name(variant, "jlc_bom")
+    ninja.rule(
+        name=jlc_bom_rule,
+        command=[f"python {jlc_bom_generator} {raw_bom} {jlc_bom}"],
+    )
+    ninja.build(
+        inputs=[jlc_bom_generator, raw_bom],
+        outputs=[jlc_bom],
+        rule=jlc_bom_rule,
     )
     ninja.newline()
 
@@ -202,7 +220,13 @@ def add_shorthand_rule(ninja, variant):
     ninja.build(
         inputs=[
             make_output_file_path(variant, f)
-            for f in ["gerbers.zip", "front.svg", "back.svg", "ibom.html"]
+            for f in [
+                "gerbers.zip",
+                "front.svg",
+                "back.svg",
+                "ibom.html",
+                "bom_jlcpcb.csv",
+            ]
         ],
         outputs=[variant],
         rule="phony",
@@ -224,6 +248,7 @@ def generate_buildfile_content():
         add_comment_header(ninja, variant)
         add_render_rule(ninja, variant)
         add_interactive_bom_rule(ninja, variant)
+        add_jlc_bom_rule(ninja, variant)
         add_erc_rule(ninja, variant)
         add_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)

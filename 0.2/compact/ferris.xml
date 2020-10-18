@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/pierrec/Documents/code/ferris/0.2/compact/ferris.sch</source>
-    <date>Sun 18 Oct 2020 23:31:49 BST</date>
+    <date>Mon 19 Oct 2020 00:34:45 BST</date>
     <tool>Eeschema 5.1.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -24,6 +24,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -34,7 +35,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -45,6 +46,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -55,7 +57,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -66,7 +68,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -77,7 +79,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -88,6 +90,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -98,6 +101,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -108,7 +112,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -119,6 +123,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -129,6 +134,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -139,7 +145,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -150,6 +156,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -160,7 +167,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -171,6 +178,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -181,6 +189,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -191,7 +200,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -202,7 +211,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -213,6 +222,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -223,6 +233,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -233,6 +244,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -243,7 +255,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -254,7 +266,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -265,7 +277,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -276,6 +288,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -286,7 +299,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -297,6 +310,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -307,7 +321,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -318,6 +332,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -328,7 +343,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -339,6 +354,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -349,6 +365,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -359,7 +376,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -370,7 +387,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -381,6 +398,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -391,7 +409,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -402,6 +420,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -412,7 +431,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -423,7 +442,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -434,7 +453,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -445,6 +464,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -455,6 +475,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -465,7 +486,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -476,6 +497,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -486,6 +508,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -496,7 +519,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -507,6 +530,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -517,7 +541,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -528,6 +552,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -538,6 +563,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -548,7 +574,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -559,7 +585,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -570,6 +596,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -580,6 +607,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -590,6 +618,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -600,7 +629,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -611,7 +640,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -622,7 +651,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -633,6 +662,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -643,7 +673,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -654,6 +684,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -664,7 +695,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -675,6 +706,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -685,7 +717,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -696,7 +728,7 @@
       <footprint>Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf</datasheet>
       <fields>
-        <field name="LCSC Part #">C47023</field>
+        <field name="LCSC Part">C47023</field>
       </fields>
       <libsource lib="Interface_Expansion" part="MCP23017_SO" description="16-bit I/O expander, I2C, interrupts, w pull-ups, SOIC-28"/>
       <sheetpath names="/" tstamps="/"/>
@@ -707,7 +739,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C49678</field>
+        <field name="LCSC Part">C49678</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -718,6 +750,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -728,7 +761,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -739,7 +772,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -750,6 +783,7 @@
       <footprint>switches:Choc_PG1350_Choc_Spacing</footprint>
       <fields>
         <field name="DNP">true</field>
+        <field name="JLCPCB BOM">false</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -760,7 +794,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C49678</field>
+        <field name="LCSC Part">C49678</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -771,7 +805,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C17414</field>
+        <field name="LCSC Part">C17414</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -781,7 +815,7 @@
       <value>TRRS</value>
       <footprint>kbd:TRRS-PJ-320A</footprint>
       <fields>
-        <field name="LCSC Part #">C12569</field>
+        <field name="LCSC Part">C12569</field>
       </fields>
       <libsource lib="Connector" part="AudioJack4" description="Audio Jack, 4 Poles (TRRS)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -792,7 +826,7 @@
       <footprint>breakout_pins:Dual_MCU_QFP_QFN_48_with_breakout_pins</footprint>
       <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf</datasheet>
       <fields>
-        <field name="LCSC Part #">C81720</field>
+        <field name="LCSC Part">C81720</field>
       </fields>
       <libsource lib="MCU_ST_STM32F0" part="STM32F072CBUx" description="ARM Cortex-M0 MCU, 128KB flash, 16KB RAM, 48MHz, 2-3.6V, 37 GPIO, UFQFPN-48"/>
       <sheetpath names="/" tstamps="/"/>
@@ -803,7 +837,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C17024</field>
+        <field name="LCSC Part">C17024</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -814,7 +848,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C149504</field>
+        <field name="LCSC Part">C149504</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -825,7 +859,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C81598</field>
+        <field name="LCSC Part">C81598</field>
       </fields>
       <libsource lib="Device" part="D" description="Diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -835,7 +869,7 @@
       <value>SW_PUSH</value>
       <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
       <fields>
-        <field name="LCSC Part #">C231329</field>
+        <field name="LCSC Part">C231329</field>
       </fields>
       <libsource lib="keyboard_parts" part="SW_PUSH" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -846,7 +880,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C717014</field>
+        <field name="LCSC Part">C717014</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -856,7 +890,7 @@
       <value>DTC123J</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <fields>
-        <field name="LCSC Part #">C406040</field>
+        <field name="LCSC Part">C406040</field>
       </fields>
       <libsource lib="Transistor_BJT" part="DTC123J" description="Digital NPN Transistor, 2k2/47k, SOT-23"/>
       <sheetpath names="/" tstamps="/"/>
@@ -867,7 +901,7 @@
       <footprint>Fuse:Fuse_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C151162</field>
+        <field name="LCSC Part">C151162</field>
       </fields>
       <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
       <sheetpath names="/" tstamps="/"/>
@@ -878,7 +912,7 @@
       <footprint>Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12</footprint>
       <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
       <fields>
-        <field name="LCSC Part #">C165948</field>
+        <field name="LCSC Part">C165948</field>
       </fields>
       <libsource lib="Connector" part="USB_C_Receptacle_USB2.0" description="USB 2.0-only Type-C Receptacle connector"/>
       <sheetpath names="/" tstamps="/"/>
@@ -889,7 +923,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C27834</field>
+        <field name="LCSC Part">C27834</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -900,7 +934,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C27834</field>
+        <field name="LCSC Part">C27834</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -911,7 +945,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C435473</field>
+        <field name="LCSC Part">C435473</field>
       </fields>
       <libsource lib="Device" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
       <sheetpath names="/" tstamps="/"/>
@@ -922,7 +956,7 @@
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>http://www.diodes.com/_files/datasheets/ds23022.pdf</datasheet>
       <fields>
-        <field name="LCSC Part #">C559324</field>
+        <field name="LCSC Part">C559324</field>
       </fields>
       <libsource lib="Diode" part="SB160" description="60V 1A Schottky Barrier Rectifier Diode, DO-41"/>
       <sheetpath names="/" tstamps="/"/>
@@ -933,7 +967,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C28323</field>
+        <field name="LCSC Part">C28323</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -944,7 +978,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C149504</field>
+        <field name="LCSC Part">C149504</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -955,7 +989,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C28323</field>
+        <field name="LCSC Part">C28323</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -966,7 +1000,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C149504</field>
+        <field name="LCSC Part">C149504</field>
       </fields>
       <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -977,7 +1011,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C28323</field>
+        <field name="LCSC Part">C28323</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -988,7 +1022,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C87998</field>
+        <field name="LCSC Part">C87998</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -999,7 +1033,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C17024</field>
+        <field name="LCSC Part">C17024</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1010,7 +1044,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C49678</field>
+        <field name="LCSC Part">C49678</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1021,7 +1055,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C49678</field>
+        <field name="LCSC Part">C49678</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1032,7 +1066,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C49678</field>
+        <field name="LCSC Part">C49678</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1043,7 +1077,7 @@
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C87998</field>
+        <field name="LCSC Part">C87998</field>
       </fields>
       <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1054,7 +1088,7 @@
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</datasheet>
       <fields>
-        <field name="LCSC Part #">C39051</field>
+        <field name="LCSC Part">C39051</field>
       </fields>
       <libsource lib="Regulator_Linear" part="MCP1700-3302E_SOT23" description="250mA Low Quiscent Current LDO, 3.3V output, SOT-23"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1065,7 +1099,7 @@
       <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
       <datasheet>http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF</datasheet>
       <fields>
-        <field name="LCSC Part #">C558418</field>
+        <field name="LCSC Part">C558418</field>
       </fields>
       <libsource lib="Power_Protection" part="SRV05-4" description="ESD Protection Diodes with Low Clamping Voltage, SOT-23-6"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1075,7 +1109,7 @@
       <value>TRRS</value>
       <footprint>kbd:TRRS-PJ-320A</footprint>
       <fields>
-        <field name="LCSC Part #">C12569</field>
+        <field name="LCSC Part">C12569</field>
       </fields>
       <libsource lib="Connector" part="AudioJack4" description="Audio Jack, 4 Poles (TRRS)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1086,7 +1120,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C17673</field>
+        <field name="LCSC Part">C17673</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -1097,7 +1131,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="LCSC Part #">C17673</field>
+        <field name="LCSC Part">C17673</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>

@@ -19,11 +19,17 @@ rule 0_1_base_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/base/ferris.kicad_pcb --dest-dir ../../build/0.1/base $
-      --netlist-file 0.1/base/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.1/base/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.1/base/ibom.html: 0_1_base_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.1/base/ferris.kicad_pcb 0.1/base/ferris.xml
+
+rule 0_1_base_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.1/base/ferris.xml build/0.1/base/bom_jlcpcb.csv
+build build/0.1/base/bom_jlcpcb.csv: 0_1_base_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/base/ferris.xml
 
 rule 0_1_base_erc
   command = ./run_erc.sh 0.1/base && touch build/0.1/base/erc_success
@@ -60,7 +66,8 @@ build build/0.1/base/gerbers.zip: 0_1_base_gerbers_zip $
     build/0.1/base/ferris-F_SilkS.gbr
 
 build 0.1/base: phony build/0.1/base/gerbers.zip build/0.1/base/front.svg $
-    build/0.1/base/back.svg build/0.1/base/ibom.html
+    build/0.1/base/back.svg build/0.1/base/ibom.html $
+    build/0.1/base/bom_jlcpcb.csv
 # 0.1/compact
 
 rule 0_1_compact_render_front
@@ -84,11 +91,17 @@ rule 0_1_compact_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/compact/ferris.kicad_pcb --dest-dir ../../build/0.1/compact $
-      --netlist-file 0.1/compact/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.1/compact/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.1/compact/ibom.html: 0_1_compact_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.1/compact/ferris.kicad_pcb 0.1/compact/ferris.xml
+
+rule 0_1_compact_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.1/compact/ferris.xml build/0.1/compact/bom_jlcpcb.csv
+build build/0.1/compact/bom_jlcpcb.csv: 0_1_compact_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/compact/ferris.xml
 
 rule 0_1_compact_erc
   command = ./run_erc.sh 0.1/compact && touch build/0.1/compact/erc_success
@@ -131,7 +144,7 @@ build build/0.1/compact/gerbers.zip: 0_1_compact_gerbers_zip $
 
 build 0.1/compact: phony build/0.1/compact/gerbers.zip $
     build/0.1/compact/front.svg build/0.1/compact/back.svg $
-    build/0.1/compact/ibom.html
+    build/0.1/compact/ibom.html build/0.1/compact/bom_jlcpcb.csv
 # 0.1/high
 
 rule 0_1_high_render_front
@@ -155,11 +168,17 @@ rule 0_1_high_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/high/ferris.kicad_pcb --dest-dir ../../build/0.1/high $
-      --netlist-file 0.1/high/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.1/high/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.1/high/ibom.html: 0_1_high_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.1/high/ferris.kicad_pcb 0.1/high/ferris.xml
+
+rule 0_1_high_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.1/high/ferris.xml build/0.1/high/bom_jlcpcb.csv
+build build/0.1/high/bom_jlcpcb.csv: 0_1_high_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/high/ferris.xml
 
 rule 0_1_high_erc
   command = ./run_erc.sh 0.1/high && touch build/0.1/high/erc_success
@@ -196,7 +215,8 @@ build build/0.1/high/gerbers.zip: 0_1_high_gerbers_zip $
     build/0.1/high/ferris-F_SilkS.gbr
 
 build 0.1/high: phony build/0.1/high/gerbers.zip build/0.1/high/front.svg $
-    build/0.1/high/back.svg build/0.1/high/ibom.html
+    build/0.1/high/back.svg build/0.1/high/ibom.html $
+    build/0.1/high/bom_jlcpcb.csv
 # 0.1/low
 
 rule 0_1_low_render_front
@@ -218,11 +238,17 @@ rule 0_1_low_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/low/ferris.kicad_pcb --dest-dir ../../build/0.1/low $
-      --netlist-file 0.1/low/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.1/low/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.1/low/ibom.html: 0_1_low_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.1/low/ferris.kicad_pcb 0.1/low/ferris.xml
+
+rule 0_1_low_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.1/low/ferris.xml build/0.1/low/bom_jlcpcb.csv
+build build/0.1/low/bom_jlcpcb.csv: 0_1_low_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/low/ferris.xml
 
 rule 0_1_low_erc
   command = ./run_erc.sh 0.1/low && touch build/0.1/low/erc_success
@@ -257,7 +283,8 @@ build build/0.1/low/gerbers.zip: 0_1_low_gerbers_zip $
     build/0.1/low/ferris-F_SilkS.gbr
 
 build 0.1/low: phony build/0.1/low/gerbers.zip build/0.1/low/front.svg $
-    build/0.1/low/back.svg build/0.1/low/ibom.html
+    build/0.1/low/back.svg build/0.1/low/ibom.html $
+    build/0.1/low/bom_jlcpcb.csv
 # 0.2/bling
 
 rule 0_2_bling_render_front
@@ -281,11 +308,17 @@ rule 0_2_bling_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/bling/ferris.kicad_pcb --dest-dir ../../build/0.2/bling $
-      --netlist-file 0.2/bling/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.2/bling/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.2/bling/ibom.html: 0_2_bling_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.2/bling/ferris.kicad_pcb 0.2/bling/ferris.xml
+
+rule 0_2_bling_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.2/bling/ferris.xml build/0.2/bling/bom_jlcpcb.csv
+build build/0.2/bling/bom_jlcpcb.csv: 0_2_bling_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/bling/ferris.xml
 
 rule 0_2_bling_erc
   command = ./run_erc.sh 0.2/bling && touch build/0.2/bling/erc_success
@@ -323,7 +356,7 @@ build build/0.2/bling/gerbers.zip: 0_2_bling_gerbers_zip $
 
 build 0.2/bling: phony build/0.2/bling/gerbers.zip $
     build/0.2/bling/front.svg build/0.2/bling/back.svg $
-    build/0.2/bling/ibom.html
+    build/0.2/bling/ibom.html build/0.2/bling/bom_jlcpcb.csv
 # 0.2/compact
 
 rule 0_2_compact_render_front
@@ -347,11 +380,17 @@ rule 0_2_compact_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/compact/ferris.kicad_pcb --dest-dir ../../build/0.2/compact $
-      --netlist-file 0.2/compact/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.2/compact/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.2/compact/ibom.html: 0_2_compact_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.2/compact/ferris.kicad_pcb 0.2/compact/ferris.xml
+
+rule 0_2_compact_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.2/compact/ferris.xml build/0.2/compact/bom_jlcpcb.csv
+build build/0.2/compact/bom_jlcpcb.csv: 0_2_compact_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/compact/ferris.xml
 
 rule 0_2_compact_erc
   command = ./run_erc.sh 0.2/compact && touch build/0.2/compact/erc_success
@@ -394,7 +433,7 @@ build build/0.2/compact/gerbers.zip: 0_2_compact_gerbers_zip $
 
 build 0.2/compact: phony build/0.2/compact/gerbers.zip $
     build/0.2/compact/front.svg build/0.2/compact/back.svg $
-    build/0.2/compact/ibom.html
+    build/0.2/compact/ibom.html build/0.2/compact/bom_jlcpcb.csv
 # 0.2/high
 
 rule 0_2_high_render_front
@@ -418,11 +457,17 @@ rule 0_2_high_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/high/ferris.kicad_pcb --dest-dir ../../build/0.2/high $
-      --netlist-file 0.2/high/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.2/high/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.2/high/ibom.html: 0_2_high_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.2/high/ferris.kicad_pcb 0.2/high/ferris.xml
+
+rule 0_2_high_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.2/high/ferris.xml build/0.2/high/bom_jlcpcb.csv
+build build/0.2/high/bom_jlcpcb.csv: 0_2_high_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/high/ferris.xml
 
 rule 0_2_high_erc
   command = ./run_erc.sh 0.2/high && touch build/0.2/high/erc_success
@@ -459,7 +504,8 @@ build build/0.2/high/gerbers.zip: 0_2_high_gerbers_zip $
     build/0.2/high/ferris-F_SilkS.gbr
 
 build 0.2/high: phony build/0.2/high/gerbers.zip build/0.2/high/front.svg $
-    build/0.2/high/back.svg build/0.2/high/ibom.html
+    build/0.2/high/back.svg build/0.2/high/ibom.html $
+    build/0.2/high/bom_jlcpcb.csv
 # 0.2/mini
 
 rule 0_2_mini_render_front
@@ -481,11 +527,17 @@ rule 0_2_mini_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/mini/ferris.kicad_pcb --dest-dir ../../build/0.2/mini $
-      --netlist-file 0.2/mini/ferris.xml --extra-fields "LCSC Part #" $
+      --netlist-file 0.2/mini/ferris.xml --extra-fields "LCSC Part" $
       --dnp-field "DNP" --no-browser
 build build/0.2/mini/ibom.html: 0_2_mini_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
     0.2/mini/ferris.kicad_pcb 0.2/mini/ferris.xml
+
+rule 0_2_mini_jlc_bom
+  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+      0.2/mini/ferris.xml build/0.2/mini/bom_jlcpcb.csv
+build build/0.2/mini/bom_jlcpcb.csv: 0_2_mini_jlc_bom $
+    tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/mini/ferris.xml
 
 rule 0_2_mini_erc
   command = ./run_erc.sh 0.2/mini && touch build/0.2/mini/erc_success
@@ -522,6 +574,7 @@ build build/0.2/mini/gerbers.zip: 0_2_mini_gerbers_zip $
     build/0.2/mini/ferris-F_SilkS.gbr
 
 build 0.2/mini: phony build/0.2/mini/gerbers.zip build/0.2/mini/front.svg $
-    build/0.2/mini/back.svg build/0.2/mini/ibom.html
+    build/0.2/mini/back.svg build/0.2/mini/ibom.html $
+    build/0.2/mini/bom_jlcpcb.csv
 build 0.1: phony 0.1/base 0.1/compact 0.1/high 0.1/low
 build 0.2: phony 0.2/bling 0.2/compact 0.2/high 0.2/mini

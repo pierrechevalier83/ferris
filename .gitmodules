@@ -22,3 +22,6 @@
 [submodule "tools/InteractiveHtmlBom"]
 	path = tools/InteractiveHtmlBom
 	url = git@github.com:openscopeproject/InteractiveHtmlBom.git
+[submodule "tools/kicad-jlcpcb-bom-plugin"]
+	path = tools/kicad-jlcpcb-bom-plugin
+	url = git@github.com:wokwi/kicad-jlcpcb-bom-plugin.git
