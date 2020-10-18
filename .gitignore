@@ -12,7 +12,7 @@
 *.kicad_pcb-bak
 *.sch-bak
 *~
-*.~lock
+*.~lock*
 _autosave-*
 *.tmp
 *-save.pro

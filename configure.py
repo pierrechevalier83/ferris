@@ -44,8 +44,8 @@ def make_pcb_file_name(variant):
     return f"{variant}/ferris.kicad_pcb"
 
 
-def make_netlist_file_name(variant):
-    return f"{variant}/ferris.net"
+def make_raw_bom_file_name(variant):
+    return f"{variant}/ferris.xml"
 
 
 def make_sch_file_name(variant):
@@ -100,16 +100,16 @@ def add_interactive_bom_rule(ninja, variant):
     out_dir = f"../../{OUTPUT_DIR}/{variant}"
     ibom_output = make_output_file_path(variant, "ibom.html")
     pcb = make_pcb_file_name(variant)
-    net = make_netlist_file_name(variant)
+    raw_bom = make_raw_bom_file_name(variant)
     ibom_rule = make_rule_name(variant, "ibom")
     ninja.rule(
         name=ibom_rule,
         command=[
-            f'python {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {net} --extra-fields "LCSC Part #" --dnp-field "DNP" --no-browser'
+            f'python {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {raw_bom} --extra-fields "LCSC Part #" --dnp-field "DNP" --no-browser'
         ],
     )
     ninja.build(
-        inputs=[ibom_generator, pcb, net],
+        inputs=[ibom_generator, pcb, raw_bom],
         outputs=[ibom_output],
         rule=ibom_rule,
     )
