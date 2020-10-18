@@ -23,9 +23,6 @@ _autosave-*
 fp-info-cache
 gerber/
 
-# Netlist files (exported from Eeschema)
-*.net
-
 # Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
