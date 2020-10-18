@@ -18,10 +18,12 @@ build build/0.1/base/back.svg: 0_1_base_render_back $
 rule 0_1_base_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-      0.1/base/ferris.kicad_pcb --dest-dir ../../build/0.1/base --no-browser
+      0.1/base/ferris.kicad_pcb --dest-dir ../../build/0.1/base $
+      --netlist-file 0.1/base/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.1/base/ibom.html: 0_1_base_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.1/base/ferris.kicad_pcb
+    0.1/base/ferris.kicad_pcb 0.1/base/ferris.net
 
 rule 0_1_base_erc
   command = ./run_erc.sh 0.1/base && touch build/0.1/base/erc_success
@@ -82,10 +84,11 @@ rule 0_1_compact_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/compact/ferris.kicad_pcb --dest-dir ../../build/0.1/compact $
-      --no-browser
+      --netlist-file 0.1/compact/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.1/compact/ibom.html: 0_1_compact_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.1/compact/ferris.kicad_pcb
+    0.1/compact/ferris.kicad_pcb 0.1/compact/ferris.net
 
 rule 0_1_compact_erc
   command = ./run_erc.sh 0.1/compact && touch build/0.1/compact/erc_success
@@ -151,10 +154,12 @@ build build/0.1/high/back.svg: 0_1_high_render_back $
 rule 0_1_high_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-      0.1/high/ferris.kicad_pcb --dest-dir ../../build/0.1/high --no-browser
+      0.1/high/ferris.kicad_pcb --dest-dir ../../build/0.1/high $
+      --netlist-file 0.1/high/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.1/high/ibom.html: 0_1_high_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.1/high/ferris.kicad_pcb
+    0.1/high/ferris.kicad_pcb 0.1/high/ferris.net
 
 rule 0_1_high_erc
   command = ./run_erc.sh 0.1/high && touch build/0.1/high/erc_success
@@ -212,10 +217,12 @@ build build/0.1/low/back.svg: 0_1_low_render_back $
 rule 0_1_low_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-      0.1/low/ferris.kicad_pcb --dest-dir ../../build/0.1/low --no-browser
+      0.1/low/ferris.kicad_pcb --dest-dir ../../build/0.1/low $
+      --netlist-file 0.1/low/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.1/low/ibom.html: 0_1_low_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.1/low/ferris.kicad_pcb
+    0.1/low/ferris.kicad_pcb 0.1/low/ferris.net
 
 rule 0_1_low_erc
   command = ./run_erc.sh 0.1/low && touch build/0.1/low/erc_success
@@ -273,10 +280,12 @@ build build/0.2/bling/back.svg: 0_2_bling_render_back $
 rule 0_2_bling_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-      0.2/bling/ferris.kicad_pcb --dest-dir ../../build/0.2/bling --no-browser
+      0.2/bling/ferris.kicad_pcb --dest-dir ../../build/0.2/bling $
+      --netlist-file 0.2/bling/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.2/bling/ibom.html: 0_2_bling_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.2/bling/ferris.kicad_pcb
+    0.2/bling/ferris.kicad_pcb 0.2/bling/ferris.net
 
 rule 0_2_bling_erc
   command = ./run_erc.sh 0.2/bling && touch build/0.2/bling/erc_success
@@ -338,10 +347,11 @@ rule 0_2_compact_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/compact/ferris.kicad_pcb --dest-dir ../../build/0.2/compact $
-      --no-browser
+      --netlist-file 0.2/compact/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.2/compact/ibom.html: 0_2_compact_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.2/compact/ferris.kicad_pcb
+    0.2/compact/ferris.kicad_pcb 0.2/compact/ferris.net
 
 rule 0_2_compact_erc
   command = ./run_erc.sh 0.2/compact && touch build/0.2/compact/erc_success
@@ -407,10 +417,12 @@ build build/0.2/high/back.svg: 0_2_high_render_back $
 rule 0_2_high_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-      0.2/high/ferris.kicad_pcb --dest-dir ../../build/0.2/high --no-browser
+      0.2/high/ferris.kicad_pcb --dest-dir ../../build/0.2/high $
+      --netlist-file 0.2/high/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.2/high/ibom.html: 0_2_high_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.2/high/ferris.kicad_pcb
+    0.2/high/ferris.kicad_pcb 0.2/high/ferris.net
 
 rule 0_2_high_erc
   command = ./run_erc.sh 0.2/high && touch build/0.2/high/erc_success
@@ -468,10 +480,12 @@ build build/0.2/mini/back.svg: 0_2_mini_render_back $
 rule 0_2_mini_ibom
   command = python $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-      0.2/mini/ferris.kicad_pcb --dest-dir ../../build/0.2/mini --no-browser
+      0.2/mini/ferris.kicad_pcb --dest-dir ../../build/0.2/mini $
+      --netlist-file 0.2/mini/ferris.net --extra-fields "LCSC Part #" $
+      --dnp-field "DNP" --no-browser
 build build/0.2/mini/ibom.html: 0_2_mini_ibom $
     tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
-    0.2/mini/ferris.kicad_pcb
+    0.2/mini/ferris.kicad_pcb 0.2/mini/ferris.net
 
 rule 0_2_mini_erc
   command = ./run_erc.sh 0.2/mini && touch build/0.2/mini/erc_success
