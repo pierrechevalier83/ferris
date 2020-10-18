@@ -33,4 +33,4 @@ gerber/
 # Build artifacts
 build
 .ninja_log
-
+.eggs

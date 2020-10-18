@@ -16,3 +16,6 @@
 [submodule "tools/ninja"]
 	path = tools/ninja
 	url = git@github.com:ninja-build/ninja.git
+[submodule "tools/PcbDraw"]
+	path = tools/PcbDraw
+	url = git@github.com:yaqwsx/PcbDraw.git

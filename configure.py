@@ -16,6 +16,18 @@ VARIANTS_0_2 = [
     "0.2/mini",
 ]
 VARIANTS = VARIANTS_0_1 + VARIANTS_0_2
+PCBDRAW_DIR = "tools/PcbDraw/pcbdraw"
+KIPLOT_DIR = "tools/kiplot/src/kiplot"
+RENDER_COLORS = {
+    "0.1/base": "white",
+    "0.1/compact": "white",
+    "0.1/high": "yellow",
+    "0.1/low": "blue",
+    "0.2/bling": "white",
+    "0.2/compact": "white",
+    "0.2/high": "yellow",
+    "0.2/mini": "blue",
+}
 
 
 def add_comment_header(ninja, variant):
@@ -27,25 +39,59 @@ def underscorify(variant):
     return variant.replace("/", "_").replace(".", "_")
 
 
-def make_erc_rule_name(variant):
-    return underscorify(variant) + "_erc"
-
-
-def make_variant_out_dir(variant):
-    return f"{OUTPUT_DIR}/{variant}"
-
-
-def make_erc_success_stub_file(variant):
-    return f"{make_variant_out_dir(variant)}/erc_success"
+def make_pcb_file_name(variant):
+    return f"{variant}/ferris.kicad_pcb"
 
 
 def make_sch_file_name(variant):
     return f"{variant}/ferris.sch"
 
 
+def make_rule_name(variant, suffix):
+    return f"{underscorify(variant)}_{suffix}"
+
+
+def make_variant_out_dir(variant):
+    return f"{OUTPUT_DIR}/{variant}"
+
+
+def make_output_file_path(variant, filename):
+    return f"{make_variant_out_dir(variant)}/{filename}"
+
+
+def add_render_rule(ninja, variant):
+    pcbdraw = f"{PCBDRAW_DIR}/pcbdraw.py"
+    color = RENDER_COLORS[variant]
+    style = f"{PCBDRAW_DIR}/styles/set-{color}-enig.json"
+    pcb = make_pcb_file_name(variant)
+    render_front = make_rule_name(variant, "render_front")
+    front_svg = make_output_file_path(variant, "front.svg")
+    ninja.rule(
+        name=render_front,
+        command=[f"python {pcbdraw} --style {style} {pcb} {front_svg}"],
+    )
+    ninja.build(
+        inputs=[pcbdraw, style, pcb],
+        outputs=[front_svg],
+        rule=make_rule_name(variant, "render_front"),
+    )
+    render_back = make_rule_name(variant, "render_back")
+    back_svg = make_output_file_path(variant, "back.svg")
+    ninja.rule(
+        name=render_back,
+        command=[f"python {pcbdraw} --style {style} {pcb} {back_svg} --back"],
+    )
+    ninja.build(
+        inputs=[pcbdraw, style, pcb],
+        outputs=[back_svg],
+        rule=make_rule_name(variant, "render_back"),
+    )
+    ninja.newline()
+
+
 def add_erc_rule(ninja, variant):
-    erc_rule = make_erc_rule_name(variant)
-    erc_file = make_erc_success_stub_file(variant)
+    erc_rule = make_rule_name(variant, "erc")
+    erc_file = make_output_file_path(variant, "erc_success")
     # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if ERC fails.
     ninja.rule(
         name=erc_rule,
@@ -59,21 +105,9 @@ def add_erc_rule(ninja, variant):
     ninja.newline()
 
 
-def make_drc_rule_name(variant):
-    return underscorify(variant) + "_drc"
-
-
-def make_drc_success_stub_file(variant):
-    return f"{make_variant_out_dir(variant)}/drc_success"
-
-
-def make_pcb_file_name(variant):
-    return f"{variant}/ferris.kicad_pcb"
-
-
 def add_drc_rule(ninja, variant):
-    drc_rule = make_drc_rule_name(variant)
-    drc_file = make_drc_success_stub_file(variant)
+    drc_rule = make_rule_name(variant, "drc")
+    drc_file = make_output_file_path(variant, "drc_success")
     # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if DRC fails.
     ninja.rule(
         name=drc_rule,
@@ -85,14 +119,6 @@ def add_drc_rule(ninja, variant):
         rule=drc_rule,
     )
     ninja.newline()
-
-
-def make_gerber_rule_name(variant):
-    return underscorify(variant) + "_gerbers"
-
-
-def make_board_path(variant):
-    return variant + "/ferris.kicad_pcb"
 
 
 def make_gerber_output_paths(variant):
@@ -111,18 +137,19 @@ def make_gerber_output_paths(variant):
 
 
 def add_gerber_rule(ninja, variant):
-    gerber_rule = make_gerber_rule_name(variant)
-    board = make_board_path(variant)
+    gerber_rule = make_rule_name(variant, "gerbers")
+    board = make_pcb_file_name(variant)
     config = ".kiplot.yml"
     out_dir = make_variant_out_dir(variant)
+    kiplot = f"{KIPLOT_DIR}/kiplot.py"
     ninja.rule(
         name=gerber_rule,
-        command=[f"mkdir -p {out_dir} && kiplot -b {board} -c {config} -d {out_dir}"],
+        command=[f"mkdir -p {out_dir} && python {kiplot} -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
         inputs=[
-            make_erc_success_stub_file(variant),
-            make_drc_success_stub_file(variant),
+            make_output_file_path(variant, "erc_success"),
+            make_output_file_path(variant, "drc_success"),
         ],
         outputs=make_gerber_output_paths(variant),
         rule=gerber_rule,
@@ -130,23 +157,11 @@ def add_gerber_rule(ninja, variant):
     ninja.newline()
 
 
-def make_zip_filename(variant):
-    return underscorify(variant) + "_gerbers.zip"
-
-
-def make_zip_gerber_rule_name(variant):
-    return underscorify(make_zip_filename(variant))
-
-
-def make_zip_gerber_output(variant):
-    return f"{OUTPUT_DIR}/{make_zip_filename(variant)}"
-
-
 def add_zip_gerber_rule(ninja, variant):
-    zip_gerber_rule = make_zip_gerber_rule_name(variant)
-    zip_file = make_zip_gerber_output(variant)
+    zip_gerber_rule = make_rule_name(variant, "gerbers_zip")
+    zip_file = make_output_file_path(variant, "gerbers.zip")
     gerber_files = make_gerber_output_paths(variant)
-    gerber_rule = make_gerber_rule_name(variant)
+    gerber_rule = make_rule_name(variant, "gerbers")
     ninja.rule(name=zip_gerber_rule, command=[f"zip -r {zip_file}"] + gerber_files)
     ninja.build(inputs=gerber_files, outputs=zip_file, rule=zip_gerber_rule)
     ninja.newline()
@@ -154,7 +169,12 @@ def add_zip_gerber_rule(ninja, variant):
 
 def add_shorthand_rule(ninja, variant):
     ninja.build(
-        inputs=[make_zip_gerber_output(variant)], outputs=[variant], rule="phony"
+        inputs=[
+            make_output_file_path(variant, f)
+            for f in ["gerbers.zip", "front.svg", "back.svg"]
+        ],
+        outputs=[variant],
+        rule="phony",
     )
 
 
@@ -171,6 +191,7 @@ def generate_buildfile_content():
     variants = VARIANTS
     for variant in variants:
         add_comment_header(ninja, variant)
+        add_render_rule(ninja, variant)
         add_erc_rule(ninja, variant)
         add_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)
