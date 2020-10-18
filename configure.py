@@ -18,6 +18,7 @@ VARIANTS_0_2 = [
 VARIANTS = VARIANTS_0_1 + VARIANTS_0_2
 PCBDRAW_DIR = "tools/PcbDraw/pcbdraw"
 KIPLOT_DIR = "tools/kiplot/src/kiplot"
+IBOM_DIR = "tools/InteractiveHtmlBom/InteractiveHtmlBom"
 RENDER_COLORS = {
     "0.1/base": "white",
     "0.1/compact": "white",
@@ -89,6 +90,25 @@ def add_render_rule(ninja, variant):
     ninja.newline()
 
 
+def add_interactive_bom_rule(ninja, variant):
+    ibom_generator = f"{IBOM_DIR}/generate_interactive_bom.py"
+    # Has to be relative to the PCB file
+    out_dir = f"../../{OUTPUT_DIR}/{variant}"
+    ibom_output = make_output_file_path(variant, "ibom.html")
+    pcb = make_pcb_file_name(variant)
+    ibom_rule = make_rule_name(variant, "ibom")
+    ninja.rule(
+        name=ibom_rule,
+        command=[f"python {ibom_generator} {pcb} --dest-dir {out_dir} --no-browser"],
+    )
+    ninja.build(
+        inputs=[ibom_generator, pcb],
+        outputs=[ibom_output],
+        rule=ibom_rule,
+    )
+    ninja.newline()
+
+
 def add_erc_rule(ninja, variant):
     erc_rule = make_rule_name(variant, "erc")
     erc_file = make_output_file_path(variant, "erc_success")
@@ -141,16 +161,12 @@ def add_gerber_rule(ninja, variant):
     board = make_pcb_file_name(variant)
     config = ".kiplot.yml"
     out_dir = make_variant_out_dir(variant)
-    kiplot = f"{KIPLOT_DIR}/kiplot.py"
+    kiplot = "kiplot"
     ninja.rule(
         name=gerber_rule,
-        command=[f"mkdir -p {out_dir} && python {kiplot} -b {board} -c {config} -d {out_dir}"],
+        command=[f"mkdir -p {out_dir} && {kiplot} -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
-        inputs=[
-            make_output_file_path(variant, "erc_success"),
-            make_output_file_path(variant, "drc_success"),
-        ],
         outputs=make_gerber_output_paths(variant),
         rule=gerber_rule,
     )
@@ -163,7 +179,15 @@ def add_zip_gerber_rule(ninja, variant):
     gerber_files = make_gerber_output_paths(variant)
     gerber_rule = make_rule_name(variant, "gerbers")
     ninja.rule(name=zip_gerber_rule, command=[f"zip -r {zip_file}"] + gerber_files)
-    ninja.build(inputs=gerber_files, outputs=zip_file, rule=zip_gerber_rule)
+    ninja.build(
+        inputs=[
+            make_output_file_path(variant, "erc_success"),
+            make_output_file_path(variant, "drc_success"),
+        ]
+        + gerber_files,
+        outputs=zip_file,
+        rule=zip_gerber_rule,
+    )
     ninja.newline()
 
 
@@ -171,7 +195,7 @@ def add_shorthand_rule(ninja, variant):
     ninja.build(
         inputs=[
             make_output_file_path(variant, f)
-            for f in ["gerbers.zip", "front.svg", "back.svg"]
+            for f in ["gerbers.zip", "front.svg", "back.svg", "ibom.html"]
         ],
         outputs=[variant],
         rule="phony",
@@ -192,6 +216,7 @@ def generate_buildfile_content():
     for variant in variants:
         add_comment_header(ninja, variant)
         add_render_rule(ninja, variant)
+        add_interactive_bom_rule(ninja, variant)
         add_erc_rule(ninja, variant)
         add_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)

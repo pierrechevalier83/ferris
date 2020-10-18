@@ -19,3 +19,6 @@
 [submodule "tools/PcbDraw"]
 	path = tools/PcbDraw
 	url = git@github.com:yaqwsx/PcbDraw.git
+[submodule "tools/InteractiveHtmlBom"]
+	path = tools/InteractiveHtmlBom
+	url = git@github.com:openscopeproject/InteractiveHtmlBom.git
