@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
@@ -19,7 +17,7 @@ jobs:
         python-version: 3.8
     - name: Update submodules
       run: |
-        git submodules update --init --remote --recursive
+        git submodule update --init --remote --recursive
     - name: Generate ninja build file
       run: |
         python ./configure.py
