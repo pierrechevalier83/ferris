@@ -7,6 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
+  needs:
+    build-ninja
   build:
     runs-on: ubuntu-latest
     steps:
