@@ -11,6 +11,11 @@ It is fully Open-Source: the kicad files are released under [the solderpad licen
 The Ferris 0.1 is certified by the Open Source Hardware.
 ![OSHWA](https://imgur.com/917TZru)
 
+Status
+------
+
+| ![Validate ninja build file](https://github.com/pierrechevalier83/ferris/workflows/Validate%20ninja%20build%20file/badge.svg) | ![Format python code](https://github.com/pierrechevalier83/ferris/workflows/Format%20python%20code/badge.svg) |
+
 Design philosophy
 -----------------
 
