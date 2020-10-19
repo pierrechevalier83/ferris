@@ -7,6 +7,38 @@ on:
     branches: [ master ]
 
 jobs:
+
+  generate-ninja-file:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Generate ninja build file
+      run: |
+        python ./configure.py
+    - uses: actions/upload-artifact@v2
+      with:
+        name: build.ninja
+        path: build.ninja
+  
+  validate-ninja-file:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - uses: actions/download-artifact@v2
+      with:
+        name: ninja
+    - name: Fail if ninja build file is outdated
+      run: |
+        git diff --name-status | if [[ $(grep build.ninja) ]]; then exit 1; else exit 0; fi
+
   build-ninja:
     runs-on: ubuntu-latest
     steps:
@@ -21,9 +53,12 @@ jobs:
       with:
         name: ninja
         path: ./tools/ninja/build/ninja
+
   run-erc-for-0-1-base:
     needs:
       build-ninja
+    needs:
+      validate-ninja-file
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

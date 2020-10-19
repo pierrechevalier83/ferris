@@ -1,4 +1,4 @@
-name: Format python code
+name: Black (Python formatting)
 
 on:
   push:
