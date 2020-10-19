@@ -36,7 +36,7 @@ jobs:
         submodules: true
     - uses: actions/download-artifact@v2
       with:
-        name: ninja
+        name: build.ninja
     - name: Fail if ninja build file is outdated
       run: |
         git diff --name-status | if [[ $(grep build.ninja) ]]; then exit 1; else exit 0; fi
@@ -71,3 +71,38 @@ jobs:
       run: |
         chmod +x ninja
         ./ninja build/0.1/base/erc_success
+
+  run-drc-for-0-1-base:
+    needs:
+      [build-ninja, validate-ninja-file]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - uses: actions/download-artifact@v2
+      with:
+        name: ninja
+    - name: Ensure erc success
+      run: |
+        chmod +x ninja
+        ./ninja build/0.1/base/drc_success
+  
+  generate-artifacts-for-0-1-base:
+    needs:
+      [run-erc-for-0-1-base, run-drc-for-0-1-base]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - uses: actions/download-artifact@v2
+      with:
+        name: ninja
+    - name: Ensure erc success
+      run: |
+        mkdir -p build/0.1/base
+        touch build/0.1/base/erc_success
+        touch build/0.1/base/drc_success
+        chmod +x ninja
+        ./ninja 0.1/base
