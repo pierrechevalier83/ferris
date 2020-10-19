@@ -15,6 +15,7 @@ Status
 ------
 
 | ![Validate ninja build file](https://github.com/pierrechevalier83/ferris/workflows/Validate%20ninja%20build%20file/badge.svg) | ![Format python code](https://github.com/pierrechevalier83/ferris/workflows/Format%20python%20code/badge.svg) |
+|--|--|
 
 Design philosophy
 -----------------
