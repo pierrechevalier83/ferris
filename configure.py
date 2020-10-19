@@ -134,6 +134,40 @@ def add_jlc_bom_rule(ninja, variant):
     ninja.newline()
 
 
+def add_pos_rule(ninja, variant):
+    pos_rule = make_rule_name(variant, "pos")
+    pcb = make_pcb_file_name(variant)
+    pos_file = make_output_file_path(variant, "pos.csv")
+    ninja.rule(
+        name=pos_rule,
+        command=[f"python ./tools/generate_pos.py {pcb} > {pos_file}"],
+    )
+    ninja.build(
+        inputs=["./tools/generate_pos.py", pcb],
+        outputs=[pos_file],
+        rule=pos_rule,
+    )
+    ninja.newline()
+
+
+def add_jlc_pick_and_place(ninja, variant):
+    rule = make_rule_name(variant, "jlc_cpl")
+    pos_file = make_output_file_path(variant, "pos.csv")
+    output = make_output_file_path(variant, "cpl.csv")
+    tool = f"{JLCBOM_DIR}/kicad_pos_to_cpl.py"
+    pcb = make_pcb_file_name(variant)
+    ninja.rule(
+        name=rule,
+        command=[f"python {tool} {pos_file} {output}"],
+    )
+    ninja.build(
+        inputs=[tool, pos_file, pcb],
+        outputs=[output],
+        rule=rule,
+    )
+    ninja.newline()
+
+
 def add_erc_rule(ninja, variant):
     erc_rule = make_rule_name(variant, "erc")
     erc_file = make_output_file_path(variant, "erc_success")
@@ -226,6 +260,7 @@ def add_shorthand_rule(ninja, variant):
                 "back.svg",
                 "ibom.html",
                 "bom_jlcpcb.csv",
+                "cpl.csv",
             ]
         ],
         outputs=[variant],
@@ -249,6 +284,8 @@ def generate_buildfile_content():
         add_render_rule(ninja, variant)
         add_interactive_bom_rule(ninja, variant)
         add_jlc_bom_rule(ninja, variant)
+        add_pos_rule(ninja, variant)
+        add_jlc_pick_and_place(ninja, variant)
         add_erc_rule(ninja, variant)
         add_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)
