@@ -56,9 +56,7 @@ jobs:
 
   run-erc-for-0-1-base:
     needs:
-      build-ninja
-    needs:
-      validate-ninja-file
+      [build-ninja, validate-ninja-file]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
