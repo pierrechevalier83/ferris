@@ -27,6 +27,8 @@ jobs:
         path: build.ninja
   
   validate-ninja-file:
+    needs:
+      [generate-ninja-file]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
