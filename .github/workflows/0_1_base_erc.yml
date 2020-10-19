@@ -19,7 +19,8 @@ jobs:
         python-version: 3.8
     - name: Install Ninja
       run: |
-        sudo apt-get install ninja
+        cmake -S tools/ninja -B tools/ninja/build
+        make -j8 -C tools/ninja/build
     - name: Ensure erc success
       run: |
-        ninja build/0.1/base/erc_success
+        ./tools/ninja/build/ninja build/0.1/base/erc_success
