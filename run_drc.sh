@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Super hacky: I'm replacing the timeout value in the docker container on the fly so it works with larger projects
-FULL_DRC_OUTPUT=$(docker run --rm -t -v "$(pwd)"/$1:/kicad-project productize/kicad-automation-scripts bash -c 'sed -i s/timeout=10/timeout=600/ /usr/lib/python2.7/dist-packages/kicad-automation/util/ui_automation.py && python -m kicad-automation.pcbnew_automation.run_drc /kicad-project/ferris.kicad_pcb "$(pwd)"/build')
+FULL_DRC_OUTPUT=$(docker run --rm -t -v "$(pwd)"/$1:/kicad-project productize/kicad-automation-scripts bash -c 'sed -i s/timeout=10/timeout=300/ /usr/lib/python2.7/dist-packages/kicad-automation/util/ui_automation.py && python -m kicad-automation.pcbnew_automation.run_drc /kicad-project/ferris.kicad_pcb "$(pwd)"/build')
 
 DRC_OUTPUT=$(echo $FULL_DRC_OUTPUT | grep "INFO:root" | sed "s/INFO:root//")
 
