@@ -7,9 +7,23 @@ on:
     branches: [ master ]
 
 jobs:
-  needs:
-    build-ninja
-  build:
+  build-ninja:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build Ninja
+      run: |
+        cmake -S tools/ninja -B tools/ninja/build
+        make -j8 -C tools/ninja/build
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ninja
+        path: ./tools/ninja/build/ninja
+  run-erc-for-0-1-base:
+    needs:
+      build-ninja
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
