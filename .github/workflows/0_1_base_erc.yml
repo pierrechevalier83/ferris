@@ -38,4 +38,5 @@ jobs:
         name: ninja
     - name: Ensure erc success
       run: |
+        chmod +x ninja
         ./ninja build/0.1/base/erc_success
