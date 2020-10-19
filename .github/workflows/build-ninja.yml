@@ -1,0 +1,23 @@
+name: Build ninja
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Install Ninja
+      run: |
+        cmake -S tools/ninja -B tools/ninja/build
+        make -j8 -C tools/ninja/build
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ninja
+        path: ./tools/ninja/build/ninja
