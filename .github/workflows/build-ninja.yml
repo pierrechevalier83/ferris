@@ -3,12 +3,8 @@ name: Build ninja
 on:
   push:
     branches: [ master ]
-    paths:
-    - 'tools/ninja'
   pull_request:
     branches: [ master ]
-    paths:
-    - 'tools/ninja'
 
 jobs:
   build:
