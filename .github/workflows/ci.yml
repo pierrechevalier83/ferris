@@ -99,6 +99,10 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: ninja
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
     - name: Ensure erc success
       run: |
         mkdir -p build/0.1/base
