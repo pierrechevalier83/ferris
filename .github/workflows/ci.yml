@@ -28,7 +28,7 @@ jobs:
   
   validate-ninja-file:
     needs:
-      [generate-ninja-file]
+      [generate-ninja-file, build-ninja]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -90,7 +90,9 @@ jobs:
   
   generate-artifacts-for-0-1-base:
     needs:
-      [run-erc-for-0-1-base, run-drc-for-0-1-base]
+      [generate-ninja-file, build-ninja]
+      #    needs:
+      #      [run-erc-for-0-1-base, run-drc-for-0-1-base]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -105,10 +107,23 @@ jobs:
         python-version: 3.8
     - name: Install kicad
       run: |
-        sudo apt-get update && sudo apt-get install -y kicad
+        sudo add-apt-repository --yes ppa:kicad/kicad-5.1-releases
+        sudo apt-get update
+        sudo apt-get install -y kicad
     - name: Install python dependencies
       run: |
-        pip install numpy lxml mistune pybars3 wand pyyaml kicad-python pcbdraw
+        python -m pip install --upgrade pip
+        pip install wheel setuptools tokenize
+        pip install numpy lxml mistune pybars3 wand pyyaml wxPython
+    - name: Check python path contents
+      run: |
+          python3 -m site
+    - name: Add pcbnew to python path
+      run: |
+        echo "PYTHONPATH=/usr/lib/python3/dist-packages:/usr/share/kicad/plugins" >> $GITHUB_ENV
+    - name: Check python path contents
+      run: |
+          python3 -m site
     - name: Generate artifacts
       run: |
         mkdir -p build/0.1/base
