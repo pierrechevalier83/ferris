@@ -74,7 +74,7 @@ def add_render_rule(ninja, variant):
     front_svg = make_output_file_path(variant, "front.svg")
     ninja.rule(
         name=render_front,
-        command=[f"python {pcbdraw} --style {style} {pcb} {front_svg}"],
+        command=[f"python3 {pcbdraw} --style {style} {pcb} {front_svg}"],
     )
     ninja.build(
         inputs=[pcbdraw, style, pcb],
@@ -85,7 +85,7 @@ def add_render_rule(ninja, variant):
     back_svg = make_output_file_path(variant, "back.svg")
     ninja.rule(
         name=render_back,
-        command=[f"python {pcbdraw} --style {style} {pcb} {back_svg} --back"],
+        command=[f"python3 {pcbdraw} --style {style} {pcb} {back_svg} --back"],
     )
     ninja.build(
         inputs=[pcbdraw, style, pcb],
@@ -106,7 +106,7 @@ def add_interactive_bom_rule(ninja, variant):
     ninja.rule(
         name=ibom_rule,
         command=[
-            f'python {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {raw_bom} --extra-fields "LCSC Part" --dnp-field "DNP" --no-browser'
+            f'python3 {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {raw_bom} --extra-fields "LCSC Part" --dnp-field "DNP" --no-browser'
         ],
     )
     ninja.build(
@@ -124,7 +124,7 @@ def add_jlc_bom_rule(ninja, variant):
     jlc_bom_rule = make_rule_name(variant, "jlc_bom")
     ninja.rule(
         name=jlc_bom_rule,
-        command=[f"python {jlc_bom_generator} {raw_bom} {jlc_bom}"],
+        command=[f"python3 {jlc_bom_generator} {raw_bom} {jlc_bom}"],
     )
     ninja.build(
         inputs=[jlc_bom_generator, raw_bom],
@@ -140,7 +140,7 @@ def add_pos_rule(ninja, variant):
     pos_file = make_output_file_path(variant, "pos.csv")
     ninja.rule(
         name=pos_rule,
-        command=[f"python ./tools/generate_pos.py {pcb} > {pos_file}"],
+        command=[f"python3 ./tools/generate_pos.py {pcb} > {pos_file}"],
     )
     ninja.build(
         inputs=["./tools/generate_pos.py", pcb],
@@ -158,7 +158,7 @@ def add_jlc_pick_and_place(ninja, variant):
     pcb = make_pcb_file_name(variant)
     ninja.rule(
         name=rule,
-        command=[f"python {tool} {pos_file} {output}"],
+        command=[f"python3 {tool} {pos_file} {output}"],
     )
     ninja.build(
         inputs=[tool, pos_file, pcb],

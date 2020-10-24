@@ -1,14 +1,14 @@
 # 0.1/base
 
 rule 0_1_base_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.1/base/ferris.kicad_pcb build/0.1/base/front.svg
 build build/0.1/base/front.svg: 0_1_base_render_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json 0.1/base/ferris.kicad_pcb
 rule 0_1_base_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.1/base/ferris.kicad_pcb build/0.1/base/back.svg --back
 build build/0.1/base/back.svg: 0_1_base_render_back $
@@ -16,7 +16,7 @@ build build/0.1/base/back.svg: 0_1_base_render_back $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json 0.1/base/ferris.kicad_pcb
 
 rule 0_1_base_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/base/ferris.kicad_pcb --dest-dir ../../build/0.1/base $
       --netlist-file 0.1/base/ferris.xml --extra-fields "LCSC Part" $
@@ -26,19 +26,19 @@ build build/0.1/base/ibom.html: 0_1_base_ibom $
     0.1/base/ferris.kicad_pcb 0.1/base/ferris.xml
 
 rule 0_1_base_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.1/base/ferris.xml build/0.1/base/bom_jlcpcb.csv
 build build/0.1/base/bom_jlcpcb.csv: 0_1_base_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/base/ferris.xml
 
 rule 0_1_base_pos
-  command = python ./tools/generate_pos.py 0.1/base/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.1/base/ferris.kicad_pcb > $
       build/0.1/base/pos.csv
 build build/0.1/base/pos.csv: 0_1_base_pos ./tools/generate_pos.py $
     0.1/base/ferris.kicad_pcb
 
 rule 0_1_base_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.1/base/pos.csv build/0.1/base/cpl.csv
 build build/0.1/base/cpl.csv: 0_1_base_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
@@ -84,7 +84,7 @@ build 0.1/base: phony build/0.1/base/gerbers.zip build/0.1/base/front.svg $
 # 0.1/compact
 
 rule 0_1_compact_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.1/compact/ferris.kicad_pcb build/0.1/compact/front.svg
 build build/0.1/compact/front.svg: 0_1_compact_render_front $
@@ -92,7 +92,7 @@ build build/0.1/compact/front.svg: 0_1_compact_render_front $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.1/compact/ferris.kicad_pcb
 rule 0_1_compact_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.1/compact/ferris.kicad_pcb build/0.1/compact/back.svg --back
 build build/0.1/compact/back.svg: 0_1_compact_render_back $
@@ -101,7 +101,7 @@ build build/0.1/compact/back.svg: 0_1_compact_render_back $
     0.1/compact/ferris.kicad_pcb
 
 rule 0_1_compact_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/compact/ferris.kicad_pcb --dest-dir ../../build/0.1/compact $
       --netlist-file 0.1/compact/ferris.xml --extra-fields "LCSC Part" $
@@ -111,19 +111,19 @@ build build/0.1/compact/ibom.html: 0_1_compact_ibom $
     0.1/compact/ferris.kicad_pcb 0.1/compact/ferris.xml
 
 rule 0_1_compact_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.1/compact/ferris.xml build/0.1/compact/bom_jlcpcb.csv
 build build/0.1/compact/bom_jlcpcb.csv: 0_1_compact_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/compact/ferris.xml
 
 rule 0_1_compact_pos
-  command = python ./tools/generate_pos.py 0.1/compact/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.1/compact/ferris.kicad_pcb > $
       build/0.1/compact/pos.csv
 build build/0.1/compact/pos.csv: 0_1_compact_pos ./tools/generate_pos.py $
     0.1/compact/ferris.kicad_pcb
 
 rule 0_1_compact_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.1/compact/pos.csv build/0.1/compact/cpl.csv
 build build/0.1/compact/cpl.csv: 0_1_compact_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
@@ -175,7 +175,7 @@ build 0.1/compact: phony build/0.1/compact/gerbers.zip $
 # 0.1/high
 
 rule 0_1_high_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
       0.1/high/ferris.kicad_pcb build/0.1/high/front.svg
 build build/0.1/high/front.svg: 0_1_high_render_front $
@@ -183,7 +183,7 @@ build build/0.1/high/front.svg: 0_1_high_render_front $
     tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
     0.1/high/ferris.kicad_pcb
 rule 0_1_high_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
       0.1/high/ferris.kicad_pcb build/0.1/high/back.svg --back
 build build/0.1/high/back.svg: 0_1_high_render_back $
@@ -192,7 +192,7 @@ build build/0.1/high/back.svg: 0_1_high_render_back $
     0.1/high/ferris.kicad_pcb
 
 rule 0_1_high_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/high/ferris.kicad_pcb --dest-dir ../../build/0.1/high $
       --netlist-file 0.1/high/ferris.xml --extra-fields "LCSC Part" $
@@ -202,19 +202,19 @@ build build/0.1/high/ibom.html: 0_1_high_ibom $
     0.1/high/ferris.kicad_pcb 0.1/high/ferris.xml
 
 rule 0_1_high_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.1/high/ferris.xml build/0.1/high/bom_jlcpcb.csv
 build build/0.1/high/bom_jlcpcb.csv: 0_1_high_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/high/ferris.xml
 
 rule 0_1_high_pos
-  command = python ./tools/generate_pos.py 0.1/high/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.1/high/ferris.kicad_pcb > $
       build/0.1/high/pos.csv
 build build/0.1/high/pos.csv: 0_1_high_pos ./tools/generate_pos.py $
     0.1/high/ferris.kicad_pcb
 
 rule 0_1_high_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.1/high/pos.csv build/0.1/high/cpl.csv
 build build/0.1/high/cpl.csv: 0_1_high_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
@@ -260,14 +260,14 @@ build 0.1/high: phony build/0.1/high/gerbers.zip build/0.1/high/front.svg $
 # 0.1/low
 
 rule 0_1_low_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
       0.1/low/ferris.kicad_pcb build/0.1/low/front.svg
 build build/0.1/low/front.svg: 0_1_low_render_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.1/low/ferris.kicad_pcb
 rule 0_1_low_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
       0.1/low/ferris.kicad_pcb build/0.1/low/back.svg --back
 build build/0.1/low/back.svg: 0_1_low_render_back $
@@ -275,7 +275,7 @@ build build/0.1/low/back.svg: 0_1_low_render_back $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.1/low/ferris.kicad_pcb
 
 rule 0_1_low_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.1/low/ferris.kicad_pcb --dest-dir ../../build/0.1/low $
       --netlist-file 0.1/low/ferris.xml --extra-fields "LCSC Part" $
@@ -285,19 +285,19 @@ build build/0.1/low/ibom.html: 0_1_low_ibom $
     0.1/low/ferris.kicad_pcb 0.1/low/ferris.xml
 
 rule 0_1_low_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.1/low/ferris.xml build/0.1/low/bom_jlcpcb.csv
 build build/0.1/low/bom_jlcpcb.csv: 0_1_low_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.1/low/ferris.xml
 
 rule 0_1_low_pos
-  command = python ./tools/generate_pos.py 0.1/low/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.1/low/ferris.kicad_pcb > $
       build/0.1/low/pos.csv
 build build/0.1/low/pos.csv: 0_1_low_pos ./tools/generate_pos.py $
     0.1/low/ferris.kicad_pcb
 
 rule 0_1_low_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.1/low/pos.csv build/0.1/low/cpl.csv
 build build/0.1/low/cpl.csv: 0_1_low_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py build/0.1/low/pos.csv $
@@ -341,7 +341,7 @@ build 0.1/low: phony build/0.1/low/gerbers.zip build/0.1/low/front.svg $
 # 0.2/bling
 
 rule 0_2_bling_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.2/bling/ferris.kicad_pcb build/0.2/bling/front.svg
 build build/0.2/bling/front.svg: 0_2_bling_render_front $
@@ -349,7 +349,7 @@ build build/0.2/bling/front.svg: 0_2_bling_render_front $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/ferris.kicad_pcb
 rule 0_2_bling_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.2/bling/ferris.kicad_pcb build/0.2/bling/back.svg --back
 build build/0.2/bling/back.svg: 0_2_bling_render_back $
@@ -358,7 +358,7 @@ build build/0.2/bling/back.svg: 0_2_bling_render_back $
     0.2/bling/ferris.kicad_pcb
 
 rule 0_2_bling_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/bling/ferris.kicad_pcb --dest-dir ../../build/0.2/bling $
       --netlist-file 0.2/bling/ferris.xml --extra-fields "LCSC Part" $
@@ -368,19 +368,19 @@ build build/0.2/bling/ibom.html: 0_2_bling_ibom $
     0.2/bling/ferris.kicad_pcb 0.2/bling/ferris.xml
 
 rule 0_2_bling_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.2/bling/ferris.xml build/0.2/bling/bom_jlcpcb.csv
 build build/0.2/bling/bom_jlcpcb.csv: 0_2_bling_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/bling/ferris.xml
 
 rule 0_2_bling_pos
-  command = python ./tools/generate_pos.py 0.2/bling/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.2/bling/ferris.kicad_pcb > $
       build/0.2/bling/pos.csv
 build build/0.2/bling/pos.csv: 0_2_bling_pos ./tools/generate_pos.py $
     0.2/bling/ferris.kicad_pcb
 
 rule 0_2_bling_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.2/bling/pos.csv build/0.2/bling/cpl.csv
 build build/0.2/bling/cpl.csv: 0_2_bling_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
@@ -427,7 +427,7 @@ build 0.2/bling: phony build/0.2/bling/gerbers.zip $
 # 0.2/compact
 
 rule 0_2_compact_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.2/compact/ferris.kicad_pcb build/0.2/compact/front.svg
 build build/0.2/compact/front.svg: 0_2_compact_render_front $
@@ -435,7 +435,7 @@ build build/0.2/compact/front.svg: 0_2_compact_render_front $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/compact/ferris.kicad_pcb
 rule 0_2_compact_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
       0.2/compact/ferris.kicad_pcb build/0.2/compact/back.svg --back
 build build/0.2/compact/back.svg: 0_2_compact_render_back $
@@ -444,7 +444,7 @@ build build/0.2/compact/back.svg: 0_2_compact_render_back $
     0.2/compact/ferris.kicad_pcb
 
 rule 0_2_compact_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/compact/ferris.kicad_pcb --dest-dir ../../build/0.2/compact $
       --netlist-file 0.2/compact/ferris.xml --extra-fields "LCSC Part" $
@@ -454,19 +454,19 @@ build build/0.2/compact/ibom.html: 0_2_compact_ibom $
     0.2/compact/ferris.kicad_pcb 0.2/compact/ferris.xml
 
 rule 0_2_compact_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.2/compact/ferris.xml build/0.2/compact/bom_jlcpcb.csv
 build build/0.2/compact/bom_jlcpcb.csv: 0_2_compact_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/compact/ferris.xml
 
 rule 0_2_compact_pos
-  command = python ./tools/generate_pos.py 0.2/compact/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.2/compact/ferris.kicad_pcb > $
       build/0.2/compact/pos.csv
 build build/0.2/compact/pos.csv: 0_2_compact_pos ./tools/generate_pos.py $
     0.2/compact/ferris.kicad_pcb
 
 rule 0_2_compact_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.2/compact/pos.csv build/0.2/compact/cpl.csv
 build build/0.2/compact/cpl.csv: 0_2_compact_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
@@ -518,7 +518,7 @@ build 0.2/compact: phony build/0.2/compact/gerbers.zip $
 # 0.2/high
 
 rule 0_2_high_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
       0.2/high/ferris.kicad_pcb build/0.2/high/front.svg
 build build/0.2/high/front.svg: 0_2_high_render_front $
@@ -526,7 +526,7 @@ build build/0.2/high/front.svg: 0_2_high_render_front $
     tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
     0.2/high/ferris.kicad_pcb
 rule 0_2_high_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
       0.2/high/ferris.kicad_pcb build/0.2/high/back.svg --back
 build build/0.2/high/back.svg: 0_2_high_render_back $
@@ -535,7 +535,7 @@ build build/0.2/high/back.svg: 0_2_high_render_back $
     0.2/high/ferris.kicad_pcb
 
 rule 0_2_high_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/high/ferris.kicad_pcb --dest-dir ../../build/0.2/high $
       --netlist-file 0.2/high/ferris.xml --extra-fields "LCSC Part" $
@@ -545,19 +545,19 @@ build build/0.2/high/ibom.html: 0_2_high_ibom $
     0.2/high/ferris.kicad_pcb 0.2/high/ferris.xml
 
 rule 0_2_high_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.2/high/ferris.xml build/0.2/high/bom_jlcpcb.csv
 build build/0.2/high/bom_jlcpcb.csv: 0_2_high_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/high/ferris.xml
 
 rule 0_2_high_pos
-  command = python ./tools/generate_pos.py 0.2/high/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.2/high/ferris.kicad_pcb > $
       build/0.2/high/pos.csv
 build build/0.2/high/pos.csv: 0_2_high_pos ./tools/generate_pos.py $
     0.2/high/ferris.kicad_pcb
 
 rule 0_2_high_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.2/high/pos.csv build/0.2/high/cpl.csv
 build build/0.2/high/cpl.csv: 0_2_high_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
@@ -603,14 +603,14 @@ build 0.2/high: phony build/0.2/high/gerbers.zip build/0.2/high/front.svg $
 # 0.2/mini
 
 rule 0_2_mini_render_front
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
       0.2/mini/ferris.kicad_pcb build/0.2/mini/front.svg
 build build/0.2/mini/front.svg: 0_2_mini_render_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.2/mini/ferris.kicad_pcb
 rule 0_2_mini_render_back
-  command = python tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
       0.2/mini/ferris.kicad_pcb build/0.2/mini/back.svg --back
 build build/0.2/mini/back.svg: 0_2_mini_render_back $
@@ -618,7 +618,7 @@ build build/0.2/mini/back.svg: 0_2_mini_render_back $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.2/mini/ferris.kicad_pcb
 
 rule 0_2_mini_ibom
-  command = python $
+  command = python3 $
       tools/InteractiveHtmlBom/InteractiveHtmlBom/generate_interactive_bom.py $
       0.2/mini/ferris.kicad_pcb --dest-dir ../../build/0.2/mini $
       --netlist-file 0.2/mini/ferris.xml --extra-fields "LCSC Part" $
@@ -628,19 +628,19 @@ build build/0.2/mini/ibom.html: 0_2_mini_ibom $
     0.2/mini/ferris.kicad_pcb 0.2/mini/ferris.xml
 
 rule 0_2_mini_jlc_bom
-  command = python tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py $
       0.2/mini/ferris.xml build/0.2/mini/bom_jlcpcb.csv
 build build/0.2/mini/bom_jlcpcb.csv: 0_2_mini_jlc_bom $
     tools/kicad-jlcpcb-bom-plugin/bom_csv_jlcpcb.py 0.2/mini/ferris.xml
 
 rule 0_2_mini_pos
-  command = python ./tools/generate_pos.py 0.2/mini/ferris.kicad_pcb > $
+  command = python3 ./tools/generate_pos.py 0.2/mini/ferris.kicad_pcb > $
       build/0.2/mini/pos.csv
 build build/0.2/mini/pos.csv: 0_2_mini_pos ./tools/generate_pos.py $
     0.2/mini/ferris.kicad_pcb
 
 rule 0_2_mini_jlc_cpl
-  command = python tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
+  command = python3 tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
       build/0.2/mini/pos.csv build/0.2/mini/cpl.csv
 build build/0.2/mini/cpl.csv: 0_2_mini_jlc_cpl $
     tools/kicad-jlcpcb-bom-plugin/kicad_pos_to_cpl.py $
