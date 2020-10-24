@@ -134,4 +134,4 @@ jobs:
         touch build/0.1/base/erc_success
         touch build/0.1/base/drc_success
         chmod +x ninja
-        ./ninja 0.1/base
+        ./ninja -k 0 0.1/base
