@@ -124,7 +124,7 @@ jobs:
           python3 -m site
     - name: Add pcbnew to python path
       run: |
-        echo "PYTHONPATH=/usr/lib/python3/dist-packages:/usr/share/kicad/plugins" >> $GITHUB_ENV
+          echo "PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/dist-packages/wx:/usr/share/kicad/plugins" >> $GITHUB_ENV
     - name: Check python path contents
       run: |
           python3 -m site
