@@ -1,9 +1,5 @@
 #!/bin/bash
-
-# Super hacky: I'm replacing the timeout value in the docker container on the fly so it works with larger projects
-FULL_DRC_OUTPUT=$(docker run --rm -t -v "$(pwd)"/$1:/kicad-project productize/kicad-automation-scripts bash -c 'sed -i s/timeout=10/timeout=300/ /usr/lib/python2.7/dist-packages/kicad-automation/util/ui_automation.py && python -m kicad-automation.pcbnew_automation.run_drc /kicad-project/ferris.kicad_pcb "$(pwd)"/build')
-
-DRC_OUTPUT=$(echo $FULL_DRC_OUTPUT | grep "INFO:root" | sed "s/INFO:root//")
+DRC_OUTPUT=$(docker run --rm -t -e VARIANT=$1 -e RUST_LOG -v "$(pwd)":/workdir pierrechevalier83/kicad_cli bash -c 'kicad_cli run-drc $VARIANT/ferris.kicad_pcb --headless')
 
 if [[ -z "$DRC_OUTPUT" ]]; then
 	echo -e "\e[1;32mERROR\e[0m"
@@ -11,7 +7,7 @@ if [[ -z "$DRC_OUTPUT" ]]; then
 	echo "$FULL_DRC_OUTPUT"
 	exit 2
 else
-	if [[ "$DRC_OUTPUT" = *"'drc_errors': 0, 'unconnected_pads': 0"* ]]; then
+	if [[ "$DRC_OUTPUT" == "DrcOutput { num_errors: 0, num_unconnected_pads: 0 }"* ]]; then
 		echo -e "\e[1;32mPASS\e[0m"
 		echo "$DRC_OUTPUT"
 	    exit 0
