@@ -1,5 +1,9 @@
 #!/bin/bash
-DRC_OUTPUT=$(docker run --rm -t -e VARIANT=$1 -e RUST_LOG -v "$(pwd)":/workdir pierrechevalier83/kicad_cli bash -c 'kicad_cli run-drc $VARIANT/ferris.kicad_pcb --headless')
+if [[ -z "$WORKDIR" ]]; then
+	export WORKDIR="$(pwd)";
+fi
+
+DRC_OUTPUT=$(docker run --rm -t -e VARIANT=$1 -e RUST_LOG -v $WORKDIR:/workdir pierrechevalier83/kicad_cli bash -c 'kicad_cli run-drc $VARIANT/ferris.kicad_pcb --headless --drc-timeout-in-s 60')
 
 if [[ -z "$DRC_OUTPUT" ]]; then
 	echo -e "\e[1;32mERROR\e[0m"

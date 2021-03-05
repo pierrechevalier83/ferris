@@ -1,5 +1,9 @@
 #!/bin/bash
-ERC_OUTPUT=$(docker run --rm -t -e VARIANT=$1 -e RUST_LOG -v "$(pwd)":/workdir pierrechevalier83/kicad_cli bash -c 'RUSTLOG=$RUSTLOG kicad_cli run-erc $VARIANT/ferris.sch --headless')
+if [[ -z "$WORKDIR" ]]; then
+	export WORKDIR="$(pwd)";
+fi
+
+ERC_OUTPUT=$(docker run --rm -t -e VARIANT=$1 -e RUST_LOG -v $WORKDIR:/workdir pierrechevalier83/kicad_cli bash -c 'RUSTLOG=$RUSTLOG kicad_cli run-erc $VARIANT/ferris.sch --headless')
 
 if [[ -z "$ERC_OUTPUT" ]]; then
 	echo -e "\e[1;32mERROR\e[0m"
