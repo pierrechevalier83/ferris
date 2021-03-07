@@ -235,7 +235,7 @@ def add_zip_gerber_rule(ninja, variant):
     zip_file = make_output_file_path(variant, "gerbers.zip")
     gerber_files = make_gerber_output_paths(variant)
     gerber_rule = make_rule_name(variant, "gerbers")
-    ninja.rule(name=zip_gerber_rule, command=[f"zip -r {zip_file}"] + gerber_files)
+    ninja.rule(name=zip_gerber_rule, command=[f"zip -j -r {zip_file}"] + gerber_files)
     ninja.build(
         inputs=[
             make_output_file_path(variant, "erc_success"),

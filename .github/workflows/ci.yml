@@ -27,7 +27,8 @@ jobs:
         ./ninja.sh ${{ matrix.variant }}
     - name: Generate release zip
       run: |
-         zip build/${{ matrix.variant }}/release.zip \
+         zip -j \
+             build/${{ matrix.variant }}/release.zip \
              build/${{ matrix.variant }}/front.svg \
              build/${{ matrix.variant }}/back.svg \
              build/${{ matrix.variant }}/bom_jlcpcb.csv \

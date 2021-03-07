@@ -60,7 +60,7 @@ build build/0.1/base/ferris-B_Cu.gbr build/0.1/base/ferris-B_Mask.gbr $
     build/0.1/base/ferris-F_SilkS.gbr: 0_1_base_gerbers
 
 rule 0_1_base_gerbers_zip
-  command = zip -r build/0.1/base/gerbers.zip $
+  command = zip -j -r build/0.1/base/gerbers.zip $
       build/0.1/base/ferris-B_Cu.gbr build/0.1/base/ferris-B_Mask.gbr $
       build/0.1/base/ferris-B_Paste.gbr build/0.1/base/ferris-B_SilkS.gbr $
       build/0.1/base/ferris-Edge_Cuts.gbr build/0.1/base/ferris-F_Cu.gbr $
@@ -143,7 +143,7 @@ build build/0.1/compact/ferris-B_Cu.gbr build/0.1/compact/ferris-B_Mask.gbr $
     build/0.1/compact/ferris-F_SilkS.gbr: 0_1_compact_gerbers
 
 rule 0_1_compact_gerbers_zip
-  command = zip -r build/0.1/compact/gerbers.zip $
+  command = zip -j -r build/0.1/compact/gerbers.zip $
       build/0.1/compact/ferris-B_Cu.gbr build/0.1/compact/ferris-B_Mask.gbr $
       build/0.1/compact/ferris-B_Paste.gbr $
       build/0.1/compact/ferris-B_SilkS.gbr $
@@ -228,7 +228,7 @@ build build/0.1/high/ferris-B_Cu.gbr build/0.1/high/ferris-B_Mask.gbr $
     build/0.1/high/ferris-F_SilkS.gbr: 0_1_high_gerbers
 
 rule 0_1_high_gerbers_zip
-  command = zip -r build/0.1/high/gerbers.zip $
+  command = zip -j -r build/0.1/high/gerbers.zip $
       build/0.1/high/ferris-B_Cu.gbr build/0.1/high/ferris-B_Mask.gbr $
       build/0.1/high/ferris-B_Paste.gbr build/0.1/high/ferris-B_SilkS.gbr $
       build/0.1/high/ferris-Edge_Cuts.gbr build/0.1/high/ferris-F_Cu.gbr $
@@ -306,11 +306,12 @@ build build/0.1/low/ferris-B_Cu.gbr build/0.1/low/ferris-B_Mask.gbr $
     build/0.1/low/ferris-F_SilkS.gbr: 0_1_low_gerbers
 
 rule 0_1_low_gerbers_zip
-  command = zip -r build/0.1/low/gerbers.zip build/0.1/low/ferris-B_Cu.gbr $
-      build/0.1/low/ferris-B_Mask.gbr build/0.1/low/ferris-B_Paste.gbr $
-      build/0.1/low/ferris-B_SilkS.gbr build/0.1/low/ferris-Edge_Cuts.gbr $
-      build/0.1/low/ferris-F_Cu.gbr build/0.1/low/ferris-F_Mask.gbr $
-      build/0.1/low/ferris-F_Paste.gbr build/0.1/low/ferris-F_SilkS.gbr
+  command = zip -j -r build/0.1/low/gerbers.zip $
+      build/0.1/low/ferris-B_Cu.gbr build/0.1/low/ferris-B_Mask.gbr $
+      build/0.1/low/ferris-B_Paste.gbr build/0.1/low/ferris-B_SilkS.gbr $
+      build/0.1/low/ferris-Edge_Cuts.gbr build/0.1/low/ferris-F_Cu.gbr $
+      build/0.1/low/ferris-F_Mask.gbr build/0.1/low/ferris-F_Paste.gbr $
+      build/0.1/low/ferris-F_SilkS.gbr
 build build/0.1/low/gerbers.zip: 0_1_low_gerbers_zip $
     build/0.1/low/erc_success build/0.1/low/drc_success $
     build/0.1/low/ferris-B_Cu.gbr build/0.1/low/ferris-B_Mask.gbr $
@@ -386,7 +387,7 @@ build build/0.2/bling/ferris-B_Cu.gbr build/0.2/bling/ferris-B_Mask.gbr $
     build/0.2/bling/ferris-F_SilkS.gbr: 0_2_bling_gerbers
 
 rule 0_2_bling_gerbers_zip
-  command = zip -r build/0.2/bling/gerbers.zip $
+  command = zip -j -r build/0.2/bling/gerbers.zip $
       build/0.2/bling/ferris-B_Cu.gbr build/0.2/bling/ferris-B_Mask.gbr $
       build/0.2/bling/ferris-B_Paste.gbr build/0.2/bling/ferris-B_SilkS.gbr $
       build/0.2/bling/ferris-Edge_Cuts.gbr build/0.2/bling/ferris-F_Cu.gbr $
@@ -470,7 +471,7 @@ build build/0.2/compact/ferris-B_Cu.gbr build/0.2/compact/ferris-B_Mask.gbr $
     build/0.2/compact/ferris-F_SilkS.gbr: 0_2_compact_gerbers
 
 rule 0_2_compact_gerbers_zip
-  command = zip -r build/0.2/compact/gerbers.zip $
+  command = zip -j -r build/0.2/compact/gerbers.zip $
       build/0.2/compact/ferris-B_Cu.gbr build/0.2/compact/ferris-B_Mask.gbr $
       build/0.2/compact/ferris-B_Paste.gbr $
       build/0.2/compact/ferris-B_SilkS.gbr $
@@ -555,7 +556,7 @@ build build/0.2/high/ferris-B_Cu.gbr build/0.2/high/ferris-B_Mask.gbr $
     build/0.2/high/ferris-F_SilkS.gbr: 0_2_high_gerbers
 
 rule 0_2_high_gerbers_zip
-  command = zip -r build/0.2/high/gerbers.zip $
+  command = zip -j -r build/0.2/high/gerbers.zip $
       build/0.2/high/ferris-B_Cu.gbr build/0.2/high/ferris-B_Mask.gbr $
       build/0.2/high/ferris-B_Paste.gbr build/0.2/high/ferris-B_SilkS.gbr $
       build/0.2/high/ferris-Edge_Cuts.gbr build/0.2/high/ferris-F_Cu.gbr $
@@ -634,7 +635,7 @@ build build/0.2/mini/ferris-B_Cu.gbr build/0.2/mini/ferris-B_Mask.gbr $
     build/0.2/mini/ferris-F_SilkS.gbr: 0_2_mini_gerbers
 
 rule 0_2_mini_gerbers_zip
-  command = zip -r build/0.2/mini/gerbers.zip $
+  command = zip -j -r build/0.2/mini/gerbers.zip $
       build/0.2/mini/ferris-B_Cu.gbr build/0.2/mini/ferris-B_Mask.gbr $
       build/0.2/mini/ferris-B_Paste.gbr build/0.2/mini/ferris-B_SilkS.gbr $
       build/0.2/mini/ferris-Edge_Cuts.gbr build/0.2/mini/ferris-F_Cu.gbr $
