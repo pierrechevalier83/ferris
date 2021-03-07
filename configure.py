@@ -168,8 +168,8 @@ def add_jlc_pick_and_place(ninja, variant):
 
 def add_erc_rule(ninja, variant):
     erc_rule = make_rule_name(variant, "erc")
-    erc_file = make_output_file_path(variant, "erc_success")
     # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if ERC fails.
+    erc_file = make_output_file_path(variant, "erc_success")
     ninja.rule(
         name=erc_rule,
         command=[f"./run_erc.sh {variant}"],
@@ -184,8 +184,8 @@ def add_erc_rule(ninja, variant):
 
 def add_drc_rule(ninja, variant):
     drc_rule = make_rule_name(variant, "drc")
-    drc_file = make_output_file_path(variant, "drc_success")
     # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if DRC fails.
+    drc_file = make_output_file_path(variant, "drc_success")
     ninja.rule(
         name=drc_rule,
         command=[f"./run_drc.sh {variant}"],
