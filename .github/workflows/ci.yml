@@ -39,12 +39,12 @@ jobs:
     - name: Generate artifacts
       run: |
         ./ninja.sh 0.1/base
-    - name: Upload zip file to release
+    - name: Upload generated files to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/0.1/base/gerbers.zip
-        asset_name: 0_1_base_gerbers.zip
+        file: build/0.1/base/*
         tag: ${{ github.ref }}
         overwrite: true
-        body: "Automatically generated gerbers for ferris 0.1 base variant"
+        file_glob: true
+        body: "Automatically generated files for ferris 0.1 base variant"
