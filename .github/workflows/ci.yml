@@ -25,13 +25,23 @@ jobs:
     - name: Generate artifacts
       run: |
         ./ninja.sh ${{ matrix.variant }}
+    - name: Generate release zip
+      run: |
+         zip build/${{ matrix.variant }}/release.zip \
+             build/${{ matrix.variant }}/front.svg \
+             build/${{ matrix.variant }}/back.svg \
+             build/${{ matrix.variant }}/bom_jlcpcb.csv \
+             build/${{ matrix.variant }}/cpl.csv \
+             build/${{ matrix.variant }}/pos.csv \
+             build/${{ matrix.variant }}/ibom.html \
+             build/${{ matrix.variant }}/gerbers.zip
     - name: Upload generated files to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/${{ matrix.variant }}/*
+        file: build/${{ matrix.variant }}/release.zip
+        asset_name: ${{ matrix.variant }}/release.zip
         tag: ${{ github.ref }}
         overwrite: true
-        file_glob: true
         body: "Automatically generated files for ferris ${{ matrix.variant }} variant"
 
