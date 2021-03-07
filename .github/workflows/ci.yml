@@ -57,36 +57,24 @@ jobs:
         path: ./tools/ninja/build/ninja
 
   run-erc-for-0-1-base:
-    needs:
-      [build-ninja, validate-ninja-file]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - uses: actions/download-artifact@v2
-      with:
-        name: ninja
     - name: Ensure erc success
       run: |
-        chmod +x ninja
-        ./ninja build/0.1/base/erc_success
+        ./ninja.sh build/0.1/base/erc_success
 
   run-drc-for-0-1-base:
-    needs:
-      [build-ninja, validate-ninja-file]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - uses: actions/download-artifact@v2
-      with:
-        name: ninja
     - name: Ensure erc success
       run: |
-        chmod +x ninja
-        ./ninja build/0.1/base/drc_success
+        ./ninja.sh build/0.1/base/drc_success
   
   generate-artifacts-for-0-1-base:
     needs:
