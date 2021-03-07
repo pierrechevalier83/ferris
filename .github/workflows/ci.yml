@@ -1,4 +1,4 @@
-name: Generate artifacts for 0.1/base
+name: Generate artifacts for all variants
 
 on:
   push:
@@ -7,44 +7,31 @@ on:
     branches: [ master ]
 
 jobs:
-
-  run-erc-for-0-1-base:
+  generate-artifacts:
+    strategy:
+      matrix:
+          variant: [0.1/base, 0.1/compact, 0.1/high, 0.1/low, 0.2/bling, 0.2/compact, 0.2/high, 0.2/mini]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - name: Ensure erc success
+    - name: Design rules check
       run: |
-        ./ninja.sh build/0.1/base/erc_success
-
-  run-drc-for-0-1-base:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
-    - name: Ensure erc success
+        ./ninja.sh build/${{ matrix.variant }}/drc_success
+    - name: Electrical rules check
       run: |
-        ./ninja.sh build/0.1/base/drc_success
-  
-  generate-artifacts-for-0-1-base:
-    needs:
-      [run-erc-for-0-1-base, run-drc-for-0-1-base]
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
+        ./ninja.sh build/${{ matrix.variant }}/erc_success
     - name: Generate artifacts
       run: |
-        ./ninja.sh 0.1/base
+        ./ninja.sh ${{ matrix.variant }}
     - name: Upload generated files to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/0.1/base/*
+        file: build/${{ matrix.variant }}/*
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
-        body: "Automatically generated files for ferris 0.1 base variant"
+        body: "Automatically generated files for ferris ${{ matrix.variant }} variant"
+
