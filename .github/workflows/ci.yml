@@ -8,54 +8,6 @@ on:
 
 jobs:
 
-  generate-ninja-file:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
-    - name: Set up Python 3.6
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.6
-    - name: Generate ninja build file
-      run: |
-        python3 ./configure.py
-    - uses: actions/upload-artifact@v2
-      with:
-        name: build.ninja
-        path: build.ninja
-  
-  validate-ninja-file:
-    needs:
-      [generate-ninja-file, build-ninja]
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
-    - uses: actions/download-artifact@v2
-      with:
-        name: build.ninja
-    - name: Fail if ninja build file is outdated
-      run: |
-        git diff --name-status | if [[ $(grep build.ninja) ]]; then exit 1; else exit 0; fi
-
-  build-ninja:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
-    - name: Build Ninja
-      run: |
-        cmake -S tools/ninja -B tools/ninja/build
-        make -j8 -C tools/ninja/build
-    - uses: actions/upload-artifact@v2
-      with:
-        name: ninja
-        path: ./tools/ninja/build/ninja
-
   run-erc-for-0-1-base:
     runs-on: ubuntu-latest
     steps:
@@ -78,53 +30,12 @@ jobs:
   
   generate-artifacts-for-0-1-base:
     needs:
-      [generate-ninja-file, build-ninja]
-      #    needs:
-      #      [run-erc-for-0-1-base, run-drc-for-0-1-base]
+      [run-erc-for-0-1-base, run-drc-for-0-1-base]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - uses: actions/download-artifact@v2
-      with:
-        name: ninja
-    - name: Set up Python 3.6
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.6
-    - name: Install kicad
-      run: |
-        sudo add-apt-repository --yes ppa:kicad/kicad-5.1-releases
-        sudo apt-get update
-        sudo apt-get install -y kicad
-    - name: Setup vnc server
-      run: |
-        sudo apt-get install -y x11vnc xvfb
-        mkdir ~/.vnc
-        x11vnc -storepasswd 1234 ~/.vnc/passwd
-    - name: Upgrade pip
-      run: |
-        python3 -m pip install --upgrade pip
-    - name: Install wheel and setuptools
-      run: |
-        python3 -m pip install wheel setuptools
-    - name: Install python dependencies
-      run: |
-        python3 -m pip install numpy lxml mistune pybars3 wand pyyaml
-    - name: Check python path contents
-      run: |
-          python3 -m site
-    - name: Add pcbnew to python path
-      run: |
-          echo "PYTHONPATH=/usr/lib/python3/dist-packages:/usr/lib/python3/dist-packages/wx:/usr/share/kicad/plugins" >> $GITHUB_ENV
-    - name: Check python path contents
-      run: |
-          python3 -m site
     - name: Generate artifacts
       run: |
-        mkdir -p build/0.1/base
-        touch build/0.1/base/erc_success
-        touch build/0.1/base/drc_success
-        chmod +x ninja
-        ./ninja -k 0 0.1/base
+        ./ninja.sh 0.1/base
