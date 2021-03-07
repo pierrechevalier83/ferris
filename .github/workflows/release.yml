@@ -1,0 +1,45 @@
+name: Generate artifacts for all variants
+
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  generate-artifacts:
+    strategy:
+      matrix:
+          variant: [0.1/base, 0.1/compact, 0.1/high, 0.1/low, 0.2/bling, 0.2/compact, 0.2/high, 0.2/mini]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Design rules check
+      run: |
+        ./ninja.sh build/${{ matrix.variant }}/drc_success
+    - name: Electrical rules check
+      run: |
+        ./ninja.sh build/${{ matrix.variant }}/erc_success
+    - name: Generate artifacts
+      run: |
+        ./ninja.sh ${{ matrix.variant }}
+    - name: Generate release zip
+      run: |
+         zip -j \
+             build/${{ matrix.variant }}/release.zip \
+             build/${{ matrix.variant }}/front.svg \
+             build/${{ matrix.variant }}/back.svg \
+             build/${{ matrix.variant }}/bom_jlcpcb.csv \
+             build/${{ matrix.variant }}/cpl.csv \
+             build/${{ matrix.variant }}/pos.csv \
+             build/${{ matrix.variant }}/ibom.html \
+             build/${{ matrix.variant }}/gerbers.zip
+    - name: Upload generated files to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: build/${{ matrix.variant }}/release.zip
+        asset_name: ${{ matrix.variant }}/release.zip
+        tag: ${{ github.ref }}
+        body: "Automatically generated files for all ferris variants"
+
