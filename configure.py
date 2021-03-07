@@ -105,12 +105,10 @@ def add_interactive_bom_rule(ninja, variant):
     ibom_rule = make_rule_name(variant, "ibom")
     ninja.rule(
         name=ibom_rule,
-        command=[
-            f'python3 {ibom_generator} {pcb} --dest-dir {out_dir} --netlist-file {raw_bom} --extra-fields "LCSC Part" --dnp-field "DNP" --no-browser'
-        ],
+        command=[f"./run_ibom.sh {variant}"],
     )
     ninja.build(
-        inputs=[ibom_generator, pcb, raw_bom],
+        inputs=["./run_ibom.sh", ibom_generator, pcb, raw_bom],
         outputs=[ibom_output],
         rule=ibom_rule,
     )
@@ -174,7 +172,7 @@ def add_erc_rule(ninja, variant):
     # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if ERC fails.
     ninja.rule(
         name=erc_rule,
-        command=[f"./run_erc.sh {variant} && touch {erc_file}"],
+        command=[f"./run_erc.sh {variant}"],
     )
     ninja.build(
         inputs=["./run_erc.sh", make_sch_file_name(variant)],
@@ -190,7 +188,7 @@ def add_drc_rule(ninja, variant):
     # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if DRC fails.
     ninja.rule(
         name=drc_rule,
-        command=[f"./run_drc.sh {variant} && touch {drc_file}"],
+        command=[f"./run_drc.sh {variant}"],
     )
     ninja.build(
         inputs=["./run_drc.sh", make_pcb_file_name(variant)],
