@@ -42,6 +42,5 @@ jobs:
         file: build/${{ matrix.variant }}/release.zip
         asset_name: ${{ matrix.variant }}/release.zip
         tag: ${{ github.ref }}
-        overwrite: true
         body: "Automatically generated files for all ferris variants"
 
