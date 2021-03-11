@@ -30,6 +30,27 @@ RENDER_COLORS = {
     "0.2/high": "yellow",
     "0.2/mini": "blue",
 }
+CASE_DIRS = {
+    "mid_profile_with_puck": "mid_profile",
+    "mid_profile_without_puck": "mid_profile",
+}
+CASE_BASENAMES = {
+    "mid_profile_with_puck": [
+        "top_left_plate_with_puck",
+        "top_right_plate_with_puck",
+        "mid_plate",
+        "bottom_plate_with_puck",
+    ],
+    "mid_profile_without_puck": [
+        "top_left_plate_without_puck",
+        "top_right_plate_without_puck",
+        "mid_plate",
+        "bottom_plate_without_puck",
+    ],
+}
+CASES = {
+    "0.2/bling": ["mid_profile_with_puck", "mid_profile_without_puck"],
+}
 
 
 def add_comment_header(ninja, variant):
@@ -41,8 +62,12 @@ def underscorify(variant):
     return variant.replace("/", "_").replace(".", "_")
 
 
-def make_pcb_file_name(variant):
-    return f"{variant}/ferris.kicad_pcb"
+def make_pcb_file_name(rel_dir, basename):
+    return f"{rel_dir}/{basename}.kicad_pcb"
+
+
+def make_drc_success_file_name(rel_dir, basename):
+    return f"{OUTPUT_DIR}/{make_pcb_file_name(rel_dir, basename)}.drc_success"
 
 
 def make_raw_bom_file_name(variant):
@@ -69,7 +94,7 @@ def add_render_rule(ninja, variant):
     pcbdraw = f"{PCBDRAW_DIR}/pcbdraw.py"
     color = RENDER_COLORS[variant]
     style = f"{PCBDRAW_DIR}/styles/set-{color}-enig.json"
-    pcb = make_pcb_file_name(variant)
+    pcb = make_pcb_file_name(variant, "ferris")
     render_front = make_rule_name(variant, "render_front")
     front_svg = make_output_file_path(variant, "front.svg")
     ninja.rule(
@@ -100,7 +125,7 @@ def add_interactive_bom_rule(ninja, variant):
     # Has to be relative to the PCB file
     out_dir = f"../../{OUTPUT_DIR}/{variant}"
     ibom_output = make_output_file_path(variant, "ibom.html")
-    pcb = make_pcb_file_name(variant)
+    pcb = make_pcb_file_name(variant, "ferris")
     raw_bom = make_raw_bom_file_name(variant)
     ibom_rule = make_rule_name(variant, "ibom")
     ninja.rule(
@@ -134,7 +159,7 @@ def add_jlc_bom_rule(ninja, variant):
 
 def add_pos_rule(ninja, variant):
     pos_rule = make_rule_name(variant, "pos")
-    pcb = make_pcb_file_name(variant)
+    pcb = make_pcb_file_name(variant, "ferris")
     pos_file = make_output_file_path(variant, "pos.csv")
     ninja.rule(
         name=pos_rule,
@@ -153,7 +178,7 @@ def add_jlc_pick_and_place(ninja, variant):
     pos_file = make_output_file_path(variant, "pos.csv")
     output = make_output_file_path(variant, "cpl.csv")
     tool = f"{JLCBOM_DIR}/kicad_pos_to_cpl.py"
-    pcb = make_pcb_file_name(variant)
+    pcb = make_pcb_file_name(variant, "ferris")
     ninja.rule(
         name=rule,
         command=[f"python3 {tool} {pos_file} {output}"],
@@ -182,20 +207,23 @@ def add_erc_rule(ninja, variant):
     ninja.newline()
 
 
-def add_drc_rule(ninja, variant):
-    drc_rule = make_rule_name(variant, "drc")
-    # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if DRC fails.
-    drc_file = make_output_file_path(variant, "drc_success")
+def add_drc_rule(ninja, rel_dir, basename):
+    drc_rule = make_rule_name(f"{rel_dir}/{basename}", "drc")
+    pcb_file = make_pcb_file_name(rel_dir, basename)
     ninja.rule(
         name=drc_rule,
-        command=[f"./run_drc.sh {variant}"],
+        command=[f"./run_drc.sh {pcb_file}"],
     )
     ninja.build(
-        inputs=["./run_drc.sh", make_pcb_file_name(variant)],
-        outputs=[drc_file],
+        inputs=["./run_drc.sh", f"{pcb_file}"],
+        outputs=[make_drc_success_file_name(rel_dir, basename)],
         rule=drc_rule,
     )
     ninja.newline()
+
+
+def add_keyboard_drc_rule(ninja, variant):
+    add_drc_rule(ninja, variant, "ferris")
 
 
 def make_gerber_output_paths(variant):
@@ -219,10 +247,11 @@ def make_gerber_output_paths(variant):
 
 def add_gerber_rule(ninja, variant):
     gerber_rule = make_rule_name(variant, "gerbers")
-    board = make_pcb_file_name(variant)
+    board = make_pcb_file_name(variant, "ferris")
     config = ".kiplot.yml"
     out_dir = make_variant_out_dir(variant)
     kiplot = "kiplot"
+
     ninja.rule(
         name=gerber_rule,
         command=[f"mkdir -p {out_dir} && {kiplot} -b {board} -c {config} -d {out_dir}"],
@@ -243,13 +272,27 @@ def add_zip_gerber_rule(ninja, variant):
     ninja.build(
         inputs=[
             make_output_file_path(variant, "erc_success"),
-            make_output_file_path(variant, "drc_success"),
+            make_drc_success_file_name(variant, "ferris"),
         ]
         + gerber_files,
         outputs=zip_file,
         rule=zip_gerber_rule,
     )
     ninja.newline()
+
+
+def add_case_drc_rules(ninja, variant, case, already_checked):
+    for basename in CASE_BASENAMES[case]:
+        case_dir = CASE_DIRS[case]
+        if not (variant, case_dir, basename) in already_checked:
+            add_drc_rule(ninja, f"{variant}/cases/{case_dir}", basename)
+            already_checked.add((variant, case_dir, basename))
+
+
+def add_case_rules(ninja, variant):
+    already_checked = set(())
+    for case in CASES.get(variant, []):
+        add_case_drc_rules(ninja, variant, case, already_checked)
 
 
 def add_shorthand_rule(ninja, variant):
@@ -289,9 +332,10 @@ def generate_buildfile_content():
         add_pos_rule(ninja, variant)
         add_jlc_pick_and_place(ninja, variant)
         add_erc_rule(ninja, variant)
-        add_drc_rule(ninja, variant)
+        add_keyboard_drc_rule(ninja, variant)
         add_gerber_rule(ninja, variant)
         add_zip_gerber_rule(ninja, variant)
+        add_case_rules(ninja, variant)
         add_shorthand_rule(ninja, variant)
     add_0_1_shorthand_rule(ninja)
     add_0_2_shorthand_rule(ninja)
