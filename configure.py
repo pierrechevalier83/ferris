@@ -78,6 +78,10 @@ def make_sch_file_name(variant):
     return f"{variant}/ferris.sch"
 
 
+def make_erc_success_file_name(variant):
+    return f"{OUTPUT_DIR}/{make_sch_file_name(variant)}.erc_success"
+
+
 def make_rule_name(variant, suffix):
     return f"{underscorify(variant)}_{suffix}"
 
@@ -193,15 +197,14 @@ def add_jlc_pick_and_place(ninja, variant):
 
 def add_erc_rule(ninja, variant):
     erc_rule = make_rule_name(variant, "erc")
-    # On success, we create a file which informs the next rule that it's ok to proceed. We don't want to generate gerber files if ERC fails.
-    erc_file = make_output_file_path(variant, "erc_success")
+    sch_file = make_sch_file_name(variant)
     ninja.rule(
         name=erc_rule,
-        command=[f"./run_erc.sh {variant}"],
+        command=[f"./run_erc.sh {sch_file}"],
     )
     ninja.build(
-        inputs=["./run_erc.sh", make_sch_file_name(variant)],
-        outputs=[erc_file],
+        inputs=["./run_erc.sh", sch_file],
+        outputs=[make_erc_success_file_name(variant)],
         rule=erc_rule,
     )
     ninja.newline()
@@ -271,7 +274,7 @@ def add_zip_gerber_rule(ninja, variant):
     ninja.rule(name=zip_gerber_rule, command=[f"zip -j -r {zip_file}"] + gerber_files)
     ninja.build(
         inputs=[
-            make_output_file_path(variant, "erc_success"),
+            make_erc_success_file_name(variant),
             make_drc_success_file_name(variant, "ferris"),
         ]
         + gerber_files,

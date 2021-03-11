@@ -5,7 +5,7 @@ fi
 
 VARIANT=$1
 
-ERC_OUTPUT=$(docker run --rm -t -e VARIANT=$VARIANT -e RUST_LOG -v $WORKDIR:/workdir pierrechevalier83/kicad_cli bash -c 'RUSTLOG=$RUSTLOG kicad_cli run-erc $VARIANT/ferris.sch --headless')
+ERC_OUTPUT=$(docker run --rm -t -e VARIANT=$VARIANT -e RUST_LOG -v $WORKDIR:/workdir pierrechevalier83/kicad_cli bash -c 'RUSTLOG=$RUSTLOG kicad_cli run-erc $VARIANT --headless')
 
 if [[ -z "$ERC_OUTPUT" ]]; then
 	echo -e "\e[1;32mERROR\e[0m"
@@ -13,7 +13,7 @@ if [[ -z "$ERC_OUTPUT" ]]; then
 	exit 2
 else
 	if [[ "$ERC_OUTPUT" == "ErcOutput { num_errors: 0, num_warnings: 0 }"* ]]; then
-		touch build/$VARIANT/erc_success
+		touch build/$VARIANT.erc_success
 		echo -e "\e[1;32mPASS\e[0m"
 		echo "$ERC_OUTPUT"
 	    exit 0
