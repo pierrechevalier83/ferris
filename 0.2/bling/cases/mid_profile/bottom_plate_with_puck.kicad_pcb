@@ -5,7 +5,7 @@
     (drawings 40)
     (tracks 0)
     (zones 0)
-    (modules 0)
+    (modules 1)
     (nets 1)
   )
 
@@ -107,6 +107,16 @@
     (via_drill 0.4)
     (uvia_dia 0.3)
     (uvia_drill 0.1)
+  )
+
+  (module dummy:dummy (layer F.Cu) (tedit 604AAE8F) (tstamp 604AAECA)
+    (at 12 12)
+    (fp_text reference dummy (at 0 0.5) (layer F.SilkS)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value dummy (at 0 -0.5) (layer F.Fab)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
   )
 
   (gr_circle (center 67.790402 38.02) (end 46.780402 37.89) (layer Edge.Cuts) (width 0.05) (tstamp 6049EA61))
