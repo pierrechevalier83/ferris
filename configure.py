@@ -26,6 +26,7 @@ RENDER_COLORS = {
     "0.1/high": "yellow",
     "0.1/low": "blue",
     "0.2/bling": "white",
+    "0.2/bling/cases/mid_profile": "white",
     "0.2/compact": "white",
     "0.2/high": "yellow",
     "0.2/mini": "blue",
@@ -94,13 +95,13 @@ def make_output_file_path(variant, filename):
     return f"{make_variant_out_dir(variant)}/{filename}"
 
 
-def add_render_rule(ninja, variant):
+def add_render_front_rule(ninja, rel_dir, basename="ferris"):
     pcbdraw = f"{PCBDRAW_DIR}/pcbdraw.py"
-    color = RENDER_COLORS[variant]
+    color = RENDER_COLORS[rel_dir]
     style = f"{PCBDRAW_DIR}/styles/set-{color}-enig.json"
-    pcb = make_pcb_file_name(variant, "ferris")
-    render_front = make_rule_name(variant, "render_front")
-    front_svg = make_output_file_path(variant, "front.svg")
+    pcb = make_pcb_file_name(rel_dir, basename)
+    render_front = make_rule_name(rel_dir, f"render_{basename}_front")
+    front_svg = make_output_file_path(rel_dir, f"{basename}_front.svg")
     ninja.rule(
         name=render_front,
         command=[f"python3 {pcbdraw} --style {style} {pcb} {front_svg}"],
@@ -108,10 +109,18 @@ def add_render_rule(ninja, variant):
     ninja.build(
         inputs=[pcbdraw, style, pcb],
         outputs=[front_svg],
-        rule=make_rule_name(variant, "render_front"),
+        rule=make_rule_name(rel_dir, f"render_{basename}_front"),
     )
-    render_back = make_rule_name(variant, "render_back")
-    back_svg = make_output_file_path(variant, "back.svg")
+    ninja.newline()
+
+
+def add_render_back_rule(ninja, rel_dir, basename="ferris"):
+    pcbdraw = f"{PCBDRAW_DIR}/pcbdraw.py"
+    color = RENDER_COLORS[rel_dir]
+    style = f"{PCBDRAW_DIR}/styles/set-{color}-enig.json"
+    pcb = make_pcb_file_name(rel_dir, basename)
+    render_back = make_rule_name(rel_dir, f"render_{basename}_back")
+    back_svg = make_output_file_path(rel_dir, f"{basename}_back.svg")
     ninja.rule(
         name=render_back,
         command=[f"python3 {pcbdraw} --style {style} {pcb} {back_svg} --back"],
@@ -119,7 +128,7 @@ def add_render_rule(ninja, variant):
     ninja.build(
         inputs=[pcbdraw, style, pcb],
         outputs=[back_svg],
-        rule=make_rule_name(variant, "render_back"),
+        rule=make_rule_name(rel_dir, f"render_{basename}_back"),
     )
     ninja.newline()
 
@@ -284,18 +293,19 @@ def add_zip_gerber_rule(ninja, variant):
     ninja.newline()
 
 
-def add_case_drc_rules(ninja, variant, case, already_checked):
+def add_case_pcb_rules(ninja, variant, case, already_checked):
     for basename in CASE_BASENAMES[case]:
         case_dir = CASE_DIRS[case]
         if not (variant, case_dir, basename) in already_checked:
             add_drc_rule(ninja, f"{variant}/cases/{case_dir}", basename)
+            add_render_front_rule(ninja, f"{variant}/cases/{case_dir}", basename)
             already_checked.add((variant, case_dir, basename))
 
 
 def add_case_rules(ninja, variant):
     already_checked = set(())
     for case in CASES.get(variant, []):
-        add_case_drc_rules(ninja, variant, case, already_checked)
+        add_case_pcb_rules(ninja, variant, case, already_checked)
 
 
 def add_shorthand_rule(ninja, variant):
@@ -304,8 +314,8 @@ def add_shorthand_rule(ninja, variant):
             make_output_file_path(variant, f)
             for f in [
                 "gerbers.zip",
-                "front.svg",
-                "back.svg",
+                "ferris_front.svg",
+                "ferris_back.svg",
                 "ibom.html",
                 "bom_jlcpcb.csv",
                 "cpl.csv",
@@ -329,7 +339,8 @@ def generate_buildfile_content():
     variants = VARIANTS
     for variant in variants:
         add_comment_header(ninja, variant)
-        add_render_rule(ninja, variant)
+        add_render_front_rule(ninja, variant)
+        add_render_back_rule(ninja, variant)
         add_interactive_bom_rule(ninja, variant)
         add_jlc_bom_rule(ninja, variant)
         add_pos_rule(ninja, variant)

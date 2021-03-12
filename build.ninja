@@ -1,17 +1,18 @@
 # 0.1/base
 
-rule 0_1_base_render_front
+rule 0_1_base_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.1/base/ferris.kicad_pcb build/0.1/base/front.svg
-build build/0.1/base/front.svg: 0_1_base_render_front $
+      0.1/base/ferris.kicad_pcb build/0.1/base/ferris_front.svg
+build build/0.1/base/ferris_front.svg: 0_1_base_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json 0.1/base/ferris.kicad_pcb
-rule 0_1_base_render_back
+
+rule 0_1_base_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.1/base/ferris.kicad_pcb build/0.1/base/back.svg --back
-build build/0.1/base/back.svg: 0_1_base_render_back $
+      0.1/base/ferris.kicad_pcb build/0.1/base/ferris_back.svg --back
+build build/0.1/base/ferris_back.svg: 0_1_base_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json 0.1/base/ferris.kicad_pcb
 
@@ -82,24 +83,26 @@ build build/0.1/base/gerbers.zip: 0_1_base_gerbers_zip $
     build/0.1/base/ferris-NPTH-drl_map.gbr build/0.1/base/ferris-NPTH.drl $
     build/0.1/base/ferris-PTH-drl_map.gbr build/0.1/base/ferris-PTH.drl
 
-build 0.1/base: phony build/0.1/base/gerbers.zip build/0.1/base/front.svg $
-    build/0.1/base/back.svg build/0.1/base/ibom.html $
-    build/0.1/base/bom_jlcpcb.csv build/0.1/base/cpl.csv
+build 0.1/base: phony build/0.1/base/gerbers.zip $
+    build/0.1/base/ferris_front.svg build/0.1/base/ferris_back.svg $
+    build/0.1/base/ibom.html build/0.1/base/bom_jlcpcb.csv $
+    build/0.1/base/cpl.csv
 # 0.1/compact
 
-rule 0_1_compact_render_front
+rule 0_1_compact_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.1/compact/ferris.kicad_pcb build/0.1/compact/front.svg
-build build/0.1/compact/front.svg: 0_1_compact_render_front $
+      0.1/compact/ferris.kicad_pcb build/0.1/compact/ferris_front.svg
+build build/0.1/compact/ferris_front.svg: 0_1_compact_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.1/compact/ferris.kicad_pcb
-rule 0_1_compact_render_back
+
+rule 0_1_compact_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.1/compact/ferris.kicad_pcb build/0.1/compact/back.svg --back
-build build/0.1/compact/back.svg: 0_1_compact_render_back $
+      0.1/compact/ferris.kicad_pcb build/0.1/compact/ferris_back.svg --back
+build build/0.1/compact/ferris_back.svg: 0_1_compact_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.1/compact/ferris.kicad_pcb
@@ -182,24 +185,25 @@ build build/0.1/compact/gerbers.zip: 0_1_compact_gerbers_zip $
     build/0.1/compact/ferris-PTH-drl_map.gbr build/0.1/compact/ferris-PTH.drl
 
 build 0.1/compact: phony build/0.1/compact/gerbers.zip $
-    build/0.1/compact/front.svg build/0.1/compact/back.svg $
+    build/0.1/compact/ferris_front.svg build/0.1/compact/ferris_back.svg $
     build/0.1/compact/ibom.html build/0.1/compact/bom_jlcpcb.csv $
     build/0.1/compact/cpl.csv
 # 0.1/high
 
-rule 0_1_high_render_front
+rule 0_1_high_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
-      0.1/high/ferris.kicad_pcb build/0.1/high/front.svg
-build build/0.1/high/front.svg: 0_1_high_render_front $
+      0.1/high/ferris.kicad_pcb build/0.1/high/ferris_front.svg
+build build/0.1/high/ferris_front.svg: 0_1_high_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
     0.1/high/ferris.kicad_pcb
-rule 0_1_high_render_back
+
+rule 0_1_high_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
-      0.1/high/ferris.kicad_pcb build/0.1/high/back.svg --back
-build build/0.1/high/back.svg: 0_1_high_render_back $
+      0.1/high/ferris.kicad_pcb build/0.1/high/ferris_back.svg --back
+build build/0.1/high/ferris_back.svg: 0_1_high_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
     0.1/high/ferris.kicad_pcb
@@ -271,23 +275,25 @@ build build/0.1/high/gerbers.zip: 0_1_high_gerbers_zip $
     build/0.1/high/ferris-NPTH-drl_map.gbr build/0.1/high/ferris-NPTH.drl $
     build/0.1/high/ferris-PTH-drl_map.gbr build/0.1/high/ferris-PTH.drl
 
-build 0.1/high: phony build/0.1/high/gerbers.zip build/0.1/high/front.svg $
-    build/0.1/high/back.svg build/0.1/high/ibom.html $
-    build/0.1/high/bom_jlcpcb.csv build/0.1/high/cpl.csv
+build 0.1/high: phony build/0.1/high/gerbers.zip $
+    build/0.1/high/ferris_front.svg build/0.1/high/ferris_back.svg $
+    build/0.1/high/ibom.html build/0.1/high/bom_jlcpcb.csv $
+    build/0.1/high/cpl.csv
 # 0.1/low
 
-rule 0_1_low_render_front
+rule 0_1_low_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
-      0.1/low/ferris.kicad_pcb build/0.1/low/front.svg
-build build/0.1/low/front.svg: 0_1_low_render_front $
+      0.1/low/ferris.kicad_pcb build/0.1/low/ferris_front.svg
+build build/0.1/low/ferris_front.svg: 0_1_low_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.1/low/ferris.kicad_pcb
-rule 0_1_low_render_back
+
+rule 0_1_low_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
-      0.1/low/ferris.kicad_pcb build/0.1/low/back.svg --back
-build build/0.1/low/back.svg: 0_1_low_render_back $
+      0.1/low/ferris.kicad_pcb build/0.1/low/ferris_back.svg --back
+build build/0.1/low/ferris_back.svg: 0_1_low_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.1/low/ferris.kicad_pcb
 
@@ -357,24 +363,25 @@ build build/0.1/low/gerbers.zip: 0_1_low_gerbers_zip $
     build/0.1/low/ferris-NPTH.drl build/0.1/low/ferris-PTH-drl_map.gbr $
     build/0.1/low/ferris-PTH.drl
 
-build 0.1/low: phony build/0.1/low/gerbers.zip build/0.1/low/front.svg $
-    build/0.1/low/back.svg build/0.1/low/ibom.html $
-    build/0.1/low/bom_jlcpcb.csv build/0.1/low/cpl.csv
+build 0.1/low: phony build/0.1/low/gerbers.zip $
+    build/0.1/low/ferris_front.svg build/0.1/low/ferris_back.svg $
+    build/0.1/low/ibom.html build/0.1/low/bom_jlcpcb.csv build/0.1/low/cpl.csv
 # 0.2/bling
 
-rule 0_2_bling_render_front
+rule 0_2_bling_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.2/bling/ferris.kicad_pcb build/0.2/bling/front.svg
-build build/0.2/bling/front.svg: 0_2_bling_render_front $
+      0.2/bling/ferris.kicad_pcb build/0.2/bling/ferris_front.svg
+build build/0.2/bling/ferris_front.svg: 0_2_bling_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/ferris.kicad_pcb
-rule 0_2_bling_render_back
+
+rule 0_2_bling_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.2/bling/ferris.kicad_pcb build/0.2/bling/back.svg --back
-build build/0.2/bling/back.svg: 0_2_bling_render_back $
+      0.2/bling/ferris.kicad_pcb build/0.2/bling/ferris_back.svg --back
+build build/0.2/bling/ferris_back.svg: 0_2_bling_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/ferris.kicad_pcb
@@ -455,6 +462,17 @@ build $
     0_2_bling_cases_mid_profile_top_left_plate_with_puck_drc ./run_drc.sh $
     0.2/bling/cases/mid_profile/top_left_plate_with_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_render_top_left_plate_with_puck_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/top_left_plate_with_puck.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/top_left_plate_with_puck_front.svg
+build build/0.2/bling/cases/mid_profile/top_left_plate_with_puck_front.svg: $
+    0_2_bling_cases_mid_profile_render_top_left_plate_with_puck_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/bling/cases/mid_profile/top_left_plate_with_puck.kicad_pcb
+
 rule 0_2_bling_cases_mid_profile_top_right_plate_with_puck_drc
   command = ./run_drc.sh $
       0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb
@@ -463,10 +481,33 @@ build $
     0_2_bling_cases_mid_profile_top_right_plate_with_puck_drc ./run_drc.sh $
     0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_render_top_right_plate_with_puck_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/top_right_plate_with_puck_front.svg
+build $
+    build/0.2/bling/cases/mid_profile/top_right_plate_with_puck_front.svg: $
+    0_2_bling_cases_mid_profile_render_top_right_plate_with_puck_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb
+
 rule 0_2_bling_cases_mid_profile_mid_plate_drc
   command = ./run_drc.sh 0.2/bling/cases/mid_profile/mid_plate.kicad_pcb
 build build/0.2/bling/cases/mid_profile/mid_plate.kicad_pcb.drc_success: $
     0_2_bling_cases_mid_profile_mid_plate_drc ./run_drc.sh $
+    0.2/bling/cases/mid_profile/mid_plate.kicad_pcb
+
+rule 0_2_bling_cases_mid_profile_render_mid_plate_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/mid_plate.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/mid_plate_front.svg
+build build/0.2/bling/cases/mid_profile/mid_plate_front.svg: $
+    0_2_bling_cases_mid_profile_render_mid_plate_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/mid_plate.kicad_pcb
 
 rule 0_2_bling_cases_mid_profile_bottom_plate_with_puck_drc
@@ -475,6 +516,17 @@ rule 0_2_bling_cases_mid_profile_bottom_plate_with_puck_drc
 build $
     build/0.2/bling/cases/mid_profile/bottom_plate_with_puck.kicad_pcb.drc_success: $
     0_2_bling_cases_mid_profile_bottom_plate_with_puck_drc ./run_drc.sh $
+    0.2/bling/cases/mid_profile/bottom_plate_with_puck.kicad_pcb
+
+rule 0_2_bling_cases_mid_profile_render_bottom_plate_with_puck_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/bottom_plate_with_puck.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/bottom_plate_with_puck_front.svg
+build build/0.2/bling/cases/mid_profile/bottom_plate_with_puck_front.svg: $
+    0_2_bling_cases_mid_profile_render_bottom_plate_with_puck_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/bottom_plate_with_puck.kicad_pcb
 
 rule 0_2_bling_cases_mid_profile_top_left_plate_without_puck_drc
@@ -486,6 +538,18 @@ build $
     ./run_drc.sh $
     0.2/bling/cases/mid_profile/top_left_plate_without_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_render_top_left_plate_without_puck_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/top_left_plate_without_puck.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/top_left_plate_without_puck_front.svg
+build $
+    build/0.2/bling/cases/mid_profile/top_left_plate_without_puck_front.svg: $
+    0_2_bling_cases_mid_profile_render_top_left_plate_without_puck_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/bling/cases/mid_profile/top_left_plate_without_puck.kicad_pcb
+
 rule 0_2_bling_cases_mid_profile_top_right_plate_without_puck_drc
   command = ./run_drc.sh $
       0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb
@@ -493,6 +557,18 @@ build $
     build/0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb.drc_success: $
     0_2_bling_cases_mid_profile_top_right_plate_without_puck_drc $
     ./run_drc.sh $
+    0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb
+
+rule 0_2_bling_cases_mid_profile_render_top_right_plate_without_puck_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/top_right_plate_without_puck_front.svg
+build $
+    build/0.2/bling/cases/mid_profile/top_right_plate_without_puck_front.svg: $
+    0_2_bling_cases_mid_profile_render_top_right_plate_without_puck_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb
 
 rule 0_2_bling_cases_mid_profile_bottom_plate_without_puck_drc
@@ -503,25 +579,38 @@ build $
     0_2_bling_cases_mid_profile_bottom_plate_without_puck_drc ./run_drc.sh $
     0.2/bling/cases/mid_profile/bottom_plate_without_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_render_bottom_plate_without_puck_front
+  command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
+      tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/bling/cases/mid_profile/bottom_plate_without_puck.kicad_pcb $
+      build/0.2/bling/cases/mid_profile/bottom_plate_without_puck_front.svg
+build $
+    build/0.2/bling/cases/mid_profile/bottom_plate_without_puck_front.svg: $
+    0_2_bling_cases_mid_profile_render_bottom_plate_without_puck_front $
+    tools/PcbDraw/pcbdraw/pcbdraw.py $
+    tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/bling/cases/mid_profile/bottom_plate_without_puck.kicad_pcb
+
 build 0.2/bling: phony build/0.2/bling/gerbers.zip $
-    build/0.2/bling/front.svg build/0.2/bling/back.svg $
+    build/0.2/bling/ferris_front.svg build/0.2/bling/ferris_back.svg $
     build/0.2/bling/ibom.html build/0.2/bling/bom_jlcpcb.csv $
     build/0.2/bling/cpl.csv
 # 0.2/compact
 
-rule 0_2_compact_render_front
+rule 0_2_compact_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.2/compact/ferris.kicad_pcb build/0.2/compact/front.svg
-build build/0.2/compact/front.svg: 0_2_compact_render_front $
+      0.2/compact/ferris.kicad_pcb build/0.2/compact/ferris_front.svg
+build build/0.2/compact/ferris_front.svg: 0_2_compact_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/compact/ferris.kicad_pcb
-rule 0_2_compact_render_back
+
+rule 0_2_compact_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.2/compact/ferris.kicad_pcb build/0.2/compact/back.svg --back
-build build/0.2/compact/back.svg: 0_2_compact_render_back $
+      0.2/compact/ferris.kicad_pcb build/0.2/compact/ferris_back.svg --back
+build build/0.2/compact/ferris_back.svg: 0_2_compact_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/compact/ferris.kicad_pcb
@@ -604,24 +693,25 @@ build build/0.2/compact/gerbers.zip: 0_2_compact_gerbers_zip $
     build/0.2/compact/ferris-PTH-drl_map.gbr build/0.2/compact/ferris-PTH.drl
 
 build 0.2/compact: phony build/0.2/compact/gerbers.zip $
-    build/0.2/compact/front.svg build/0.2/compact/back.svg $
+    build/0.2/compact/ferris_front.svg build/0.2/compact/ferris_back.svg $
     build/0.2/compact/ibom.html build/0.2/compact/bom_jlcpcb.csv $
     build/0.2/compact/cpl.csv
 # 0.2/high
 
-rule 0_2_high_render_front
+rule 0_2_high_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
-      0.2/high/ferris.kicad_pcb build/0.2/high/front.svg
-build build/0.2/high/front.svg: 0_2_high_render_front $
+      0.2/high/ferris.kicad_pcb build/0.2/high/ferris_front.svg
+build build/0.2/high/ferris_front.svg: 0_2_high_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
     0.2/high/ferris.kicad_pcb
-rule 0_2_high_render_back
+
+rule 0_2_high_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
-      0.2/high/ferris.kicad_pcb build/0.2/high/back.svg --back
-build build/0.2/high/back.svg: 0_2_high_render_back $
+      0.2/high/ferris.kicad_pcb build/0.2/high/ferris_back.svg --back
+build build/0.2/high/ferris_back.svg: 0_2_high_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-yellow-enig.json $
     0.2/high/ferris.kicad_pcb
@@ -693,23 +783,25 @@ build build/0.2/high/gerbers.zip: 0_2_high_gerbers_zip $
     build/0.2/high/ferris-NPTH-drl_map.gbr build/0.2/high/ferris-NPTH.drl $
     build/0.2/high/ferris-PTH-drl_map.gbr build/0.2/high/ferris-PTH.drl
 
-build 0.2/high: phony build/0.2/high/gerbers.zip build/0.2/high/front.svg $
-    build/0.2/high/back.svg build/0.2/high/ibom.html $
-    build/0.2/high/bom_jlcpcb.csv build/0.2/high/cpl.csv
+build 0.2/high: phony build/0.2/high/gerbers.zip $
+    build/0.2/high/ferris_front.svg build/0.2/high/ferris_back.svg $
+    build/0.2/high/ibom.html build/0.2/high/bom_jlcpcb.csv $
+    build/0.2/high/cpl.csv
 # 0.2/mini
 
-rule 0_2_mini_render_front
+rule 0_2_mini_render_ferris_front
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
-      0.2/mini/ferris.kicad_pcb build/0.2/mini/front.svg
-build build/0.2/mini/front.svg: 0_2_mini_render_front $
+      0.2/mini/ferris.kicad_pcb build/0.2/mini/ferris_front.svg
+build build/0.2/mini/ferris_front.svg: 0_2_mini_render_ferris_front $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.2/mini/ferris.kicad_pcb
-rule 0_2_mini_render_back
+
+rule 0_2_mini_render_ferris_back
   command = python3 tools/PcbDraw/pcbdraw/pcbdraw.py --style $
       tools/PcbDraw/pcbdraw/styles/set-blue-enig.json $
-      0.2/mini/ferris.kicad_pcb build/0.2/mini/back.svg --back
-build build/0.2/mini/back.svg: 0_2_mini_render_back $
+      0.2/mini/ferris.kicad_pcb build/0.2/mini/ferris_back.svg --back
+build build/0.2/mini/ferris_back.svg: 0_2_mini_render_ferris_back $
     tools/PcbDraw/pcbdraw/pcbdraw.py $
     tools/PcbDraw/pcbdraw/styles/set-blue-enig.json 0.2/mini/ferris.kicad_pcb
 
@@ -780,8 +872,9 @@ build build/0.2/mini/gerbers.zip: 0_2_mini_gerbers_zip $
     build/0.2/mini/ferris-NPTH-drl_map.gbr build/0.2/mini/ferris-NPTH.drl $
     build/0.2/mini/ferris-PTH-drl_map.gbr build/0.2/mini/ferris-PTH.drl
 
-build 0.2/mini: phony build/0.2/mini/gerbers.zip build/0.2/mini/front.svg $
-    build/0.2/mini/back.svg build/0.2/mini/ibom.html $
-    build/0.2/mini/bom_jlcpcb.csv build/0.2/mini/cpl.csv
+build 0.2/mini: phony build/0.2/mini/gerbers.zip $
+    build/0.2/mini/ferris_front.svg build/0.2/mini/ferris_back.svg $
+    build/0.2/mini/ibom.html build/0.2/mini/bom_jlcpcb.csv $
+    build/0.2/mini/cpl.csv
 build 0.1: phony 0.1/base 0.1/compact 0.1/high 0.1/low
 build 0.2: phony 0.2/bling 0.2/compact 0.2/high 0.2/mini
