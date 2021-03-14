@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.6)
+(kicad_pcb (version 20171130) (host pcbnew 5.1.9)
 
   (general
     (thickness 1.6)
@@ -6,7 +6,7 @@
     (tracks 1996)
     (zones 0)
     (modules 145)
-    (nets 119)
+    (nets 154)
   )
 
   (page A4)
@@ -208,6 +208,41 @@
   (net 116 "Net-(U1-Pad31)")
   (net 117 "Net-(U1-Pad34)")
   (net 118 "Net-(U1-Pad46)")
+  (net 119 "Net-(J1-PadB8)")
+  (net 120 "Net-(J1-PadA8)")
+  (net 121 "Net-(U2-Pad28)")
+  (net 122 "Net-(U2-Pad27)")
+  (net 123 "Net-(U2-Pad26)")
+  (net 124 "Net-(U2-Pad20)")
+  (net 125 "Net-(U2-Pad19)")
+  (net 126 "Net-(U2-Pad14)")
+  (net 127 "Net-(U2-Pad11)")
+  (net 128 "Net-(U2-Pad8)")
+  (net 129 "Net-(U2-Pad7)")
+  (net 130 "Net-(U2-Pad6)")
+  (net 131 "Net-(U2-Pad5)")
+  (net 132 "Net-(U5-Pad28)")
+  (net 133 "Net-(U5-Pad27)")
+  (net 134 "Net-(U5-Pad26)")
+  (net 135 "Net-(U5-Pad25)")
+  (net 136 "Net-(U5-Pad24)")
+  (net 137 "Net-(U5-Pad23)")
+  (net 138 "Net-(U5-Pad22)")
+  (net 139 "Net-(U5-Pad21)")
+  (net 140 "Net-(U5-Pad17)")
+  (net 141 "Net-(U5-Pad16)")
+  (net 142 "Net-(U5-Pad1)")
+  (net 143 "Net-(U6-Pad17)")
+  (net 144 "Net-(U6-Pad16)")
+  (net 145 "Net-(U6-Pad15)")
+  (net 146 "Net-(U6-Pad14)")
+  (net 147 "Net-(U6-Pad13)")
+  (net 148 "Net-(U6-Pad12)")
+  (net 149 "Net-(U6-Pad11)")
+  (net 150 "Net-(U6-Pad10)")
+  (net 151 "Net-(U6-Pad9)")
+  (net 152 "Net-(U6-Pad8)")
+  (net 153 "Net-(U6-Pad7)")
 
   (net_class Default "This is the default net class."
     (clearance 0.2)
@@ -284,7 +319,9 @@
     (add_net "Net-(D3_5-Pad2)")
     (add_net "Net-(D3_6-Pad2)")
     (add_net "Net-(J1-PadA5)")
+    (add_net "Net-(J1-PadA8)")
     (add_net "Net-(J1-PadB5)")
+    (add_net "Net-(J1-PadB8)")
     (add_net "Net-(J1-PadS1)")
     (add_net "Net-(R10-Pad1)")
     (add_net "Net-(R11-Pad1)")
@@ -317,6 +354,39 @@
     (add_net "Net-(U1-Pad46)")
     (add_net "Net-(U1-Pad5)")
     (add_net "Net-(U1-Pad6)")
+    (add_net "Net-(U2-Pad11)")
+    (add_net "Net-(U2-Pad14)")
+    (add_net "Net-(U2-Pad19)")
+    (add_net "Net-(U2-Pad20)")
+    (add_net "Net-(U2-Pad26)")
+    (add_net "Net-(U2-Pad27)")
+    (add_net "Net-(U2-Pad28)")
+    (add_net "Net-(U2-Pad5)")
+    (add_net "Net-(U2-Pad6)")
+    (add_net "Net-(U2-Pad7)")
+    (add_net "Net-(U2-Pad8)")
+    (add_net "Net-(U5-Pad1)")
+    (add_net "Net-(U5-Pad16)")
+    (add_net "Net-(U5-Pad17)")
+    (add_net "Net-(U5-Pad21)")
+    (add_net "Net-(U5-Pad22)")
+    (add_net "Net-(U5-Pad23)")
+    (add_net "Net-(U5-Pad24)")
+    (add_net "Net-(U5-Pad25)")
+    (add_net "Net-(U5-Pad26)")
+    (add_net "Net-(U5-Pad27)")
+    (add_net "Net-(U5-Pad28)")
+    (add_net "Net-(U6-Pad10)")
+    (add_net "Net-(U6-Pad11)")
+    (add_net "Net-(U6-Pad12)")
+    (add_net "Net-(U6-Pad13)")
+    (add_net "Net-(U6-Pad14)")
+    (add_net "Net-(U6-Pad15)")
+    (add_net "Net-(U6-Pad16)")
+    (add_net "Net-(U6-Pad17)")
+    (add_net "Net-(U6-Pad7)")
+    (add_net "Net-(U6-Pad8)")
+    (add_net "Net-(U6-Pad9)")
     (add_net Right_CA1)
     (add_net Right_CA2)
     (add_net Right_CA3)
@@ -351,7 +421,7 @@
     (fp_text reference U1 (at 0 0.5 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value STM32F072CBTx (at 0 9 90) (layer F.Fab)
+    (fp_text value STM32F072CBT6 (at 0 9 90) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 3.5 3.5) (end -3.5 3.5) (layer F.Fab) (width 0.1))
@@ -7571,7 +7641,7 @@
     (fp_text reference Right_RGB_6 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7601,7 +7671,7 @@
     (fp_text reference Right_RGB_5 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7631,7 +7701,7 @@
     (fp_text reference Right_RGB_4 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7661,7 +7731,7 @@
     (fp_text reference Right_RGB_3 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7691,7 +7761,7 @@
     (fp_text reference Right_RGB_2 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7721,7 +7791,7 @@
     (fp_text reference Right_RGB_1 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7751,7 +7821,7 @@
     (fp_text reference Right_RGB_0 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7781,7 +7851,7 @@
     (fp_text reference Left_RGB_6 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7811,7 +7881,7 @@
     (fp_text reference Left_RGB_5 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7841,7 +7911,7 @@
     (fp_text reference Left_RGB_4 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7871,7 +7941,7 @@
     (fp_text reference Left_RGB_3 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7901,7 +7971,7 @@
     (fp_text reference Left_RGB_2 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7931,7 +8001,7 @@
     (fp_text reference Left_RGB_1 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -7961,7 +8031,7 @@
     (fp_text reference Left_RGB_0 (at 0 0) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value LED_RGBA (at 0 -2) (layer B.Fab) hide
+    (fp_text value FM-B2020RGBA-HG (at 0 -2) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -2.1 -1.3) (end 2.1 -1.3) (layer B.SilkS) (width 0.12))
@@ -9152,7 +9222,7 @@
     (fp_text reference R13 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 4.7k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 4.7kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -9188,7 +9258,7 @@
     (fp_text reference U6 (at 0 -3.3 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value IS31FL3731-QF (at 0 3.3 90) (layer F.Fab) hide
+    (fp_text value IS31FL3731 (at 0 3.3 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.56 -2.11) (end 2.11 -2.11) (layer F.SilkS) (width 0.12))
@@ -9258,17 +9328,28 @@
       (net 69 i2c_sda_right))
     (pad 18 smd roundrect (at 1.9375 0 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 70 i2c_scl_right))
-    (pad 17 smd roundrect (at 1.9375 0.4 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 16 smd roundrect (at 1.9375 0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 15 smd roundrect (at 1.9375 1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 14 smd roundrect (at 1.2 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 13 smd roundrect (at 0.8 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 12 smd roundrect (at 0.4 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 11 smd roundrect (at 0 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 10 smd roundrect (at -0.4 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 9 smd roundrect (at -0.8 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 8 smd roundrect (at -1.2 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 7 smd roundrect (at -1.9375 1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 17 smd roundrect (at 1.9375 0.4 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 143 "Net-(U6-Pad17)"))
+    (pad 16 smd roundrect (at 1.9375 0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 144 "Net-(U6-Pad16)"))
+    (pad 15 smd roundrect (at 1.9375 1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 145 "Net-(U6-Pad15)"))
+    (pad 14 smd roundrect (at 1.2 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 146 "Net-(U6-Pad14)"))
+    (pad 13 smd roundrect (at 0.8 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 147 "Net-(U6-Pad13)"))
+    (pad 12 smd roundrect (at 0.4 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 148 "Net-(U6-Pad12)"))
+    (pad 11 smd roundrect (at 0 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 149 "Net-(U6-Pad11)"))
+    (pad 10 smd roundrect (at -0.4 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 150 "Net-(U6-Pad10)"))
+    (pad 9 smd roundrect (at -0.8 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 151 "Net-(U6-Pad9)"))
+    (pad 8 smd roundrect (at -1.2 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 152 "Net-(U6-Pad8)"))
+    (pad 7 smd roundrect (at -1.9375 1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 153 "Net-(U6-Pad7)"))
     (pad 6 smd roundrect (at -1.9375 0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 76 "Net-(R14-Pad1)"))
     (pad 5 smd roundrect (at -1.9375 0.4 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
@@ -9441,7 +9522,7 @@
     (fp_text reference U5 (at 0 -3.3 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value IS31FL3731-QF (at 0 3.3 90) (layer F.Fab) hide
+    (fp_text value IS31FL3731 (at 0 3.3 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.56 -2.11) (end 2.11 -2.11) (layer F.SilkS) (width 0.12))
@@ -9489,22 +9570,32 @@
       (net 59 GND))
     (pad 29 smd rect (at 0 0 90) (size 2.3 2.3) (layers F.Cu F.Mask)
       (net 59 GND))
-    (pad 28 smd roundrect (at -1.2 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 27 smd roundrect (at -0.8 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 26 smd roundrect (at -0.4 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 25 smd roundrect (at 0 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 24 smd roundrect (at 0.4 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 23 smd roundrect (at 0.8 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 22 smd roundrect (at 1.2 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 21 smd roundrect (at 1.9375 -1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 28 smd roundrect (at -1.2 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 132 "Net-(U5-Pad28)"))
+    (pad 27 smd roundrect (at -0.8 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 133 "Net-(U5-Pad27)"))
+    (pad 26 smd roundrect (at -0.4 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 134 "Net-(U5-Pad26)"))
+    (pad 25 smd roundrect (at 0 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 135 "Net-(U5-Pad25)"))
+    (pad 24 smd roundrect (at 0.4 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 136 "Net-(U5-Pad24)"))
+    (pad 23 smd roundrect (at 0.8 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 137 "Net-(U5-Pad23)"))
+    (pad 22 smd roundrect (at 1.2 -1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 138 "Net-(U5-Pad22)"))
+    (pad 21 smd roundrect (at 1.9375 -1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 139 "Net-(U5-Pad21)"))
     (pad 20 smd roundrect (at 1.9375 -0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 64 i2c_scl))
     (pad 19 smd roundrect (at 1.9375 -0.4 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 63 i2c_sda))
     (pad 18 smd roundrect (at 1.9375 0 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 59 GND))
-    (pad 17 smd roundrect (at 1.9375 0.4 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 16 smd roundrect (at 1.9375 0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 17 smd roundrect (at 1.9375 0.4 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 140 "Net-(U5-Pad17)"))
+    (pad 16 smd roundrect (at 1.9375 0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 141 "Net-(U5-Pad16)"))
     (pad 15 smd roundrect (at 1.9375 1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 94 Left_CB9))
     (pad 14 smd roundrect (at 1.2 1.9375 90) (size 0.2 0.825) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
@@ -9533,7 +9624,8 @@
       (net 71 "Net-(R9-Pad1)"))
     (pad 2 smd roundrect (at -1.9375 -0.8 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 60 +3V3))
-    (pad 1 smd roundrect (at -1.9375 -1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 1 smd roundrect (at -1.9375 -1.2 90) (size 0.825 0.2) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 142 "Net-(U5-Pad1)"))
     (model ${KISYS3DMOD}/Package_DFN_QFN.3dshapes/QFN-28-1EP_4x4mm_P0.4mm_EP2.3x2.3mm.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -9550,7 +9642,7 @@
     (fp_text reference R14 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 18k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 18kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -9586,7 +9678,7 @@
     (fp_text reference R12 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 100kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -9622,7 +9714,7 @@
     (fp_text reference R11 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 18k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 18kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -9658,7 +9750,7 @@
     (fp_text reference R10 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 4.7k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 4.7kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -9694,7 +9786,7 @@
     (fp_text reference R9 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 100kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -9946,7 +10038,7 @@
     (fp_text reference D0_2 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -9990,7 +10082,7 @@
     (fp_text reference Q1 (at 0 -2.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value DTC123J (at 0 2.5) (layer F.Fab) hide
+    (fp_text value PDTC123JT,215 (at 0 2.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.7 -0.95) (end -0.7 1.5) (layer F.Fab) (width 0.1))
@@ -10031,7 +10123,7 @@
     (fp_text reference J1 (at 0 -5.645) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value "USB C" (at 0 5.1) (layer F.Fab) hide
+    (fp_text value TYPE-C-31-M-12 (at 0 5.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -4.7 2) (end -4.7 3.9) (layer F.SilkS) (width 0.12))
@@ -10069,7 +10161,8 @@
       (net 2 VCC))
     (pad A12 smd rect (at 3.25 -4.045 180) (size 0.6 1.45) (layers F.Cu F.Paste F.Mask)
       (net 59 GND))
-    (pad B8 smd rect (at -1.75 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask))
+    (pad B8 smd rect (at -1.75 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
+      (net 119 "Net-(J1-PadB8)"))
     (pad A5 smd rect (at -1.25 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
       (net 4 "Net-(J1-PadA5)"))
     (pad B7 smd rect (at -0.75 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
@@ -10078,7 +10171,8 @@
       (net 57 /D-))
     (pad B6 smd rect (at 0.75 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
       (net 58 /D+))
-    (pad A8 smd rect (at 1.25 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask))
+    (pad A8 smd rect (at 1.25 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
+      (net 120 "Net-(J1-PadA8)"))
     (pad B5 smd rect (at 1.75 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
       (net 5 "Net-(J1-PadB5)"))
     (pad A6 smd rect (at -0.25 -4.045 180) (size 0.3 1.45) (layers F.Cu F.Paste F.Mask)
@@ -10109,7 +10203,7 @@
     (fp_text reference U3 (at 0 -2.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MCP1700-3302E_SOT23 (at 0 2.5) (layer F.Fab) hide
+    (fp_text value MCP1700T-3302E/TT (at 0 2.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.7 -0.95) (end -0.7 1.5) (layer F.Fab) (width 0.1))
@@ -10150,7 +10244,7 @@
     (fp_text reference R8 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 4.7k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 4.7kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -10231,7 +10325,7 @@
     (fp_text reference Jack0 (at 0 14.2 90) (layer Dwgs.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value TRRS (at 0 -5.6 90) (layer F.Fab) hide
+    (fp_text value PJ-320A (at 0 -5.6 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 3.05 0) (end -3.05 0) (layer F.SilkS) (width 0.15))
@@ -10279,7 +10373,7 @@
     (fp_text reference SW1 (at 0 -2.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value SW_PUSH (at 0 2.5) (layer F.Fab) hide
+    (fp_text value B3U-1000P (at 0 2.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.4 1.65) (end 2.4 1.65) (layer F.CrtYd) (width 0.05))
@@ -10320,7 +10414,7 @@
     (fp_text reference R5 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 100kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -10356,7 +10450,7 @@
     (fp_text reference R4 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 100kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -10392,7 +10486,7 @@
     (fp_text reference R3 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 100kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -10428,7 +10522,7 @@
     (fp_text reference D3 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -10920,7 +11014,7 @@
     (fp_text reference F1 (at 0 -1.82) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 500mA (at 0 1.82) (layer F.Fab) hide
+    (fp_text value "500 mA" (at 0 1.82) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1.6 0.8) (end -1.6 -0.8) (layer F.Fab) (width 0.1))
@@ -10959,7 +11053,7 @@
     (fp_text reference R6 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 10kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -10998,7 +11092,7 @@
     (fp_text reference C13 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1u (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 0.1uF (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -11034,7 +11128,7 @@
     (fp_text reference Jack1 (at 0 14.2 90) (layer Dwgs.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value TRRS (at 0 -5.6 90) (layer F.Fab) hide
+    (fp_text value PJ-320A (at 0 -5.6 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 3.05 0) (end -3.05 0) (layer F.SilkS) (width 0.15))
@@ -11082,7 +11176,7 @@
     (fp_text reference D1_6 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11126,7 +11220,7 @@
     (fp_text reference D0_7 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11170,7 +11264,7 @@
     (fp_text reference D2_5 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11214,7 +11308,7 @@
     (fp_text reference D0_5 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11258,7 +11352,7 @@
     (fp_text reference D3_5 (at 0 -2 30) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1 30) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1 30) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11302,7 +11396,7 @@
     (fp_text reference D1_9 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11346,7 +11440,7 @@
     (fp_text reference C12 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 0.1u (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 0.1uF (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -11385,7 +11479,7 @@
     (fp_text reference D0_6 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11429,7 +11523,7 @@
     (fp_text reference D3_6 (at 0 -2 15) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1 15) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1 15) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11473,7 +11567,7 @@
     (fp_text reference D2_8 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11517,7 +11611,7 @@
     (fp_text reference D0_8 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11561,7 +11655,7 @@
     (fp_text reference D0_9 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11605,7 +11699,7 @@
     (fp_text reference D2_6 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11649,7 +11743,7 @@
     (fp_text reference D1_7 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11693,7 +11787,7 @@
     (fp_text reference U2 (at 0 -9.9) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MCP23017_SO (at 0 9.9) (layer F.Fab) hide
+    (fp_text value MCP23017-E/SO (at 0 9.9) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0 9.06) (end 3.86 9.06) (layer F.SilkS) (width 0.12))
@@ -11720,9 +11814,12 @@
     (fp_text user %R (at 0 0) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad 28 smd roundrect (at 4.65 -8.255) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 27 smd roundrect (at 4.65 -6.985) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 26 smd roundrect (at 4.65 -5.715) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 28 smd roundrect (at 4.65 -8.255) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 121 "Net-(U2-Pad28)"))
+    (pad 27 smd roundrect (at 4.65 -6.985) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 122 "Net-(U2-Pad27)"))
+    (pad 26 smd roundrect (at 4.65 -5.715) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 123 "Net-(U2-Pad26)"))
     (pad 25 smd roundrect (at 4.65 -4.445) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 14 /col9))
     (pad 24 smd roundrect (at 4.65 -3.175) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
@@ -11733,8 +11830,10 @@
       (net 12 /col6))
     (pad 21 smd roundrect (at 4.65 0.635) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 8 /col5))
-    (pad 20 smd roundrect (at 4.65 1.905) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 19 smd roundrect (at 4.65 3.175) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 20 smd roundrect (at 4.65 1.905) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 124 "Net-(U2-Pad20)"))
+    (pad 19 smd roundrect (at 4.65 3.175) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 125 "Net-(U2-Pad19)"))
     (pad 18 smd roundrect (at 4.65 4.445) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 65 "Net-(R6-Pad1)"))
     (pad 17 smd roundrect (at 4.65 5.715) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
@@ -11743,20 +11842,26 @@
       (net 59 GND))
     (pad 15 smd roundrect (at 4.65 8.255) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 59 GND))
-    (pad 14 smd roundrect (at -4.65 8.255) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 14 smd roundrect (at -4.65 8.255) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 126 "Net-(U2-Pad14)"))
     (pad 13 smd roundrect (at -4.65 6.985) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 69 i2c_sda_right))
     (pad 12 smd roundrect (at -4.65 5.715) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 70 i2c_scl_right))
-    (pad 11 smd roundrect (at -4.65 4.445) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 11 smd roundrect (at -4.65 4.445) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 127 "Net-(U2-Pad11)"))
     (pad 10 smd roundrect (at -4.65 3.175) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 59 GND))
     (pad 9 smd roundrect (at -4.65 1.905) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 68 VDD))
-    (pad 8 smd roundrect (at -4.65 0.635) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 7 smd roundrect (at -4.65 -0.635) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 6 smd roundrect (at -4.65 -1.905) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-    (pad 5 smd roundrect (at -4.65 -3.175) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
+    (pad 8 smd roundrect (at -4.65 0.635) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 128 "Net-(U2-Pad8)"))
+    (pad 7 smd roundrect (at -4.65 -0.635) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 129 "Net-(U2-Pad7)"))
+    (pad 6 smd roundrect (at -4.65 -1.905) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 130 "Net-(U2-Pad6)"))
+    (pad 5 smd roundrect (at -4.65 -3.175) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
+      (net 131 "Net-(U2-Pad5)"))
     (pad 4 smd roundrect (at -4.65 -4.445) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 21 /row1,3))
     (pad 3 smd roundrect (at -4.65 -5.715) (size 2.05 0.6) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
@@ -11781,7 +11886,7 @@
     (fp_text reference D1_8 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11825,7 +11930,7 @@
     (fp_text reference D2_7 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11869,7 +11974,7 @@
     (fp_text reference D2_9 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11913,7 +12018,7 @@
     (fp_text reference D1_5 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -11957,7 +12062,7 @@
     (fp_text reference D3_4 (at 0 -2 150) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1 150) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1 150) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12001,7 +12106,7 @@
     (fp_text reference D3_3 (at 0 -2 165) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1 165) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1 165) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12045,7 +12150,7 @@
     (fp_text reference D2_4 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12089,7 +12194,7 @@
     (fp_text reference D2_3 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12133,7 +12238,7 @@
     (fp_text reference D2_2 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12177,7 +12282,7 @@
     (fp_text reference D2_1 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12221,7 +12326,7 @@
     (fp_text reference D2_0 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12265,7 +12370,7 @@
     (fp_text reference D1_4 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12309,7 +12414,7 @@
     (fp_text reference D1_3 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12353,7 +12458,7 @@
     (fp_text reference D1_2 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12397,7 +12502,7 @@
     (fp_text reference D1_1 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12441,7 +12546,7 @@
     (fp_text reference D1_0 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12485,7 +12590,7 @@
     (fp_text reference D0_4 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12529,7 +12634,7 @@
     (fp_text reference D0_3 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12573,7 +12678,7 @@
     (fp_text reference D0_1 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12617,7 +12722,7 @@
     (fp_text reference D0_0 (at 0 -2) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value D (at 0 2.1) (layer F.Fab) hide
+    (fp_text value 1N4148W (at 0 2.1) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -2.25 -1) (end -2.25 1) (layer F.SilkS) (width 0.12))
@@ -12661,7 +12766,7 @@
     (fp_text reference R7 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 4.7k (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 4.7kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -12700,7 +12805,7 @@
     (fp_text reference R2 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5.1K (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 5.1kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
@@ -12739,7 +12844,7 @@
     (fp_text reference R1 (at 0 -1.65) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5.1K (at 0 1.65) (layer F.Fab) hide
+    (fp_text value 5.1kΩ (at 0 1.65) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1 0.6) (end -1 -0.6) (layer F.Fab) (width 0.1))
