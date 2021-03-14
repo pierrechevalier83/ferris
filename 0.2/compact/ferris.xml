@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/pierrec/Documents/code/ferris/0.2/compact/ferris.sch</source>
-    <date>Mon 19 Oct 2020 00:34:45 BST</date>
-    <tool>Eeschema 5.1.6</tool>
+    <date>Mon 15 Mar 2021 09:58:55 GMT</date>
+    <tool>Eeschema 5.1.9</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -25,19 +25,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE18079</tstamp>
     </comp>
     <comp ref="D0_0">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE1B34F</tstamp>
     </comp>
@@ -47,41 +49,45 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE22042</tstamp>
     </comp>
     <comp ref="D1_0">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE22835</tstamp>
     </comp>
     <comp ref="D0_1">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE44032</tstamp>
     </comp>
     <comp ref="D1_1">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE478DC</tstamp>
     </comp>
@@ -91,6 +97,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -102,19 +109,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE8C569</tstamp>
     </comp>
     <comp ref="D0_2">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EE8DCFE</tstamp>
     </comp>
@@ -124,6 +133,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -135,19 +145,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EECD1C4</tstamp>
     </comp>
     <comp ref="D1_2">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EED29B3</tstamp>
     </comp>
@@ -157,19 +169,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EED2FA2</tstamp>
     </comp>
     <comp ref="D2_0">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EED3821</tstamp>
     </comp>
@@ -179,6 +193,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -190,30 +205,33 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EED6065</tstamp>
     </comp>
     <comp ref="D2_1">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEEC45B</tstamp>
     </comp>
     <comp ref="D2_2">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEECA76</tstamp>
     </comp>
@@ -223,6 +241,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -234,6 +253,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -245,41 +265,45 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEF764A</tstamp>
     </comp>
     <comp ref="D0_3">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEF7A7A</tstamp>
     </comp>
     <comp ref="D1_3">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEF7F2D</tstamp>
     </comp>
     <comp ref="D2_3">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEF838C</tstamp>
     </comp>
@@ -289,19 +313,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEF9889</tstamp>
     </comp>
     <comp ref="D0_4">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEFA013</tstamp>
     </comp>
@@ -311,19 +337,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEFA968</tstamp>
     </comp>
     <comp ref="D1_4">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEFB5C1</tstamp>
     </comp>
@@ -333,19 +361,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEFBA25</tstamp>
     </comp>
     <comp ref="D2_4">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EEFC892</tstamp>
     </comp>
@@ -355,6 +385,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -366,30 +397,33 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF1CAA2</tstamp>
     </comp>
     <comp ref="D3_3">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF1DB01</tstamp>
     </comp>
     <comp ref="D3_4">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF1DFD1</tstamp>
     </comp>
@@ -399,19 +433,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3ADBA</tstamp>
     </comp>
     <comp ref="D0_5">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3ADC4</tstamp>
     </comp>
@@ -421,41 +457,45 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3ADD3</tstamp>
     </comp>
     <comp ref="D1_5">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3ADDD</tstamp>
     </comp>
     <comp ref="D0_6">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3ADEC</tstamp>
     </comp>
     <comp ref="D1_6">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3ADF8</tstamp>
     </comp>
@@ -465,6 +505,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -476,19 +517,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE0F</tstamp>
     </comp>
     <comp ref="D0_7">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE19</tstamp>
     </comp>
@@ -498,6 +541,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -509,19 +553,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE31</tstamp>
     </comp>
     <comp ref="D1_7">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE3E</tstamp>
     </comp>
@@ -531,19 +577,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE48</tstamp>
     </comp>
     <comp ref="D2_5">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE53</tstamp>
     </comp>
@@ -553,6 +601,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -564,30 +613,33 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE69</tstamp>
     </comp>
     <comp ref="D2_6">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE79</tstamp>
     </comp>
     <comp ref="D2_7">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AE83</tstamp>
     </comp>
@@ -597,6 +649,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -608,6 +661,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -619,41 +673,45 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEA6</tstamp>
     </comp>
     <comp ref="D0_8">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEB0</tstamp>
     </comp>
     <comp ref="D1_8">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEBA</tstamp>
     </comp>
     <comp ref="D2_8">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEC4</tstamp>
     </comp>
@@ -663,19 +721,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AECE</tstamp>
     </comp>
     <comp ref="D0_9">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AED8</tstamp>
     </comp>
@@ -685,19 +745,21 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEE2</tstamp>
     </comp>
     <comp ref="D1_9">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEEC</tstamp>
     </comp>
@@ -707,30 +769,33 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AEF6</tstamp>
     </comp>
     <comp ref="D2_9">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AF00</tstamp>
     </comp>
     <comp ref="U2">
-      <value>MCP23017_SO</value>
+      <value>MCP23017-E/SO</value>
       <footprint>Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf</datasheet>
       <fields>
         <field name="LCSC Part">C47023</field>
+        <field name="Part Name">I/O Expander</field>
       </fields>
-      <libsource lib="Interface_Expansion" part="MCP23017_SO" description="16-bit I/O expander, I2C, interrupts, w pull-ups, SOIC-28"/>
+      <libsource lib="Interface_Expansion" part="MCP23017_SO" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ED65123</tstamp>
     </comp>
@@ -740,8 +805,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C49678</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ED8F3F5</tstamp>
     </comp>
@@ -751,30 +817,33 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AF30</tstamp>
     </comp>
     <comp ref="D3_5">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AF4E</tstamp>
     </comp>
     <comp ref="D3_6">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FD3AF58</tstamp>
     </comp>
@@ -784,6 +853,7 @@
       <fields>
         <field name="DNP">true</field>
         <field name="JLCPCB BOM">false</field>
+        <field name="Part Name">Key</field>
       </fields>
       <libsource lib="keyboard_parts" part="KEYSW" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -795,40 +865,44 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C49678</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F9F59AE</tstamp>
     </comp>
     <comp ref="R6">
-      <value>10k</value>
+      <value>10kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C17414</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA6C6B0</tstamp>
     </comp>
     <comp ref="Jack0">
-      <value>TRRS</value>
+      <value>PJ-320A</value>
       <footprint>kbd:TRRS-PJ-320A</footprint>
       <fields>
         <field name="LCSC Part">C12569</field>
+        <field name="Part Name">TRRS Jack</field>
       </fields>
-      <libsource lib="Connector" part="AudioJack4" description="Audio Jack, 4 Poles (TRRS)"/>
+      <libsource lib="Connector" part="AudioJack4" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FF96E70</tstamp>
     </comp>
     <comp ref="U1">
-      <value>STM32F072CBTx</value>
+      <value>STM32F072CBT6</value>
       <footprint>breakout_pins:Dual_MCU_QFP_QFN_48_with_breakout_pins</footprint>
       <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf</datasheet>
       <fields>
         <field name="LCSC Part">C81720</field>
+        <field name="Part Name">MCU</field>
       </fields>
-      <libsource lib="MCU_ST_STM32F0" part="STM32F072CBUx" description="ARM Cortex-M0 MCU, 128KB flash, 16KB RAM, 48MHz, 2-3.6V, 37 GPIO, UFQFPN-48"/>
+      <libsource lib="MCU_ST_STM32F0" part="STM32F072CBUx" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F410845</tstamp>
     </comp>
@@ -838,38 +912,42 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C17024</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F515E8B</tstamp>
     </comp>
     <comp ref="R5">
-      <value>100k</value>
+      <value>100kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C149504</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="Device" part="R_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F517791</tstamp>
     </comp>
     <comp ref="D3">
-      <value>D</value>
+      <value>1N4148W</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C81598</field>
+        <field name="Part Name">Diode</field>
       </fields>
-      <libsource lib="Device" part="D" description="Diode"/>
+      <libsource lib="Device" part="D" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F51983E</tstamp>
     </comp>
     <comp ref="SW1">
-      <value>SW_PUSH</value>
+      <value>B3U-1000P</value>
       <footprint>Button_Switch_SMD:SW_SPST_B3U-1000P</footprint>
       <fields>
         <field name="LCSC Part">C231329</field>
+        <field name="Part Name">Reset</field>
       </fields>
       <libsource lib="keyboard_parts" part="SW_PUSH" description=""/>
       <sheetpath names="/" tstamps="/"/>
@@ -881,18 +959,20 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C717014</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F5C1502</tstamp>
     </comp>
     <comp ref="Q1">
-      <value>DTC123J</value>
+      <value>PDTC123JT,215</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <fields>
         <field name="LCSC Part">C406040</field>
+        <field name="Part Name">NPN Transistor</field>
       </fields>
-      <libsource lib="Transistor_BJT" part="DTC123J" description="Digital NPN Transistor, 2k2/47k, SOT-23"/>
+      <libsource lib="Transistor_BJT" part="DTC123J" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F5C26BA</tstamp>
     </comp>
@@ -902,41 +982,45 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C151162</field>
+        <field name="Part Name">Polyfuse</field>
       </fields>
-      <libsource lib="Device" part="Polyfuse" description="Resettable fuse, polymeric positive temperature coefficient"/>
+      <libsource lib="Device" part="Polyfuse" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF6C20F</tstamp>
     </comp>
     <comp ref="J1">
-      <value>USB C</value>
+      <value>TYPE-C-31-M-12</value>
       <footprint>Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12</footprint>
       <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
       <fields>
         <field name="LCSC Part">C165948</field>
+        <field name="Part Name">USB C</field>
       </fields>
-      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0" description="USB 2.0-only Type-C Receptacle connector"/>
+      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EF5D00C</tstamp>
     </comp>
     <comp ref="R2">
-      <value>5.1K</value>
+      <value>5.1kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C27834</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ED69FD6</tstamp>
     </comp>
     <comp ref="R1">
-      <value>5.1K</value>
+      <value>5.1kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C27834</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5ED68FE1</tstamp>
     </comp>
@@ -946,8 +1030,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C435473</field>
+        <field name="Part Name">Bidirectional Diode</field>
       </fields>
-      <libsource lib="Device" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
+      <libsource lib="Device" part="D_TVS" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7742E5</tstamp>
     </comp>
@@ -957,8 +1042,9 @@
       <datasheet>http://www.diodes.com/_files/datasheets/ds23022.pdf</datasheet>
       <fields>
         <field name="LCSC Part">C559324</field>
+        <field name="Part Name">Schottky Barrier Diode</field>
       </fields>
-      <libsource lib="Diode" part="SB160" description="60V 1A Schottky Barrier Rectifier Diode, DO-41"/>
+      <libsource lib="Diode" part="SB160" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F77E041</tstamp>
     </comp>
@@ -968,19 +1054,21 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C28323</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7A600F</tstamp>
     </comp>
     <comp ref="R4">
-      <value>100k</value>
+      <value>100kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C149504</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="Device" part="R_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7A7ED9</tstamp>
     </comp>
@@ -990,19 +1078,21 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C28323</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7A908E</tstamp>
     </comp>
     <comp ref="R3">
-      <value>100k</value>
+      <value>100kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C149504</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <libsource lib="Device" part="R_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7AA074</tstamp>
     </comp>
@@ -1012,8 +1102,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C28323</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F812062</tstamp>
     </comp>
@@ -1023,8 +1114,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C87998</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F8185CF</tstamp>
     </comp>
@@ -1034,8 +1126,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C17024</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F81D133</tstamp>
     </comp>
@@ -1045,8 +1138,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C49678</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F81D63C</tstamp>
     </comp>
@@ -1056,8 +1150,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C49678</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F81DB23</tstamp>
     </comp>
@@ -1067,8 +1162,9 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C49678</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F81E072</tstamp>
     </comp>
@@ -1078,19 +1174,21 @@
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C87998</field>
+        <field name="Part Name">Capacitor</field>
       </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <libsource lib="Device" part="C_Small" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F81E43D</tstamp>
     </comp>
     <comp ref="U3">
-      <value>MCP1700-3302E_SOT23</value>
+      <value>MCP1700T-3302E/TT</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</datasheet>
       <fields>
         <field name="LCSC Part">C39051</field>
+        <field name="Part Name">Dropout Regulator</field>
       </fields>
-      <libsource lib="Regulator_Linear" part="MCP1700-3302E_SOT23" description="250mA Low Quiscent Current LDO, 3.3V output, SOT-23"/>
+      <libsource lib="Regulator_Linear" part="MCP1700-3302E_SOT23" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F77927A</tstamp>
     </comp>
@@ -1100,48 +1198,50 @@
       <datasheet>http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF</datasheet>
       <fields>
         <field name="LCSC Part">C558418</field>
+        <field name="Part Name">TVS Diode Array</field>
       </fields>
-      <libsource lib="Power_Protection" part="SRV05-4" description="ESD Protection Diodes with Low Clamping Voltage, SOT-23-6"/>
+      <libsource lib="Power_Protection" part="SRV05-4" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F443F1C</tstamp>
     </comp>
     <comp ref="Jack1">
-      <value>TRRS</value>
+      <value>PJ-320A</value>
       <footprint>kbd:TRRS-PJ-320A</footprint>
       <fields>
         <field name="LCSC Part">C12569</field>
+        <field name="Part Name">TRRS Jack</field>
       </fields>
-      <libsource lib="Connector" part="AudioJack4" description="Audio Jack, 4 Poles (TRRS)"/>
+      <libsource lib="Connector" part="AudioJack4" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EFEDC58</tstamp>
     </comp>
     <comp ref="R8">
-      <value>4.7k</value>
+      <value>4.7kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C17673</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>602A653D</tstamp>
     </comp>
     <comp ref="R7">
-      <value>4.7k</value>
+      <value>4.7kΩ</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
       <datasheet>~</datasheet>
       <fields>
         <field name="LCSC Part">C17673</field>
+        <field name="Part Name">Resistor</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="Device" part="R" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>60281202</tstamp>
     </comp>
   </components>
   <libparts>
     <libpart lib="Connector" part="AudioJack4">
-      <description>Audio Jack, 4 Poles (TRRS)</description>
-      <docs>~</docs>
       <footprints>
         <fp>Jack*</fp>
       </footprints>
@@ -1157,8 +1257,6 @@
       </pins>
     </libpart>
     <libpart lib="Connector" part="USB_C_Receptacle_USB2.0">
-      <description>USB 2.0-only Type-C Receptacle connector</description>
-      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
       <footprints>
         <fp>USB*C*Receptacle*</fp>
       </footprints>
@@ -1167,8 +1265,8 @@
         <field name="Value">USB_C_Receptacle_USB2.0</field>
       </fields>
       <pins>
-        <pin num="A1" name="GND" type="power_in"/>
-        <pin num="A4" name="VBUS" type="power_in"/>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
         <pin num="A5" name="CC1" type="BiDi"/>
         <pin num="A6" name="D+" type="BiDi"/>
         <pin num="A7" name="D-" type="BiDi"/>
@@ -1187,8 +1285,6 @@
       </pins>
     </libpart>
     <libpart lib="Device" part="C_Small">
-      <description>Unpolarized capacitor, small symbol</description>
-      <docs>~</docs>
       <footprints>
         <fp>C_*</fp>
       </footprints>
@@ -1202,8 +1298,6 @@
       </pins>
     </libpart>
     <libpart lib="Device" part="D">
-      <description>Diode</description>
-      <docs>~</docs>
       <footprints>
         <fp>TO-???*</fp>
         <fp>*_Diode_*</fp>
@@ -1220,8 +1314,6 @@
       </pins>
     </libpart>
     <libpart lib="Device" part="D_TVS">
-      <description>Bidirectional transient-voltage-suppression diode</description>
-      <docs>~</docs>
       <footprints>
         <fp>TO-???*</fp>
         <fp>*_Diode_*</fp>
@@ -1238,8 +1330,6 @@
       </pins>
     </libpart>
     <libpart lib="Device" part="Polyfuse">
-      <description>Resettable fuse, polymeric positive temperature coefficient</description>
-      <docs>~</docs>
       <footprints>
         <fp>*polyfuse*</fp>
         <fp>*PTC*</fp>
@@ -1254,8 +1344,6 @@
       </pins>
     </libpart>
     <libpart lib="Device" part="R">
-      <description>Resistor</description>
-      <docs>~</docs>
       <footprints>
         <fp>R_*</fp>
       </footprints>
@@ -1269,8 +1357,6 @@
       </pins>
     </libpart>
     <libpart lib="Device" part="R_Small">
-      <description>Resistor, small symbol</description>
-      <docs>~</docs>
       <footprints>
         <fp>R_*</fp>
       </footprints>
@@ -1293,8 +1379,6 @@
         <alias>1N5818</alias>
         <alias>1N5819</alias>
       </aliases>
-      <description>20V 1A Schottky Barrier Rectifier Diode, DO-41</description>
-      <docs>http://www.diodes.com/_files/datasheets/ds23022.pdf</docs>
       <footprints>
         <fp>D*DO?41*</fp>
       </footprints>
@@ -1309,8 +1393,6 @@
       </pins>
     </libpart>
     <libpart lib="Interface_Expansion" part="MCP23017_SO">
-      <description>16-bit I/O expander, I2C, interrupts, w pull-ups, SOIC-28</description>
-      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf</docs>
       <footprints>
         <fp>SOIC*7.5x17.9mm*P1.27mm*</fp>
       </footprints>
@@ -1354,8 +1436,6 @@
       <aliases>
         <alias>STM32F072CBUx</alias>
       </aliases>
-      <description>ARM Cortex-M0 MCU, 64KB flash, 16KB RAM, 48MHz, 2-3.6V, 37 GPIO, UFQFPN-48</description>
-      <docs>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf</docs>
       <footprints>
         <fp>QFN*1EP*7x7mm*P0.5mm*</fp>
       </footprints>
@@ -1417,8 +1497,6 @@
       </pins>
     </libpart>
     <libpart lib="Power_Protection" part="SRV05-4">
-      <description>ESD Protection Diodes with Low Clamping Voltage, SOT-23-6</description>
-      <docs>http://www.onsemi.com/pub/Collateral/SRV05-4-D.PDF</docs>
       <footprints>
         <fp>SOT?23*</fp>
       </footprints>
@@ -1445,8 +1523,6 @@
         <alias>MCP1700-3302E_SOT23</alias>
         <alias>MCP1700-5002E_SOT23</alias>
       </aliases>
-      <description>250mA Low Quiscent Current LDO, 3.0V output, SOT-23</description>
-      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf</docs>
       <footprints>
         <fp>SOT?23*</fp>
       </footprints>
@@ -1462,7 +1538,6 @@
       </pins>
     </libpart>
     <libpart lib="Transistor_BJT" part="DTC123J">
-      <description>Digital NPN Transistor, 2k2/47k, SOT-23</description>
       <footprints>
         <fp>SOT?23*</fp>
         <fp>SC?59*</fp>
@@ -1500,28 +1575,28 @@
   </libparts>
   <libraries>
     <library logical="Connector">
-      <uri>/usr/share/kicad/library/Connector.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Connector.lib</uri>
     </library>
     <library logical="Device">
-      <uri>/usr/share/kicad/library/Device.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Device.lib</uri>
     </library>
     <library logical="Diode">
-      <uri>/usr/share/kicad/library/Diode.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Diode.lib</uri>
     </library>
     <library logical="Interface_Expansion">
-      <uri>/usr/share/kicad/library/Interface_Expansion.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Interface_Expansion.lib</uri>
     </library>
     <library logical="MCU_ST_STM32F0">
-      <uri>/usr/share/kicad/library/MCU_ST_STM32F0.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/MCU_ST_STM32F0.lib</uri>
     </library>
     <library logical="Power_Protection">
-      <uri>/usr/share/kicad/library/Power_Protection.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Power_Protection.lib</uri>
     </library>
     <library logical="Regulator_Linear">
-      <uri>/usr/share/kicad/library/Regulator_Linear.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Regulator_Linear.lib</uri>
     </library>
     <library logical="Transistor_BJT">
-      <uri>/usr/share/kicad/library/Transistor_BJT.lib</uri>
+      <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_library/Transistor_BJT.lib</uri>
     </library>
     <library logical="keyboard_parts">
       <uri>/home/pierrec/Documents/code/ferris/0.2/compact/../../sym/kicad_lib_tmk/keyboard_parts.lib</uri>
