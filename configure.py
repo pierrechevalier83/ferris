@@ -209,6 +209,10 @@ def make_gerber_output_paths(variant):
         "ferris-F_Mask.gbr",
         "ferris-F_Paste.gbr",
         "ferris-F_SilkS.gbr",
+        "ferris-NPTH-drl_map.gbr", 
+        "ferris-NPTH.drl",
+        "ferris-PTH-drl_map.gbr",
+        "ferris-PTH.drl",
     ]
     return [f"{make_variant_out_dir(variant)}/{f}" for f in gerbers_out]
 

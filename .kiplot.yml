@@ -60,7 +60,7 @@ outputs:
   - name: excellon_drill
     comment: "Excellon drill files"
     type: excellon
-    dir: gerberdir
+    dir: .
     options:
       metric_units: true
       pth_and_npth_single_file: false
@@ -69,4 +69,5 @@ outputs:
       mirror_y_axis: false
       map:
           type: 'gerber'
+
 
