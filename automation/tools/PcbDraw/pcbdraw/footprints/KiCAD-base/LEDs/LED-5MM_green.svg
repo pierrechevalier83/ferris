@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   id="svg5567"
+   viewBox="0 0 4.5396519 5"
+   height="1.4111111mm"
+   width="1.2811906mm">
+  <defs
+     id="defs5569">
+    <linearGradient
+       id="linearGradient6119">
+      <stop
+         id="stop6121"
+         offset="0"
+         style="stop-color:#aff957;stop-opacity:1" />
+      <stop
+         id="stop6123"
+         offset="1"
+         style="stop-color:#097400;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       r="2"
+       fy="1052.3622"
+       fx="0"
+       cy="1052.3622"
+       cx="0"
+       id="radialGradient6125"
+       xlink:href="#linearGradient6119" />
+    <clipPath
+       id="clipPath6129"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="1049.6301"
+         x="-2.8443117"
+         height="4.7717075"
+         width="5.763474"
+         id="rect6131"
+         style="opacity:1;fill:#ff4321;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata5572">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(2.0396345,-1049.8622)"
+     id="layer1">
+    <rect
+       transform="rotate(-90)"
+       y="-1.5868281"
+       x="-1052.8622"
+       height="1.9"
+       width="1"
+       id="rect6158"
+       style="opacity:0.93999999;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="1051.8622"
+       x="0.56374156"
+       height="1"
+       width="0.91868997"
+       id="rect6160"
+       style="opacity:0.85;fill:#bfbfbf;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       style="opacity:0.85"
+       transform="rotate(90,0,1052.3622)"
+       id="g6154">
+      <circle
+         style="opacity:1;fill:#6bcb1f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path6115"
+         cx="0"
+         cy="1052.3622"
+         r="2.5"
+         clip-path="url(#clipPath6129)" />
+      <circle
+         style="opacity:1;fill:url(#radialGradient6125);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path6117"
+         cx="0"
+         cy="1052.3622"
+         r="2" />
+    </g>
+    <rect
+       y="1052.3622"
+       x="-1.2819999"
+       height="1"
+       width="1"
+       id="origin"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

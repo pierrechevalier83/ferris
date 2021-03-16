@@ -16,13 +16,13 @@ jobs:
         submodules: true
     - name: Design rules check
       run: |
-        ./ninja.sh build/${{ matrix.variant }}/drc_success
+        ./automation/ninja.sh build/${{ matrix.variant }}/drc_success
     - name: Electrical rules check
       run: |
-        ./ninja.sh build/${{ matrix.variant }}/erc_success
+        ./automation/ninja.sh build/${{ matrix.variant }}/erc_success
     - name: Generate artifacts
       run: |
-        ./ninja.sh ${{ matrix.variant }}
+        ./automation/ninja.sh ${{ matrix.variant }}
     - name: Generate release zip
       run: |
          zip -j \

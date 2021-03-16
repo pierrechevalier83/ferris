@@ -18,7 +18,7 @@ jobs:
         submodules: true
     - name: Design rules check
       run: |
-        ./ninja.sh build/${{ matrix.variant }}/drc_success
+        ./automation/ninja.sh build/${{ matrix.variant }}/drc_success
 
   run-erc:
     strategy:
@@ -31,4 +31,4 @@ jobs:
         submodules: true
     - name: Electrical rules check
       run: |
-        ./ninja.sh build/${{ matrix.variant }}/erc_success
+        ./automation/ninja.sh build/${{ matrix.variant }}/erc_success

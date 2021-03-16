@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2.2577775mm"
+   height="1.1201788mm"
+   viewBox="0 0 7.9999988 3.9691375"
+   id="svg4328"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="R_PHOTO_7mm.svg">
+  <defs
+     id="defs4330">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4945">
+      <rect
+         style="opacity:1;fill:#d3d2c7;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.30000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4947"
+         width="251.19769"
+         height="141.19609"
+         x="-1036.8062"
+         y="-1252.7461" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="27.563906"
+     inkscape:cx="-4.8286646"
+     inkscape:cy="-4.1854575"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="956"
+     inkscape:window-height="1056"
+     inkscape:window-x="960"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata4333">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.5015987,-1043.7698)">
+    <g
+       id="g4957"
+       transform="matrix(0.02657653,0,0,0.02657653,29.7989,1077.1505)">
+      <rect
+         y="-1198.6975"
+         x="-1061.0978"
+         height="29.023462"
+         width="293.71744"
+         id="rect4955"
+         style="opacity:1;fill:#c6c8b6;fill-opacity:1;fill-rule:nonzero;stroke:#938c8c;stroke-width:7.30000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         clip-path="url(#clipPath4945)"
+         r="95.19696"
+         cy="-1180.1226"
+         cx="-910.17578"
+         id="path4941"
+         style="opacity:1;fill:#d3d2c7;fill-opacity:1;fill-rule:nonzero;stroke:#8c492d;stroke-width:7.30000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4949"
+         d="m -976.87991,-1248.6415 100.15071,-2.4627 0.82091,26.269 h -68.95623 v 26.2691 l 66.49351,-0.8209 0.82091,27.9108 h -66.49351 v 23.8063 h 64.03078 v 17.2391 h -63.20987 v 18.8809 l 102.61343,-1.6418"
+         style="fill:none;fill-rule:evenodd;stroke:#8c492d;stroke-width:9.60000038;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         r="10"
+         cy="-1182.2971"
+         cx="-847.0274"
+         id="path4951"
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle4953"
+         cx="-977.5517"
+         cy="-1182.2971"
+         r="10" />
+    </g>
+    <rect
+       style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:7.30000019;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="origin"
+       width="1"
+       height="1"
+       x="1.7414079"
+       y="1045.5575" />
+  </g>
+</svg>
