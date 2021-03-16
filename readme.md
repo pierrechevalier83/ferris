@@ -41,89 +41,30 @@ and this set of non-goals:
 
 You may read more about how each feature (and mostly lack thereof) contributes to these goals [in this write up](docs/design_philosophy.md) once described as "overly long and almost pretentious" :)
 
-Technical details
+Versions and variants
 -----------------
 
 There are currently two versions of the Ferris:
-* v0.1 used an atmega32u4 microcontroller.
-* v0.2 is in prototyping stage and uses an Arm chip (STM32F072CBT6) which is more capable and cheaper than the atmega32u4. v0.2 also adds better ESD protection. The plan for v0.2 is to eventually offer full rust firmware as an alternative to qmk.
+* [v0.1](0.1/readme.md) used an atmega32u4 microcontroller.
+    * [Base variant](0.1/base/readme.md) (Choc switches with MX spacing)
+    * [Ferris Low](0.1/low/readme.md) (Choc mini)
+    * [Ferris High](0.1/high/readme.md) (MX switches)
+    * [Ferris Compact](0.1/compact/readme.md) (Choc switches with choc spacing)
+* [v0.2](0.2/readme.md) is in advanced prototyping stage and uses an Arm chip (STM32F072CBT6) which is more capable and cheaper than the atmega32u4. v0.2 also adds better ESD protection. The plan for v0.2 is to eventually offer full rust firmware as an alternative to qmk.
+    * [Ferris Bling](0.2/bling/readme.md) (Choc, Choc spacing, packed with features)
+    * [Ferris Compact](0.2/compact/readme.md) (Choc, Choc spacing, as minimalistic as the previous Ferris we all know and love)
+    * [Ferris High](0.2/high/readme.md) (MX switches)
+    * [Ferris Mini](0.2/mini/readme.md) (Choc mini switches with choc spacing)
 
-Whithin each version, a number of variants have been designed.
-
-### rev 0.1
-
-#### Base variant
-
-![Base variant](https://i.imgur.com/s6nTn0C.jpg)
-![Base variant silk](https://i.imgur.com/Ymlac2A.jpg)
-
-This describes the first ever iteration of the Ferris keyboard: a plain pcb with support for choc switches, and the same layout as the Kyria (but limited to 34 keys).
-
-* USB C
-* 34 keys (3x5 + 2 thumb keys per hand)
-* Split
-* Atmega32u4 microcontroller on the left hand side
-* MCP23017 on the right hand side
-* A 4 poles jack cable carries data between halves using the i2c protocol
-* The diodes live under the switches where they are snuggly hidden from sight
-* No holes through the PCB. The intent is to use it case-less.
-* Switches are spaced by 19mm from each other in each direction (almost exactly what's known as MX spacing [19.05x19.05]). This allows for a wider variety of compatible keycaps for the price of gaps for certain keycaps that respect the Kailh choc specification
-* Columnar stagger identical to the one on the Kyria
-
-Status: Working boards were produced.
-
-#### Ferris high
-![Ferris High](https://i.imgur.com/JfCLJa0.jpg)
-![Ferris High silk](https://i.imgur.com/ZjXNqry.jpg)
-
-The Ferris high is similar the base variant, but with support for MX switches and updated copper pad and silkscreen.
-
-Status: Working boards were produced.
-
-#### Ferris low
-![Ferris Low](https://i.imgur.com/MwBP3hJ.jpg)
-![Ferris Low silk](https://i.imgur.com/6oXWj0b.jpg)
-
-The Ferris low is similar to the base variant, but with support for Choc mini switches and updated copper pad and silkscreen.
-
-Status: Working boards were produced.
-
-#### Ferris compact
-![Ferris Compact](https://i.imgur.com/wcE4eT5.jpg)
-![Ferris Compact silk](https://i.imgur.com/FD1pJfh.jpg)
-
-The Ferris compact is similar to the base variant, but with Choc spacing (17x18 mm) instead of MX spacing (18x19 mm). This means it isn't compatible with as many keycaps, but doesn't have gaps with keycaps that conform to the Kailh datasheet, like the MBK keycaps pictured. 
-
-Status: Working boards were produced.
-
-### Upcoming changes
-
-### rev 0.2
-
-All rev 0.2 variants come with the STM32F072CBT6 arm microcontroller and electrostatic discharge protection.
-
-#### Ferris bling
-![Ferris Bling](https://i.imgur.com/pv87NEC.jpeg)
-![Ferris Bling silk](https://i.imgur.com/YB40hqn.jpeg)
-
-The Ferris bling diverges slightly from the minimalism of other variants to offer a broader appeal.
-Notable features:
-* Choc spacing
-* Choc switches
-* RGB backlighting
-* Tenting puck support
-* Case support
-* All microcontroller pads are broken out for ease of repairability and modability
-
-#### Ferris mini
-![Ferris Mini](https://i.imgur.com/KgupmOg.jpeg)
-![Ferris Mini silk](https://i.imgur.com/tEfUbvH.jpeg)
-
-The Ferris Mini is a barebone Ferris supporting choc mini switches in choc spacing. It also exposes all microcontroller pads for ease of repairability and modability.
-
-
-How to I print one?
+How do I print one?
 -------------------
+
+Before you print one yourself, you're welcome contact the owner of this repository and see if they have spare boards to sell.
+
+If they don't, or you prefer to have the full experience yourself,
+
+* Decide which variant/version you want to print (refer to individual readme files in subdirectories for a short description of each variant).
+* Download the `{version}.{variant}.release.zip` file from the latest [GitHub release on this repo](https://github.com/pierrechevalier83/ferris/releases/).
 
 For a given version, you will find a release in this repository containing a zip file with the gerber files. This should be ready to send to a PCB manufacturer for assembly.
 The repository also contains a bill of materials (bom.csv) with a list of the components you need and their reference number on LCSC.com. You may use another vendor for the components, as long as you make sure to get components that are equivalent.
@@ -131,33 +72,30 @@ The repository also contains a bill of materials (bom.csv) with a list of the co
 How do I assemble one?
 ----------------------
 
-If you received a kit from me, you will notice the package contains [these cards](docs/assembly_guide.md)
+The zip files for each release contain a file named `ibom.html`.
 
-Here is where the components go on the pcb:
-![Keeb map](https://i.imgur.com/3QpTI6m.jpeg)
-![Diodes](https://i.imgur.com/WgII1Tx.jpeg)
-![Microcontroller](https://i.imgur.com/m1sC2Tc.jpeg)
-![Jacks](https://i.imgur.com/cJ2TTdF.jpeg)
+Open this file in a web browser for the variant you are building. It contains all the information needed to assemble
+a keyboard, and is able to present it nicely in a contextual manner.
 
-Most of these components are smd mounted. They can be soldered in with hot air and solder paste or with a soldering iron, solder wire and flux.
-I have found it easier to control how much solder I use with a soldering iron.
+A few tips:
+* Be mindful of the orientation of components.
+	* The interactive bom has an option to "highlight first pin". TYou should match the pin drawn on the component to the side of the PCB that is highlighted. For a diode, the "first pin" is indicated with the cathode bar.
+* You can change the order in which the components are displayed by clicking the column headers.
+    * I like to sort the components by decreasing quantity to start with the most tedious work and end with the fun :)
+* Most of the components are SMD mounted and can be soldered with a soldering iron, solder wire and flux (optional but strongly recomended).
+    * If you are assembling a Ferris 0.2 - Bling, you will need a hot air station to place the LED driver chip.
 
-Here are some key pieces of advice I can give from my experience assembling 3 of them so far:
-* Be mindful of the orientation for the components that are polarized:
-  * Diodes: cathode bar on the right side for both pcbs
-  * Crystal: text readable looking at it from the controller
-  * Controller: pin 1 dot indicator in the top right
-  * IO expander: pin 1 dot indicator in the top left
-* Use a wedge tip or other tip with a large enough surface. Pointy is harder.
+And here are some key pieces of advice about soldering from my experience assembling many Ferris keyboards.
+* If possible, use a wedge tip or other tip with a large enough surface. Pointy tips are harder, especially for drag soldering as they don't deliver as much heat at once.
 * Don't use too much solder or you will have to wick it away and start again.
-  * This especially applies to the USB C area and the microcontroller.
+  * This especially applies to the USB C area and the small chips.
 * Don't be shy on the flux: it really helps the solder flow where it should and keep away from surfaces it shouldn't go to.
 * Don't use too much heat to avoid damaging the components. I've had good results with 350C for unleaded rosin core solder wire.
 * Don't touch any component for too long with the iron to avoid heat damage. If you're not getting it right in a few seconds, let it cool down add more flux and try again. 
 * Be sure to test every diode is properly soldered before soldering on the switches as the diodes are located under the switches and won't be accessible later on.
-* I have found it easier to solder the crystal with hot air as it is hard to reach the solder from under it with an iron. Your mileage may vary
 
-I took many pictures while building a board. If you want to build a Ferris while following along,
+I took many pictures while building a Ferris 0.1 base variant.
+The build log is here and may be of help:
 Part 1:
 [build log, part 1](https://imgur.com/gallery/jYbxkxE)
 Part 2:
@@ -166,14 +104,62 @@ Part 2:
 Where is the firmware?
 ----------------------
 
-For now, the Ferris keyboard is powered by QMK.
-Firmware for it (currently only v0.1 and sweep) is available [upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/ferris).
+## QMK
 
-
+The Ferris keyboard is powered by QMK as its main firmware.
 The default keymap showcases one possible way to make a 34 keys keyboard usable and is documented [in its readme upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/ferris/keymaps/default).
+Firmware for v0.1 and the [Sweep](https://github.com/davidphilipbarr/Sweep) is already available [upstream](https://github.com/qmk/qmk_firmware/tree/master/keyboards/ferris).
+Support for v0.2 should land upstream pretty soon with [this PR](https://github.com/qmk/qmk_firmware/pull/12133)
+	- Support for the underglow feature is missing from this PR, but will come in a subsequent PR. It works for me locally :)
 
-Does it actually work?
-----------------------
+## ZMK
 
-Here is a short demo of a working Ferris:
-[typing test](https://i.imgur.com/E8Wipxz.mp4)
+Support for v0.2 is also coming to upstream zmk with [this PR](https://github.com/zmkfirmware/zmk/pull/642)
+
+## Rust firmware
+
+I plan to write rust firmware for the v0.2 variants of the Ferris, eventually. Progress will be tracked in [this issue](https://github.com/pierrechevalier83/ferris/issues/2)
+
+
+Automation
+---
+
+The philosophy of designing many simple keyboards rather than one versatile one which is slightly less good for any set of features results in an explosion in the number of designs one has to maintain.
+
+## GitHub Actions
+
+The keep this manageable, I have automated a number of steps such as [checking the Design Rules and the Electrical Rules](https://github.com/pierrechevalier83/ferris/actions/workflows/ci.yml) for each PCB on every commit push, and [generating release artifacts](https://github.com/pierrechevalier83/ferris/actions/workflows/release.yml) when a tag is pushed.
+
+## Manually running within docker
+
+Because GitHub actions perform these steps automatically, you shouldn't need to make use of the build system yourself, but for maintainers or curious bystanders, here is the workflow:
+
+```
+./automation/configure.py
+```
+Will generate a file named `build.ninja` in the root of the repository.
+
+Then, running:
+```
+./automation/ninja.sh
+```
+will run `ninja` in [the ferris_automation docker container](https://hub.docker.com/repository/docker/pierrechevalier83/ferris_automation) which I published to dockerhub. This means minimal local setup is needed (basically, make sure you are able to run docker) as the specific tools are already contained in that docker image.
+This will produce all build and release artifacts in a local directory called `build`.
+
+## Running on the local system
+
+If for a reason or another, you would prefer to run all of the tools locally rather than in `docker`, you may read the [ferris_automation Dockerfile](automation/Dockerfile) for inspiration and install the same software with the steps that work best on your platform.
+In that case, docker will still be needed for some steps as it ensured [`kicad_cli`](https://github.com/pierrechevalier83/kicad_cli) can do its hackish UI manipulation in a known environment.
+
+## Updating the `ferris_automation` docker image
+
+When some of the scripts change in a way that will affect the `ferris_automation` docker container, I need to publish a new version.
+This could be done as a GitHub action, but for now it is done manually with the following steps:
+
+From the repo root:
+```
+docker build -t pierrechevalier83/ferris_automation:latest automation
+docker push pierrechevalier83/ferris_automation:latest
+```
+
+
