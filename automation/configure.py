@@ -104,7 +104,7 @@ def add_render_front_rule(ninja, rel_dir, basename="ferris"):
     front_svg = make_output_file_path(rel_dir, f"{basename}_front.svg")
     ninja.rule(
         name=render_front,
-        command=[f"python3 {pcbdraw} --style {style} {pcb} {front_svg}"],
+        command=[f"python3 {pcbdraw} --silent --style {style} {pcb} {front_svg}"],
     )
     ninja.build(
         inputs=[pcbdraw, style, pcb],
@@ -123,7 +123,7 @@ def add_render_back_rule(ninja, rel_dir, basename="ferris"):
     back_svg = make_output_file_path(rel_dir, f"{basename}_back.svg")
     ninja.rule(
         name=render_back,
-        command=[f"python3 {pcbdraw} --style {style} {pcb} {back_svg} --back"],
+        command=[f"python3 {pcbdraw} --silent --style {style} {pcb} {back_svg} --back"],
     )
     ninja.build(
         inputs=[pcbdraw, style, pcb],
@@ -280,7 +280,7 @@ def add_zip_gerber_rule(ninja, variant):
     zip_file = make_output_file_path(variant, "gerbers.zip")
     gerber_files = make_gerber_output_paths(variant)
     gerber_rule = make_rule_name(variant, "gerbers")
-    ninja.rule(name=zip_gerber_rule, command=[f"zip -j -r {zip_file}"] + gerber_files)
+    ninja.rule(name=zip_gerber_rule, command=[f"zip -q -j -r {zip_file}"] + gerber_files)
     ninja.build(
         inputs=[
             make_erc_success_file_name(variant),
