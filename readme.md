@@ -5,7 +5,7 @@ Named after the Rustlang mascott, Ferris is a 34 keys split keyboard that tries 
 
 ![Ferris](https://i.imgur.com/TCjkquR.jpg)
 
-Ferris is minimalistic: it aims to be a functional, ergonomic keyboard that is pleasing to use as a daily driver. It only supports choc keyswitches, although it would be easy to make a MX version if there was interest.
+Ferris is a collection of minimalistic keyboards that each focus on delivering a small set of features (mostly, typing) well.
 
 It is fully Open-Source: the kicad files are released under [the solderpad license, version 2.1](LICENSE). The firmware, contributed to [the QMK project](https://github.com/qmk/qmk_firmware/) is released under the GPL.
 The Ferris 0.1 is certified by the Open Source Hardware.
