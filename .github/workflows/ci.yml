@@ -18,7 +18,7 @@ jobs:
         submodules: true
     - name: Design rules check
       run: |
-        ./automation/ninja.sh build/${{ matrix.variant }}/drc_success
+        ./automation/ninja.sh build/${{ matrix.variant }}/ferris.kicad_pcb.drc_success
 
   run-erc:
     strategy:
@@ -31,4 +31,4 @@ jobs:
         submodules: true
     - name: Electrical rules check
       run: |
-        ./automation/ninja.sh build/${{ matrix.variant }}/erc_success
+        ./automation/ninja.sh build/${{ matrix.variant }}/ferris.sch.erc_success
