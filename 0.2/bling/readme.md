@@ -23,7 +23,7 @@ of "bling" in their life :)
 Working boards were produced.
 
 ## Firmware status:
-Support coming to upstream qmk with [this PR](https://github.com/qmk/qmk_firmware/pull/12133)
-	- Support for the underglow feature is missing from this PR, but will come in a subsequent PR. It works for me :)
-Support coming to upstream zmk with [this PR](https://github.com/zmkfirmware/zmk/pull/642)
+* Support coming to upstream qmk with [this PR](https://github.com/qmk/qmk_firmware/pull/12133)
+	* Support for the underglow feature is missing from this PR, but will come in a subsequent PR. It works for me :)
+* Support coming to upstream zmk with [this PR](https://github.com/zmkfirmware/zmk/pull/642)
 Plan to write rust firmware for it eventually tracked in [this issue](https://github.com/pierrechevalier83/ferris/issues/2)

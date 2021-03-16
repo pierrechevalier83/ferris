@@ -24,6 +24,6 @@ available "choc mini" switches that can be acquired from Kailh's store on AliExp
 Working boards are yet to be printed and tested.
 
 ## Firmware status:
-Support coming to upstream qmk with [this PR](https://github.com/qmk/qmk_firmware/pull/12133)
-Support coming to upstream zmk with [this PR](https://github.com/zmkfirmware/zmk/pull/642)
-Plan to write rust firmware for it eventually tracked in [this issue](https://github.com/pierrechevalier83/ferris/issues/2)
+* Support coming to upstream qmk with [this PR](https://github.com/qmk/qmk_firmware/pull/12133)
+* Support coming to upstream zmk with [this PR](https://github.com/zmkfirmware/zmk/pull/642)
+* Plan to write rust firmware for it eventually tracked in [this issue](https://github.com/pierrechevalier83/ferris/issues/2)
