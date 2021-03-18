@@ -1,4 +1,5 @@
-# SOLDERPAD HARDWARE LICENSE VERSION 2.1
+# Hardware
+## SOLDERPAD HARDWARE LICENSE VERSION 2.1
 
 This license operates as a wraparound license to the Apache License Version 2.0 (the "Apache License") and incorporates the terms and conditions of the Apache License (which can be found here: http://apache.org/licenses/LICENSE-2.0), with the following additions and modifications. It must be read in conjunction with the Apache License. Section 1 below modifies definitions and terminology in the Apache License and Section 2 below replaces Section 2 of the Apache License. The Appendix replaces the Appendix in the Apache License. You may, at your option, choose to treat any Work released under this license as released under the Apache License (thus ignoring all sections written below entirely).
 
@@ -41,3 +42,27 @@ https://solderpad.org/licenses/SHL-2.1/
 
 Unless required by applicable law or agreed to in writing, any work distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
+# Software
+
+The software available in this repository (mostly automation scripts) is released under the terms of the GPL, version 3.
+
+Copyright (C) 2021 Pierre Chevalier
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+# Documentation
+
+The documentation for this project is released to the public domain under the CC0 terms.
+
+https://creativecommons.org/publicdomain/zero/1.0/
