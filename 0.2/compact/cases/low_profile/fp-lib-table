@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name dummy)(type KiCad)(uri /home/pierrec/Documents/code/ferris/fp/dummy.pretty)(options "")(descr ""))
+)
