@@ -723,6 +723,64 @@ build build/0.2/compact/gerbers.zip: 0_2_compact_gerbers_zip $
     build/0.2/compact/ferris-NPTH.drl $
     build/0.2/compact/ferris-PTH-drl_map.gbr build/0.2/compact/ferris-PTH.drl
 
+rule 0_2_compact_cases_low_profile_switch_plate_drc
+  command = ./automation/run_drc.sh $
+      0.2/compact/cases/low_profile/switch_plate.kicad_pcb
+build $
+    build/0.2/compact/cases/low_profile/switch_plate.kicad_pcb.drc_success: $
+    0_2_compact_cases_low_profile_switch_plate_drc ./automation/run_drc.sh $
+    0.2/compact/cases/low_profile/switch_plate.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_render_switch_plate_front
+  command = python3 automation/tools/PcbDraw/pcbdraw/pcbdraw.py --silent $
+      --style automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/compact/cases/low_profile/switch_plate.kicad_pcb $
+      build/0.2/compact/cases/low_profile/switch_plate_front.svg
+build build/0.2/compact/cases/low_profile/switch_plate_front.svg: $
+    0_2_compact_cases_low_profile_render_switch_plate_front $
+    automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
+    automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/compact/cases/low_profile/switch_plate.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_switch_plate_with_cutouts_drc
+  command = ./automation/run_drc.sh $
+      0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb
+build $
+    build/0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb.drc_success: $
+    0_2_compact_cases_low_profile_switch_plate_with_cutouts_drc $
+    ./automation/run_drc.sh $
+    0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_render_switch_plate_with_cutouts_front
+  command = python3 automation/tools/PcbDraw/pcbdraw/pcbdraw.py --silent $
+      --style automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb $
+      build/0.2/compact/cases/low_profile/switch_plate_with_cutouts_front.svg
+build $
+    build/0.2/compact/cases/low_profile/switch_plate_with_cutouts_front.svg: $
+    0_2_compact_cases_low_profile_render_switch_plate_with_cutouts_front $
+    automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
+    automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_lip_drc
+  command = ./automation/run_drc.sh $
+      0.2/compact/cases/low_profile/lip.kicad_pcb
+build build/0.2/compact/cases/low_profile/lip.kicad_pcb.drc_success: $
+    0_2_compact_cases_low_profile_lip_drc ./automation/run_drc.sh $
+    0.2/compact/cases/low_profile/lip.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_render_lip_front
+  command = python3 automation/tools/PcbDraw/pcbdraw/pcbdraw.py --silent $
+      --style automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+      0.2/compact/cases/low_profile/lip.kicad_pcb $
+      build/0.2/compact/cases/low_profile/lip_front.svg
+build build/0.2/compact/cases/low_profile/lip_front.svg: $
+    0_2_compact_cases_low_profile_render_lip_front $
+    automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
+    automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
+    0.2/compact/cases/low_profile/lip.kicad_pcb
+
 build 0.2/compact: phony build/0.2/compact/gerbers.zip $
     build/0.2/compact/ferris_front.svg build/0.2/compact/ferris_back.svg $
     build/0.2/compact/ibom.html build/0.2/compact/bom_jlcpcb.csv $

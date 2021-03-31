@@ -28,12 +28,14 @@ RENDER_COLORS = {
     "0.2/bling": "white",
     "0.2/bling/cases/mid_profile": "white",
     "0.2/compact": "white",
+    "0.2/compact/cases/low_profile": "white",
     "0.2/high": "yellow",
     "0.2/mini": "blue",
 }
 CASE_DIRS = {
     "mid_profile_with_puck": "mid_profile",
     "mid_profile_without_puck": "mid_profile",
+    "low_profile": "low_profile",
 }
 CASE_BASENAMES = {
     "mid_profile_with_puck": [
@@ -48,9 +50,15 @@ CASE_BASENAMES = {
         "mid_plate",
         "bottom_plate_without_puck",
     ],
+    "low_profile": [
+        "switch_plate",
+        "switch_plate_with_cutouts",
+        "lip",
+    ],
 }
 CASES = {
     "0.2/bling": ["mid_profile_with_puck", "mid_profile_without_puck"],
+    "0.2/compact": ["low_profile"],
 }
 
 
