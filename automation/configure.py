@@ -51,8 +51,8 @@ CASE_BASENAMES = {
         "bottom_plate_without_puck",
     ],
     "low_profile": [
-        "switch_plate",
-        "switch_plate_with_cutouts",
+        "metal_plate",
+        "cork_spacer_and_lip",
         "lip",
     ],
 }
