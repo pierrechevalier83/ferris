@@ -1,0 +1,36 @@
+# Adapted from example KiPlot config file
+# at `tools/kiplot/docs/samples/generic_plot.kiplot.yaml`
+
+kiplot:
+  version: 1
+
+preflight:
+
+  # one day....
+  check_zone_fills: false
+  run_drc: false
+
+outputs:
+  - name: DXF
+    comment: "DXF Edge Cuts files"
+    type: dxf
+    dir: .
+    options:
+      exclude_edge_layer: true
+      exclude_pads_from_silkscreen: true
+      use_aux_axis_as_origin: false
+      plot_sheet_reference: false
+      plot_footprint_refs: false
+      plot_footprint_values: false
+      force_plot_invisible_refs_vals: false
+      tent_vias: false
+      check_zone_fills: false
+
+      # PS options
+      drill_marks: full
+      sketch_plot: false
+      use_aux_axis_as_origin: false
+      polygon_mode: false
+    layers:
+      - layer: Edge.Cuts
+        suffix: Edge_Cuts

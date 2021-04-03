@@ -495,6 +495,13 @@ build build/0.2/bling/cases/mid_profile/top_left_plate_with_puck_front.svg: $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/top_left_plate_with_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_top_left_plate_with_puck_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/top_left_plate_with_puck.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build top_left_plate_with_puck-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_top_left_plate_with_puck_dxf_edge_cuts
+
 rule 0_2_bling_cases_mid_profile_top_right_plate_with_puck_drc
   command = ./automation/run_drc.sh $
       0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb
@@ -516,6 +523,13 @@ build $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_top_right_plate_with_puck_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/top_right_plate_with_puck.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build top_right_plate_with_puck-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_top_right_plate_with_puck_dxf_edge_cuts
+
 rule 0_2_bling_cases_mid_profile_mid_plate_drc
   command = ./automation/run_drc.sh $
       0.2/bling/cases/mid_profile/mid_plate.kicad_pcb
@@ -533,6 +547,13 @@ build build/0.2/bling/cases/mid_profile/mid_plate_front.svg: $
     automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/mid_plate.kicad_pcb
+
+rule 0_2_bling_cases_mid_profile_mid_plate_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/mid_plate.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build mid_plate-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_mid_plate_dxf_edge_cuts
 
 rule 0_2_bling_cases_mid_profile_bottom_plate_with_puck_drc
   command = ./automation/run_drc.sh $
@@ -553,6 +574,13 @@ build build/0.2/bling/cases/mid_profile/bottom_plate_with_puck_front.svg: $
     automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/bottom_plate_with_puck.kicad_pcb
+
+rule 0_2_bling_cases_mid_profile_bottom_plate_with_puck_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/bottom_plate_with_puck.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build bottom_plate_with_puck-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_bottom_plate_with_puck_dxf_edge_cuts
 
 rule 0_2_bling_cases_mid_profile_top_left_plate_without_puck_drc
   command = ./automation/run_drc.sh $
@@ -575,6 +603,13 @@ build $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/top_left_plate_without_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_top_left_plate_without_puck_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/top_left_plate_without_puck.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build top_left_plate_without_puck-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_top_left_plate_without_puck_dxf_edge_cuts
+
 rule 0_2_bling_cases_mid_profile_top_right_plate_without_puck_drc
   command = ./automation/run_drc.sh $
       0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb
@@ -596,6 +631,13 @@ build $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb
 
+rule 0_2_bling_cases_mid_profile_top_right_plate_without_puck_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/top_right_plate_without_puck.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build top_right_plate_without_puck-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_top_right_plate_without_puck_dxf_edge_cuts
+
 rule 0_2_bling_cases_mid_profile_bottom_plate_without_puck_drc
   command = ./automation/run_drc.sh $
       0.2/bling/cases/mid_profile/bottom_plate_without_puck.kicad_pcb
@@ -616,6 +658,13 @@ build $
     automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/bling/cases/mid_profile/bottom_plate_without_puck.kicad_pcb
+
+rule 0_2_bling_cases_mid_profile_bottom_plate_without_puck_dxf_edge_cuts
+  command = mkdir -p build/0.2/bling/cases/mid_profile && kiplot -b $
+      0.2/bling/cases/mid_profile/bottom_plate_without_puck.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/bling/cases/mid_profile
+build bottom_plate_without_puck-Edge_Cuts.dxf: $
+    0_2_bling_cases_mid_profile_bottom_plate_without_puck_dxf_edge_cuts
 
 build 0.2/bling: phony build/0.2/bling/gerbers.zip $
     build/0.2/bling/ferris_front.svg build/0.2/bling/ferris_back.svg $
@@ -723,45 +772,58 @@ build build/0.2/compact/gerbers.zip: 0_2_compact_gerbers_zip $
     build/0.2/compact/ferris-NPTH.drl $
     build/0.2/compact/ferris-PTH-drl_map.gbr build/0.2/compact/ferris-PTH.drl
 
-rule 0_2_compact_cases_low_profile_switch_plate_drc
+rule 0_2_compact_cases_low_profile_metal_plate_drc
   command = ./automation/run_drc.sh $
-      0.2/compact/cases/low_profile/switch_plate.kicad_pcb
+      0.2/compact/cases/low_profile/metal_plate.kicad_pcb
 build $
-    build/0.2/compact/cases/low_profile/switch_plate.kicad_pcb.drc_success: $
-    0_2_compact_cases_low_profile_switch_plate_drc ./automation/run_drc.sh $
-    0.2/compact/cases/low_profile/switch_plate.kicad_pcb
+    build/0.2/compact/cases/low_profile/metal_plate.kicad_pcb.drc_success: $
+    0_2_compact_cases_low_profile_metal_plate_drc ./automation/run_drc.sh $
+    0.2/compact/cases/low_profile/metal_plate.kicad_pcb
 
-rule 0_2_compact_cases_low_profile_render_switch_plate_front
+rule 0_2_compact_cases_low_profile_render_metal_plate_front
   command = python3 automation/tools/PcbDraw/pcbdraw/pcbdraw.py --silent $
       --style automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.2/compact/cases/low_profile/switch_plate.kicad_pcb $
-      build/0.2/compact/cases/low_profile/switch_plate_front.svg
-build build/0.2/compact/cases/low_profile/switch_plate_front.svg: $
-    0_2_compact_cases_low_profile_render_switch_plate_front $
+      0.2/compact/cases/low_profile/metal_plate.kicad_pcb $
+      build/0.2/compact/cases/low_profile/metal_plate_front.svg
+build build/0.2/compact/cases/low_profile/metal_plate_front.svg: $
+    0_2_compact_cases_low_profile_render_metal_plate_front $
     automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-    0.2/compact/cases/low_profile/switch_plate.kicad_pcb
+    0.2/compact/cases/low_profile/metal_plate.kicad_pcb
 
-rule 0_2_compact_cases_low_profile_switch_plate_with_cutouts_drc
+rule 0_2_compact_cases_low_profile_metal_plate_dxf_edge_cuts
+  command = mkdir -p build/0.2/compact/cases/low_profile && kiplot -b $
+      0.2/compact/cases/low_profile/metal_plate.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/compact/cases/low_profile
+build metal_plate-Edge_Cuts.dxf: $
+    0_2_compact_cases_low_profile_metal_plate_dxf_edge_cuts
+
+rule 0_2_compact_cases_low_profile_cork_spacer_and_lip_drc
   command = ./automation/run_drc.sh $
-      0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb
+      0.2/compact/cases/low_profile/cork_spacer_and_lip.kicad_pcb
 build $
-    build/0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb.drc_success: $
-    0_2_compact_cases_low_profile_switch_plate_with_cutouts_drc $
+    build/0.2/compact/cases/low_profile/cork_spacer_and_lip.kicad_pcb.drc_success: $
+    0_2_compact_cases_low_profile_cork_spacer_and_lip_drc $
     ./automation/run_drc.sh $
-    0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb
+    0.2/compact/cases/low_profile/cork_spacer_and_lip.kicad_pcb
 
-rule 0_2_compact_cases_low_profile_render_switch_plate_with_cutouts_front
+rule 0_2_compact_cases_low_profile_render_cork_spacer_and_lip_front
   command = python3 automation/tools/PcbDraw/pcbdraw/pcbdraw.py --silent $
       --style automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-      0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb $
-      build/0.2/compact/cases/low_profile/switch_plate_with_cutouts_front.svg
-build $
-    build/0.2/compact/cases/low_profile/switch_plate_with_cutouts_front.svg: $
-    0_2_compact_cases_low_profile_render_switch_plate_with_cutouts_front $
+      0.2/compact/cases/low_profile/cork_spacer_and_lip.kicad_pcb $
+      build/0.2/compact/cases/low_profile/cork_spacer_and_lip_front.svg
+build build/0.2/compact/cases/low_profile/cork_spacer_and_lip_front.svg: $
+    0_2_compact_cases_low_profile_render_cork_spacer_and_lip_front $
     automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
-    0.2/compact/cases/low_profile/switch_plate_with_cutouts.kicad_pcb
+    0.2/compact/cases/low_profile/cork_spacer_and_lip.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_cork_spacer_and_lip_dxf_edge_cuts
+  command = mkdir -p build/0.2/compact/cases/low_profile && kiplot -b $
+      0.2/compact/cases/low_profile/cork_spacer_and_lip.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/compact/cases/low_profile
+build cork_spacer_and_lip-Edge_Cuts.dxf: $
+    0_2_compact_cases_low_profile_cork_spacer_and_lip_dxf_edge_cuts
 
 rule 0_2_compact_cases_low_profile_lip_drc
   command = ./automation/run_drc.sh $
@@ -780,6 +842,12 @@ build build/0.2/compact/cases/low_profile/lip_front.svg: $
     automation/tools/PcbDraw/pcbdraw/pcbdraw.py $
     automation/tools/PcbDraw/pcbdraw/styles/set-white-enig.json $
     0.2/compact/cases/low_profile/lip.kicad_pcb
+
+rule 0_2_compact_cases_low_profile_lip_dxf_edge_cuts
+  command = mkdir -p build/0.2/compact/cases/low_profile && kiplot -b $
+      0.2/compact/cases/low_profile/lip.kicad_pcb -c $
+      .kiplot.dxf_edge_cuts.yml -d build/0.2/compact/cases/low_profile
+build lip-Edge_Cuts.dxf: 0_2_compact_cases_low_profile_lip_dxf_edge_cuts
 
 build 0.2/compact: phony build/0.2/compact/gerbers.zip $
     build/0.2/compact/ferris_front.svg build/0.2/compact/ferris_back.svg $
