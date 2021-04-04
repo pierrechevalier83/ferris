@@ -33,16 +33,16 @@ RENDER_COLORS = {
     "0.2/mini": "blue",
 }
 CASE_DIRS = {
-    "mid_profile_with_puck": "mid_profile",
-    "mid_profile_without_puck": "mid_profile",
+    "mid_profile": "mid_profile",
     "low_profile": "low_profile",
 }
 CASE_BASENAMES = {
-    "mid_profile_with_puck": [
-        "top_left_plate_with_puck",
-        "top_right_plate_with_puck",
-        "mid_plate",
-        "bottom_plate_with_puck",
+    "mid_profile": [
+        "left_switch_plate",
+        "right_switch_plate",
+        "lip",
+        "bottom_plate_puck",
+        "bottom_plate_no_puck",
     ],
     "mid_profile_without_puck": [
         "top_left_plate_without_puck",
@@ -57,7 +57,7 @@ CASE_BASENAMES = {
     ],
 }
 CASES = {
-    "0.2/bling": ["mid_profile_with_puck", "mid_profile_without_puck"],
+    "0.2/bling": ["mid_profile"],
     "0.2/compact": ["low_profile"],
 }
 
@@ -315,7 +315,7 @@ def add_dxf_edge_cuts_rule(ninja, reldir, basename):
         command=[f"mkdir -p {out_dir} && {kiplot} -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
-        outputs=f"{basename}-Edge_Cuts.dxf",
+        outputs=make_output_file_path(reldir, f"{basename}-Edge_Cuts.dxf"),
         rule=dxf_edge_cuts_rule,
     )
     ninja.newline()
