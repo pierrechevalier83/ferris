@@ -303,20 +303,21 @@ def add_zip_gerber_rule(ninja, variant):
     ninja.newline()
 
 
-def add_dxf_edge_cuts_rule(ninja, reldir, basename):
-    dxf_edge_cuts_rule = make_rule_name(reldir, f"{basename}_dxf_edge_cuts")
+def add_edge_cuts_rule(ninja, reldir, basename):
+    edge_cuts_rule = make_rule_name(reldir, f"{basename}_edge_cuts")
     board = make_pcb_file_name(reldir, basename)
-    config = ".kiplot.dxf_edge_cuts.yml"
+    config = ".kiplot.edge_cuts.yml"
     out_dir = make_variant_out_dir(reldir)
     kiplot = "kiplot"
 
     ninja.rule(
-        name=dxf_edge_cuts_rule,
+        name=edge_cuts_rule,
         command=[f"mkdir -p {out_dir} && {kiplot} -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
-        outputs=make_output_file_path(reldir, f"{basename}-Edge_Cuts.dxf"),
-        rule=dxf_edge_cuts_rule,
+        outputs=[make_output_file_path(reldir, f"{basename}-Edge_Cuts.dxf"),
+                 make_output_file_path(reldir, f"{basename}-Edge_Cuts.svg")],
+        rule=edge_cuts_rule,
     )
     ninja.newline()
 
@@ -327,7 +328,7 @@ def add_case_pcb_rules(ninja, variant, case, already_checked):
         if not (variant, case_dir, basename) in already_checked:
             add_drc_rule(ninja, f"{variant}/cases/{case_dir}", basename)
             add_render_front_rule(ninja, f"{variant}/cases/{case_dir}", basename)
-            add_dxf_edge_cuts_rule(ninja, f"{variant}/cases/{case_dir}", basename)
+            add_edge_cuts_rule(ninja, f"{variant}/cases/{case_dir}", basename)
             already_checked.add((variant, case_dir, basename))
 
 

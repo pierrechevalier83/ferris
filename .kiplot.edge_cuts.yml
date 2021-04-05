@@ -34,3 +34,27 @@ outputs:
     layers:
       - layer: Edge.Cuts
         suffix: Edge_Cuts
+
+  - name: SVG
+    comment: "SVG files"
+    type: svg
+    dir: .
+    options:
+      exclude_edge_layer: true
+      exclude_pads_from_silkscreen: true
+      use_aux_axis_as_origin: false
+      plot_sheet_reference: false
+      plot_footprint_refs: false
+      plot_footprint_values: false
+      force_plot_invisible_refs_vals: false
+      tent_vias: false
+      check_zone_fills: false
+
+      # SVG options
+      line_width: 0.1
+      drill_marks: full
+      mirror_plot: false
+      negative_plot: false
+    layers:
+      - layer: Edge.Cuts
+        suffix: Edge_Cuts
