@@ -23,7 +23,7 @@ outputs:
       use_aux_axis_as_origin: false
       plot_sheet_reference: false
       plot_footprint_refs: true
-      plot_footprint_values: true
+      plot_footprint_values: false
       force_plot_invisible_refs_vals: false
       tent_vias: true
       check_zone_fills: true
@@ -56,6 +56,10 @@ outputs:
         suffix: B_Paste
       - layer: Edge.Cuts
         suffix: Edge_Cuts
+      - layer: F.Fab
+        suffix: F_Fab
+      - layer: B.Fab
+        suffix: B_Fab
 
   - name: excellon_drill
     comment: "Excellon drill files"
