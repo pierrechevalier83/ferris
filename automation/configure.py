@@ -252,11 +252,13 @@ def make_gerber_output_paths(variant):
         "ferris-B_Mask.gbr",
         "ferris-B_Paste.gbr",
         "ferris-B_SilkS.gbr",
+        "ferris-B_Fab.gbr",
         "ferris-Edge_Cuts.gbr",
         "ferris-F_Cu.gbr",
         "ferris-F_Mask.gbr",
         "ferris-F_Paste.gbr",
         "ferris-F_SilkS.gbr",
+        "ferris-F_Fab.gbr",
         "ferris-NPTH-drl_map.gbr",
         "ferris-NPTH.drl",
         "ferris-PTH-drl_map.gbr",
@@ -277,6 +279,7 @@ def add_gerber_rule(ninja, variant):
         command=[f"mkdir -p {out_dir} && {kiplot} -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
+        inputs=[config, board],
         outputs=make_gerber_output_paths(variant),
         rule=gerber_rule,
     )
