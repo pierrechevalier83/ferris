@@ -318,6 +318,7 @@ def add_edge_cuts_rule(ninja, reldir, basename):
         command=[f"mkdir -p {out_dir} && {kiplot} -b {board} -c {config} -d {out_dir}"],
     )
     ninja.build(
+        inputs=[board, config],
         outputs=[make_output_file_path(reldir, f"{basename}-Edge_Cuts.dxf"),
                  make_output_file_path(reldir, f"{basename}-Edge_Cuts.svg")],
         rule=edge_cuts_rule,
