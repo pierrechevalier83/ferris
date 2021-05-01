@@ -62,7 +62,7 @@ There are currently two versions of the Ferris:
 How do I print one?
 -------------------
 
-Before you print one yourself, you're welcome contact the owner of this repository and see if they have spare boards to sell.
+Before you print one yourself, feel free to have a look at https://cuddlykeyboards.com where you may purchase a kit, pre-assembled or for you to assemble yourself :)
 
 If they don't, or you prefer to have the full experience yourself,
 
