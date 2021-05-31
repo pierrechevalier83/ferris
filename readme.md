@@ -1,7 +1,7 @@
 Meet Ferris, a minimalistic keyboard
 ====================================
 
-Named after the Rustlang mascott, Ferris is a 34 keys split keyboard that tries to be about as cute as its namesake.
+Named after the Rustlang mascot, Ferris is a 34-key split keyboard that tries to be about as cute as its namesake.
 
 ![Ferris](https://i.imgur.com/TCjkquR.jpg)
 
@@ -82,10 +82,10 @@ a keyboard, and is able to present it nicely in a contextual manner.
 
 A few tips:
 * Be mindful of the orientation of components.
-	* The interactive bom has an option to "highlight first pin". TYou should match the pin drawn on the component to the side of the PCB that is highlighted. For a diode, the "first pin" is indicated with the cathode bar.
+	* The interactive bom has an option to "highlight first pin". You should match the pin drawn on the component to the side of the PCB that is highlighted. For a diode, the "first pin" is indicated with the cathode bar.
 * You can change the order in which the components are displayed by clicking the column headers.
     * I like to sort the components by decreasing quantity to start with the most tedious work and end with the fun :)
-* Most of the components are SMD mounted and can be soldered with a soldering iron, solder wire and flux (optional but strongly recomended).
+* Most of the components are SMD mounted and can be soldered with a soldering iron, solder wire and flux (optional but strongly recommended).
     * If you are assembling a Ferris 0.2 - Bling, you will need a hot air station to place the LED driver chip.
 
 And here are some key pieces of advice about soldering from my experience assembling many Ferris keyboards.
