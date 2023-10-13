@@ -62,9 +62,9 @@ There are currently two versions of the Ferris:
 How do I print one?
 -------------------
 
-Before you print one yourself, feel free to have a look at https://cuddlykeyboards.com where you may purchase a kit, pre-assembled or for you to assemble yourself :)
+Before you print one yourself, feel free to [have a look online]([url](https://duckduckgo.com/?q=buy+ferris+sweep+keyboard)), multiple vendors now offer kits or even pre-soldered and built keyboards.
 
-If they don't, or you prefer to have the full experience yourself,
+If you prefer to have the full experience of building it yourself,
 
 * Decide which variant/version you want to print (refer to individual readme files in subdirectories for a short description of each variant).
 * Download the `{version}.{variant}.release.zip` file from the latest [GitHub release on this repo](https://github.com/pierrechevalier83/ferris/releases/).
@@ -103,6 +103,8 @@ Part 1:
 [build log, part 1](https://imgur.com/gallery/jYbxkxE)
 Part 2:
 [build log, part 2](https://imgur.com/gallery/gs19F6E)
+
+You can also [find instructional videos]([url](https://www.youtube.com/results?search_query=ferris+sweep+build)) on a very popular video sharing service.
 
 Where is the firmware?
 ----------------------
