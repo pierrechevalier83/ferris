@@ -62,10 +62,6 @@ There are currently two versions of the Ferris:
 How do I print one?
 -------------------
 
-Before you print one yourself, feel free to have a look at https://cuddlykeyboards.com where you may purchase a kit, pre-assembled or for you to assemble yourself :)
-
-If they don't, or you prefer to have the full experience yourself,
-
 * Decide which variant/version you want to print (refer to individual readme files in subdirectories for a short description of each variant).
 * Download the `{version}.{variant}.release.zip` file from the latest [GitHub release on this repo](https://github.com/pierrechevalier83/ferris/releases/).
 
